@@ -16,9 +16,13 @@ public class Shootup : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.Space))
         {
-            GetComponent<Rigidbody>().AddForce(transform.up.normalized*SPEEEEEEEEEEEED);
+            GetComponent<Rigidbody>().AddForce(transform.up.normalized*SPEEEEEEEEEEEED*Time.deltaTime);
         }
-        if(Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            GetComponent<Rigidbody>().AddForce(-transform.up.normalized * SPEEEEEEEEEEEED * Time.deltaTime);
+        }
+        if (Input.GetKey(KeyCode.A))
         {
             transform.Rotate(new Vector3(0, 0, 1), -0.1f);
         }
