@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/space travel.unity
+- path: Assets/Scenes/space travel.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
