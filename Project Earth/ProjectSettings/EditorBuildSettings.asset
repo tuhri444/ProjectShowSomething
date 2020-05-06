@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
+    path: Assets/Scenes/CustomizationScreen.unity
+    guid: a50b913bee511944b845bbde3c8a018e
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: d1c3109bdb54ad54c8a2b2838528e640
-  - enabled: 1
-    path: Assets/earth.unity
-    guid: f1521d1fa2af13b458de634e5ed0954e
   m_configObjects: {}
