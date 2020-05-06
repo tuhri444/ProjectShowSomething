@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/CustomizationScreen.unity
     guid: a50b913bee511944b845bbde3c8a018e
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: d1c3109bdb54ad54c8a2b2838528e640
+    path: Assets/space travel.unity
+    guid: 4c31074b303f2af4cbc41886ec2ca4f9
   m_configObjects: {}
