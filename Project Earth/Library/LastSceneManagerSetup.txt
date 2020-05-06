@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/space travel Horizontal.unity
+- path: Assets/Scenes/Radar.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
