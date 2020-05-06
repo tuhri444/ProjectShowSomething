@@ -40,13 +40,13 @@ public class OperateArrows : MonoBehaviour
         {
             arrows[2].texture = offArrow;
         }
-        //if (Input.GetKey(KeyCode.S))
-        //{
-        //    arrows[3].texture = onArrow;
-        //}
-        //else
-        //{
-        //    arrows[3].texture = offArrow;
-        //}
+        if (Input.GetKey(KeyCode.S))
+        {
+            arrows[3].texture = onArrow;
+        }
+        else
+        {
+            arrows[3].texture = offArrow;
+        }
     }
 }

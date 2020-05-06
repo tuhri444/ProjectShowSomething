@@ -18,7 +18,7 @@ public class collision : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("asteroid"))
+        if(other.gameObject.CompareTag("asteroid") || other.gameObject.CompareTag("junk"))
         {
             Destroy(other.gameObject);
         }

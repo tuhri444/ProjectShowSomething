@@ -17,6 +17,14 @@ public class ShipExporter : MonoBehaviour
         DontDestroyOnLoad(this);
     }
 
+    private void Update()
+    {
+        if(FindObjectOfType<BodyToReplace>())
+        {
+            transform.parent = FindObjectOfType<BodyToReplace>().transform;
+        }
+    }
+
     public GameObject Head
     {
         get { return head; }

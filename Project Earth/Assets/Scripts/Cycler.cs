@@ -27,6 +27,7 @@ public class Cycler : MonoBehaviour
     private List<GameObject> headList = new List<GameObject>();
     private List<GameObject> bodyList = new List<GameObject>();
     private List<GameObject> thrusterList = new List<GameObject>();
+    private List<GameObject> TobeDeleted = new List<GameObject>();
     private int headIndex = 0;
     private int bodyIndex = 0;
     private int thrusterIndex = 0;
@@ -47,18 +48,24 @@ public class Cycler : MonoBehaviour
         {
             GameObject head = Instantiate(Heads[i], headPlaceholder.transform);
             head.transform.Translate(i * 15, 0, 0);
+            MeshCollider temp = head.AddComponent<MeshCollider>();
+            temp.convex = true;
             headList.Add(head);
         }
         for (int i = 0; i < Bodies.Count; i++)
         {
             GameObject body = Instantiate(Bodies[i], bodyPlaceholder.transform);
             body.transform.Translate(i * 15, 0, 0);
+            MeshCollider temp = body.AddComponent<MeshCollider>();
+            temp.convex = true;
             bodyList.Add(body);
         }
         for (int i = 0; i < Thrusters.Count; i++)
         {
             GameObject thruster = Instantiate(Thrusters[i], thrusterPlaceholder.transform);
             thruster.transform.Translate(i * 15, 0, 0);
+            MeshCollider temp = thruster.AddComponent<MeshCollider>();
+            temp.convex = true;
             thrusterList.Add(thruster);
 
         }
@@ -82,7 +89,69 @@ public class Cycler : MonoBehaviour
         exporter.Head = activeHead;
         exporter.Body = activeBody;
         exporter.Thruster = activeThruster;
+        ship.transform.localScale = new Vector3(0.48f, 0.48f, 0.48f);
+        ship.transform.Translate(new Vector3(0, -0.3f, 0));
+        foreach (GameObject obj in headList)
+        {
+            if(obj != exporter.Head)
+            {
+                TobeDeleted.Add(obj);
+            }
+        }
+        foreach (GameObject obj in bodyList)
+        {
+            if (obj != exporter.Body)
+            {
+                TobeDeleted.Add(obj);
+            }
+        }
+        foreach (GameObject obj in thrusterList)
+        {
+            if (obj != exporter.Thruster)
+            {
+                TobeDeleted.Add(obj);
+            }
+        }
+        for (int i = TobeDeleted.Count-1;  i >= 0; i--)
+        {
+            Destroy(TobeDeleted[i]);
+        }
         SceneManager.LoadScene(1);
+    }
+    public void Done2()
+    {
+        ShipExporter exporter = ship.GetComponent<ShipExporter>();
+        exporter.Head = activeHead;
+        exporter.Body = activeBody;
+        exporter.Thruster = activeThruster;
+        ship.transform.localScale = new Vector3(0.48f, 0.48f, 0.48f);
+        ship.transform.Translate(new Vector3(0, -0.3f, 0));
+        foreach (GameObject obj in headList)
+        {
+            if (obj != exporter.Head)
+            {
+                TobeDeleted.Add(obj);
+            }
+        }
+        foreach (GameObject obj in bodyList)
+        {
+            if (obj != exporter.Body)
+            {
+                TobeDeleted.Add(obj);
+            }
+        }
+        foreach (GameObject obj in thrusterList)
+        {
+            if (obj != exporter.Thruster)
+            {
+                TobeDeleted.Add(obj);
+            }
+        }
+        for (int i = TobeDeleted.Count - 1; i >= 0; i--)
+        {
+            Destroy(TobeDeleted[i]);
+        }
+        SceneManager.LoadScene(2);
     }
 
     public void LeftHead()
