@@ -7,7 +7,7 @@ public class updateScore : MonoBehaviour
 {
     // Start is called before the first frame update
     private Text txt;
-    [SerializeField] Hull player;
+    [SerializeField] DropOff satellite;
     void Start()
     {
         txt = GetComponent<Text>();
@@ -16,6 +16,6 @@ public class updateScore : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        txt.text = "Score: " + player.score;
+        txt.text = "Junk Dropped-off: " + satellite.TotalJunkDroppedOff;
     }
 }

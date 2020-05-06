@@ -36,12 +36,12 @@ public class GrabItem : MonoBehaviour
             collider.enabled = false;
         }
 
-        if (grabSlot.Count != 0)
+        if (grabSlot.Count != 0 && hull.junkCollected < hull.capacity)
         {
             if (info.IsTag("de"))
             {
                 GameObject item = grabSlot[0];
-                hull.score += item.GetComponent<Junk>().score;
+                hull.junkCollected++;
                 grabSlot.Clear();
                 Destroy(item);
             }

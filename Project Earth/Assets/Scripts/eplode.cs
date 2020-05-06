@@ -30,8 +30,9 @@ public class eplode : MonoBehaviour
         if (collision.transform.CompareTag("asteroid"))
         {
             hull.hp -= (int)Random.Range(1,10);
+            Vector3 direction = (transform.position- collision.gameObject.transform.position);
             GameObject explosionObj = GameObject.Instantiate(explosion, transform.position, transform.rotation);
-            GetComponent<Rigidbody>().AddExplosionForce(1f, transform.position, 1, 1, ForceMode.Impulse);
+            GetComponent<Rigidbody>().AddExplosionForce(0.1f, transform.position, 1, 1, ForceMode.Impulse);
         }
     }
 }

@@ -7,22 +7,21 @@ using UnityEngine;
 public class ResizeSelf : MonoBehaviour
 {
     [SerializeField] Hull playerHull;
-    float TotalWidth;
     float desiredWidth;
-    RectTransform rect;
-    private Text txt;
+    Image rect;
+    [SerializeField] bool Hp;
     void Start()
     {
-        rect = GetComponent<RectTransform>();
-        TotalWidth = rect.sizeDelta.x;
-        txt = GetComponentInChildren<Text>();
+        rect = GetComponent<Image>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        desiredWidth = TotalWidth / 100 * playerHull.hp;
-        rect.sizeDelta = new Vector2(desiredWidth, rect.sizeDelta.y);
-        txt.text = playerHull.hp + "%";
+        if (Hp)
+            desiredWidth = 1.0f / playerHull.maxHp * playerHull.hp;
+        else
+            desiredWidth = 1.0f-(1.0f / playerHull.capacity * playerHull.junkCollected);
+
+        rect.fillAmount = desiredWidth;
     }
 }
