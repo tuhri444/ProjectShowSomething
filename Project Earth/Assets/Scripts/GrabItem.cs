@@ -9,6 +9,7 @@ public class GrabItem : MonoBehaviour
     [SerializeField] Hull hull;
     private List<GameObject> grabSlot;
     private SphereCollider collider;
+    AnimatorStateInfo info;
     void Start()
     {
         collider = GetComponent<SphereCollider>();
@@ -18,16 +19,10 @@ public class GrabItem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        AnimatorStateInfo info = controller.GetCurrentAnimatorStateInfo(0);
-        if (info.IsTag("rest") && Input.GetMouseButtonDown(0) && !controller.IsInTransition(0))
-        {
-            controller.SetTrigger("extendArm");
-        }
-        else if (info.IsTag("ex") && Input.GetMouseButtonDown(0) && !controller.IsInTransition(0))
-        {
-            controller.SetTrigger("dextendArm");
-        }
-        if(info.IsTag("ex") && !controller.IsInTransition(0))
+        info = controller.GetCurrentAnimatorStateInfo(0);
+
+
+        if (info.IsTag("ex") && !controller.IsInTransition(0))
         {
             collider.enabled = true;
         }
@@ -61,6 +56,18 @@ public class GrabItem : MonoBehaviour
         if (other.gameObject.CompareTag("junk") && grabSlot.Count == 0)
         {
             grabSlot.Add(other.gameObject);
+        }
+    }
+
+    public void OnClick()
+    {
+        if (info.IsTag("rest") && !controller.IsInTransition(0))
+        {
+            controller.SetTrigger("extendArm");
+        }
+        else if (info.IsTag("ex") && !controller.IsInTransition(0))
+        {
+            controller.SetTrigger("dextendArm");
         }
     }
     
