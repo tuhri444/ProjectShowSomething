@@ -4,90 +4,74 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public delegate void OnEvent();
-public struct RadarObject
-{
-    public GameObject gameObejct;
-    public GameObject uiImage;
-}
 public class Radar : MonoBehaviour
 {
-    private List<RadarObject> radarObjects = new List<RadarObject>();
-    private List<GameObject> objectsOnRadarLayer;
-    private List<GameObject> iconsOnRadar = new List<GameObject>();
+    public static Dictionary<int, GameObject> radarObjects = new Dictionary<int, GameObject>();
+    private static List<GameObject> objectsOnRadarLayer;
     public static OnEvent OnRemoveItem;
-    public Image panel;
+    public static Image panel;
+    private static int index = 0;
+    [SerializeField]
+    public static float mapScale = 10;
+    public static Vector3 currentPos;
+    public static int shipId = 0;
 
     public void Start()
     {
         objectsOnRadarLayer = GetObjectsInLayer(8);
         panel = GetComponent<Image>();
-    }
-
-    public void Update()
-    {
-       
-
         foreach (GameObject go in objectsOnRadarLayer)
         {
-            if (go.GetComponent<Renderer>() != null)
-            {
-                Renderer goRenderer = go.GetComponent<Renderer>();
-                if (goRenderer.isVisible && IsOnRadarObjects(go))
-                {
-                    RegisterRadarObject(go);
-                    Debug.Log("Registered");
-                }
-                else if (!goRenderer.isVisible && IsOnRadarObjects(go))
-                {
-                    RemoveRadarObject(go);
-                }
-            }
+            go.AddComponent<RadarObject>();
         }
-
-        foreach (RadarObject ro in radarObjects)
-        {
-            GameObject icon = Instantiate(ro.uiImage,transform);
-            Vector3 roPosition = ro.gameObejct.transform.position;
-            icon.transform.position = new Vector3(roPosition.x,roPosition.y,roPosition.z);
-            iconsOnRadar.Add(icon);
-        }
-
+    }
+    public void Update()
+    {
+        Transform ship = GameObject.Find("ship").transform;
+        currentPos = ship.position;
     }
 
-    public void RegisterRadarObject(GameObject _radarObject)
+    public static int RegisterRadarObject(GameObject _radarObject)
     {
         GameObject icon = new GameObject();
         icon.AddComponent<Image>();
         Image iconImg = icon.GetComponent<Image>();
-        if (_radarObject.name.Equals("ship"))
+        icon.transform.SetParent(panel.transform);
+        //Mathf.Clamp(roPosition.x, -panel.rectTransform.sizeDelta.x/2f, panel.rectTransform.sizeDelta.x/2f),Mathf.Clamp(roPosition.z, -panel.rectTransform.sizeDelta.y/2f, panel.rectTransform.sizeDelta.y/2f),1
+        if (_radarObject.name.Equals("Body"))
         {
+            Vector3 roPosition = _radarObject.transform.parent.position;
+            iconImg.rectTransform.localPosition = new Vector3(0,0,0);
+            iconImg.rectTransform.sizeDelta = new Vector2(10, 10);
             iconImg.color = new Color(0, 255, 0);
         }
         else
         {
+            //Mathf.Clamp(_radarObject.transform.position.x, -panel.rectTransform.sizeDelta.x / 2f, panel.rectTransform.sizeDelta.x / 2f), 1, Mathf.Clamp(_radarObject.transform.position.z, -panel.rectTransform.sizeDelta.y / 2f, panel.rectTransform.sizeDelta.y / 2f)
+            Vector3 roPosition = new Vector3(_radarObject.transform.position.x,0,_radarObject.transform.position.z);
+            iconImg.rectTransform.localPosition = new Vector3(roPosition.x, roPosition.z, 1);
+            iconImg.rectTransform.sizeDelta = new Vector2(10, 10);
             iconImg.color = new Color(255, 0, 0);
         }
-        RadarObject radarObject = new RadarObject()
-        {
-            gameObejct = _radarObject,
-            uiImage = icon
-        };
-        radarObjects.Add(new RadarObject());
+        radarObjects.Add(++index, icon);
+        return index;
     }
 
-    public void RemoveRadarObject(GameObject _radarObject)
+    public static void RemoveRadarObject(int id, GameObject _radarObject)
     {
-        foreach (RadarObject ro in radarObjects)
+        //Debug.Log("id:" + id);
+        //Debug.Log("index:" + index);
+        //Debug.Log("Count:" + radarObjects.Count);
+        if (radarObjects[id].Equals(_radarObject))
         {
-            if (ro.gameObejct.Equals(_radarObject))
-            {
-                OnRemoveItem();
-                radarObjects.Remove(ro);
-                Destroy(ro.gameObejct);
-                Destroy(ro.uiImage);
-                return;
-            }
+            Destroy(radarObjects[id]);
+            radarObjects.Remove(id);
+            return;
         }
+    }
+    public static void ReEnableRadarObject(int id)
+    {
+        radarObjects[id].SetActive(true);
     }
 
     private static List<GameObject> GetObjectsInLayer(int layer)
@@ -104,16 +88,12 @@ public class Radar : MonoBehaviour
         return outList;
     }
 
-    private bool IsOnRadarObjects(GameObject go)
+    public static void UpdatePosition(int id, Vector3 distanceFromOrigin)
     {
-        foreach (RadarObject ro in radarObjects)
+        if (id < index && id > 0)
         {
-            if (ro.gameObejct.Equals(go))
-            {
-                return true;
-            }
+            radarObjects[id].GetComponent<Image>().rectTransform.localPosition = new Vector3(distanceFromOrigin.x*mapScale, distanceFromOrigin.z*mapScale, 1);
         }
-        return false;
     }
 
 }
