@@ -18,4 +18,10 @@ public class updateScore : MonoBehaviour
     {
         txt.text = "Junk Dropped-off: " + satellite.TotalJunkDroppedOff;
     }
+
+    public int Score
+    {
+        get { return satellite.TotalJunkDroppedOff; }
+    }
+
 }
