@@ -7,6 +7,7 @@ TagManager:
   - planet
   - junk
   - asteroid
+  - Rating
   layers:
   - Default
   - TransparentFX

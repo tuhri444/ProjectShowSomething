@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class troll : MonoBehaviour
 {
-    int counter = 5;
+    int counter = 0;
     Vector3 startPos;
     void Start()
     {
@@ -27,7 +27,7 @@ public class troll : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(4);
         }
     }
 }
