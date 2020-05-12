@@ -8,19 +8,29 @@ public class Indicator : MonoBehaviour
     public GameObject DropOff;
     public Camera radar;
     float index =0;
+    public RectTransform rectCanvas;
+
+    [SerializeField] private float distanceFromPlayer = 0.5f;
+
+    Vector3 diff;
+    public Vector3 dir;
+    Canvas canvas;
     // Start is called before the first frame update
     void Start()
     {
         DropOff = GameObject.Find("Drop-off");
+        Canvas canvas = FindObjectOfType<Canvas>();
+        rectCanvas = canvas.GetComponent<RectTransform>();
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        Vector3 diff = DropOff.transform.position- Ship.transform.position;
-        Vector3 dir = diff.normalized * 5;
+        diff = DropOff.transform.position- Ship.transform.position;
+        dir = diff.normalized * distanceFromPlayer;
         if (diff.magnitude < 15)
         {
+<<<<<<< HEAD
             Vector3 indicatorWorldPos = radar.WorldToScreenPoint(DropOff.transform.position);
             indicatorWorldPos.z = 0.0f;
             transform.position = indicatorWorldPos; 
@@ -30,6 +40,15 @@ public class Indicator : MonoBehaviour
             Vector3 indicatorWorldPos = radar.WorldToScreenPoint(Ship.transform.position + dir);
             indicatorWorldPos.z = 0.0f;
             transform.position = indicatorWorldPos;
+=======
+            transform.position = new Vector3(-300,-300, transform.position.z);
+        }
+        else
+        {
+            float oldZ = transform.position.z;
+            transform.position = /*new Vector3(rectCanvas.sizeDelta.x * 0.5f, rectCanvas.sizeDelta.y*0.5f,0)*/Ship.transform.position + dir;
+            transform.position = new Vector3(transform.position.x, transform.position.y, oldZ);
+>>>>>>> Input-System
         }
     }
 }

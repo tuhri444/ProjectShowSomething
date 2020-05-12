@@ -125,9 +125,28 @@ public class Shootup : MonoBehaviour
         right = trualse;
     }
 
+<<<<<<< HEAD
     public void modifySpeed(float speedMod)
     {
         MainSpeed += speedMod;
         BreakSpeed += speedMod;
+=======
+    public void JoystickForBack(float value)
+    {
+
+        if (value > 0.5f) jetstream.Play(true);
+        else if (value < -0.5f)
+        {
+            jetstream2.Play(true);
+            jetstream3.Play(true);
+        }
+        GetComponent<Rigidbody>().AddForce(transform.up.normalized * (MainSpeed * value) * Time.deltaTime, ForceMode.Impulse);
+    }
+    public void JoystickLeftRight(float value)
+    {
+        if (value > 0.5f) jetstream5.Play(true);
+        else if (value < -0.5f) jetstream4.Play(true);
+        transform.Rotate(new Vector3(0, 0, 1), -(value * rotateSpeed) * Time.deltaTime);
+>>>>>>> Input-System
     }
 }
