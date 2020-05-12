@@ -11,20 +11,44 @@ public class ShipExporter : MonoBehaviour
     [SerializeField]
     private GameObject thruster;
 
+    [HideInInspector]
+    public Nose nose;
+    [HideInInspector]
+    public Body mainBody;
+    [HideInInspector]
+    public Booster booster;
+
     // Start is called before the first frame update
     void Start()
     {
         DontDestroyOnLoad(this);
+        init();
     }
 
     private void Update()
     {
-        if(FindObjectOfType<BodyToReplace>())
+       
+
+        if (FindObjectOfType<BodyToReplace>())
         {
             transform.parent = FindObjectOfType<BodyToReplace>().transform;
         }
     }
-
+    public void init()
+    {
+        if (nose == null)
+        {
+            nose = GetComponentInChildren<Nose>();
+        }
+        if (mainBody == null)
+        {
+            mainBody = GetComponentInChildren<Body>();
+        }
+        if (booster == null)
+        {
+            booster = GetComponentInChildren<Booster>();
+        }
+    }
     public GameObject Head
     {
         get { return head; }

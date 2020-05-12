@@ -33,7 +33,7 @@ public class Timer : MonoBehaviour
         if(canStartFade)
         {
             newAlpha = 1.0f - (Time.time - startTime) / fadeTime;
-            GetComponent<TextMeshProUGUI>().color = new Color(1, 1, 1, newAlpha);
+            GetComponent<Text>().color = new Color(1, 1, 1, newAlpha);
 
             //If alpha has decreased to zero, destroy this game object
             if (newAlpha <= 0)

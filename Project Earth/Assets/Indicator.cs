@@ -6,6 +6,7 @@ public class Indicator : MonoBehaviour
 {
     public GameObject Ship;
     public GameObject DropOff;
+    public Camera radar;
     float index =0;
     // Start is called before the first frame update
     void Start()
@@ -20,11 +21,15 @@ public class Indicator : MonoBehaviour
         Vector3 dir = diff.normalized * 5;
         if (diff.magnitude < 15)
         {
-            transform.position = DropOff.transform.position;
+            Vector3 indicatorWorldPos = radar.WorldToScreenPoint(DropOff.transform.position);
+            indicatorWorldPos.z = 0.0f;
+            transform.position = indicatorWorldPos; 
         }
         else
         {
-            transform.position = Ship.transform.position + dir;
+            Vector3 indicatorWorldPos = radar.WorldToScreenPoint(Ship.transform.position + dir);
+            indicatorWorldPos.z = 0.0f;
+            transform.position = indicatorWorldPos;
         }
     }
 }

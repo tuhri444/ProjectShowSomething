@@ -125,4 +125,9 @@ public class Shootup : MonoBehaviour
         right = trualse;
     }
 
+    public void modifySpeed(float speedMod)
+    {
+        MainSpeed += speedMod;
+        BreakSpeed += speedMod;
+    }
 }
