@@ -7,7 +7,6 @@ public class Indicator : MonoBehaviour
     public GameObject Ship;
     public GameObject DropOff;
     public Camera radar;
-    float index =0;
     public RectTransform rectCanvas;
 
     [SerializeField] private float distanceFromPlayer = 0.5f;
@@ -30,25 +29,13 @@ public class Indicator : MonoBehaviour
         dir = diff.normalized * distanceFromPlayer;
         if (diff.magnitude < 15)
         {
-<<<<<<< HEAD
-            Vector3 indicatorWorldPos = radar.WorldToScreenPoint(DropOff.transform.position);
-            indicatorWorldPos.z = 0.0f;
-            transform.position = indicatorWorldPos; 
-        }
-        else
-        {
-            Vector3 indicatorWorldPos = radar.WorldToScreenPoint(Ship.transform.position + dir);
-            indicatorWorldPos.z = 0.0f;
-            transform.position = indicatorWorldPos;
-=======
-            transform.position = new Vector3(-300,-300, transform.position.z);
+            transform.position = DropOff.transform.position; 
         }
         else
         {
             float oldZ = transform.position.z;
             transform.position = /*new Vector3(rectCanvas.sizeDelta.x * 0.5f, rectCanvas.sizeDelta.y*0.5f,0)*/Ship.transform.position + dir;
             transform.position = new Vector3(transform.position.x, transform.position.y, oldZ);
->>>>>>> Input-System
         }
     }
 }

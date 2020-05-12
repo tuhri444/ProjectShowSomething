@@ -18,12 +18,22 @@ public class Hull : MonoBehaviour
     { 
         if(exporter == null)
         {
-            exporter = GameObject.Find("Ship").GetComponent<ShipExporter>();
+            exporter = FindObjectOfType<ShipExporter>();
             exporter.init();
             Shootup shootUp = GameObject.Find("ship").GetComponent<Shootup>();
             Debug.Log(exporter);
             Debug.Log(exporter.nose);
             Debug.Log(exporter.nose.capacity);
+            Vector3 posNose = exporter.nose.transform.position;
+            posNose.x = 0;
+            exporter.nose.transform.position = posNose;
+            Vector3 posHull = exporter.mainBody.transform.position;
+            posHull.x = 0;
+            exporter.mainBody.transform.position = posHull;
+            Vector3 posBooster = exporter.booster.transform.position;
+            posBooster.x = 0;
+            exporter.booster.transform.position = posBooster;
+
             capacity = exporter.nose.capacity;
             maxHp += exporter.mainBody.health;
             shootUp.modifySpeed(exporter.booster.speed);
