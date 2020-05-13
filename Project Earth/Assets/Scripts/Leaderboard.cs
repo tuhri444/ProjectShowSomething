@@ -9,7 +9,7 @@ public class Leaderboard : MonoBehaviour
     public GameObject leaderboardSlotPrefab;
     public GameManager gameManager;
     private List<GameObject> leaderboardSlots;
-    private Dictionary<string,int> leaderboardScores = new Dictionary<string, int>();
+    private Dictionary<string, int> leaderboardScores = new Dictionary<string, int>();
     // Start is called before the first frame update
     void Start()
     {
@@ -21,39 +21,34 @@ public class Leaderboard : MonoBehaviour
             leaderboardSlots.Add(slot);
         }
 
-        leaderboardScores.Add("Fynn", 400);
-        gameManager.names.Add("Fynn");
+        //leaderboardScores.Add("Fynn", 400);
 
-        leaderboardScores.Add("Rowan", 100);
-        gameManager.names.Add("Rowan");
+        //leaderboardScores.Add("Rowan", 100);
 
-        leaderboardScores.Add("Jason", 200);
-        gameManager.names.Add("Jason");
+        //leaderboardScores.Add("Jason", 200);
 
-        leaderboardScores.Add("Arjen", 300);
-        gameManager.names.Add("Arjen");
+        //leaderboardScores.Add("Arjen", 300);
 
-        SortDictionary(leaderboardScores);
+        //leaderboardScores.Add("TheLegend27", 3000);
 
-        gameManager.saveScores(leaderboardScores);
-
-        leaderboardScores.Clear();
+        //leaderboardScores.Clear();
         leaderboardScores = gameManager.loadScores();
 
         for (int i = 0; i < leaderboardScores.Count; i++)
         {
-            Debug.Log("Names: "+gameManager.names[i]+" Leaderboard score: " + leaderboardScores[gameManager.names[i]]);
+            Debug.Log("Names: " + PlayerPrefs.GetString("TopScorer" + i) + " Leaderboard score: " + leaderboardScores[PlayerPrefs.GetString("TopScorer" + i)]);
         }
 
-        gameManager.names.Add(gameManager.Name);
         leaderboardScores.Add(gameManager.Name, gameManager.GetScore());
+        SortDictionary();
+        Debug.Log(leaderboardScores.Count);
         gameManager.saveScores(leaderboardScores);
 
         for (int i = 0; i < leaderboardScores.Count; i++)
         {
             ScoreSlot slot = leaderboardSlots[i].GetComponent<ScoreSlot>();
-            slot.Name.text = gameManager.names[i];
-            slot.Score.text = leaderboardScores[gameManager.names[i]] + "";
+            slot.Name.text = leaderboardScores.Keys.ToList()[i];
+            slot.Score.text = leaderboardScores.Values.ToList()[i] + "";
         }
     }
 
@@ -63,17 +58,16 @@ public class Leaderboard : MonoBehaviour
 
     }
 
-    public void SortDictionary(Dictionary<string,int> scores)
+    public void SortDictionary()
     {
         // Sorted by Value  
-
-        Console.WriteLine("Sorted by Value");
-        Console.WriteLine("============="); 
-        leaderboardScores.Clear();
-        foreach (KeyValuePair<string, int> score in scores.OrderBy(key => key.Value))
+        Dictionary<string, int> outDict = new Dictionary<string, int>();
+        var temp = from pair in leaderboardScores orderby pair.Value descending select pair;
+        foreach (KeyValuePair<string, int> pair in temp)
         {
-            leaderboardScores.Add(score.Key,score.Value);
+            outDict.Add(pair.Key, pair.Value);
         }
+        leaderboardScores = outDict;
     }
 
 }
