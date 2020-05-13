@@ -18,6 +18,8 @@ public class ShipExporter : MonoBehaviour
     [HideInInspector]
     public Booster booster;
 
+    bool hasReplaced;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,15 +29,18 @@ public class ShipExporter : MonoBehaviour
 
     private void Update()
     {
-       
-
-        if (FindObjectOfType<BodyToReplace>())
+        if (FindObjectOfType<BodyToReplace>() && !hasReplaced)
         {
             transform.parent = FindObjectOfType<BodyToReplace>().transform;
+            Vector3 oldPos = transform.position;
+            oldPos.x = 0;
+            transform.position = oldPos;
+            hasReplaced = true;
         }
     }
     public void init()
     {
+        hasReplaced = false;
         if (nose == null)
         {
             nose = GetComponentInChildren<Nose>();

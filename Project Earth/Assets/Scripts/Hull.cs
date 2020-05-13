@@ -5,10 +5,10 @@ using UnityEngine;
 public class Hull : MonoBehaviour
 {
     public ShipExporter exporter;
-    public int maxHp = 100;
-    public int hp;
-    public int capacity = 10;
-    public int junkCollected = 0;
+    public float maxHp = 100;
+    public float hp;
+    public float capacity = 10;
+    public float junkCollected = 0;
 
     void Start()
     {
@@ -20,10 +20,16 @@ public class Hull : MonoBehaviour
         {
             exporter = FindObjectOfType<ShipExporter>();
             exporter.init();
+
+            Vector3 pos = exporter.transform.position;
+            pos.x = 0;
+            exporter.transform.position = pos;
+
             Shootup shootUp = GameObject.Find("ship").GetComponent<Shootup>();
             Debug.Log(exporter);
             Debug.Log(exporter.nose);
             Debug.Log(exporter.nose.capacity);
+
             Vector3 posNose = exporter.nose.transform.position;
             posNose.x = 0;
             exporter.nose.transform.position = posNose;

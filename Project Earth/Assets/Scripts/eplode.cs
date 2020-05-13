@@ -27,12 +27,22 @@ public class eplode : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.transform.CompareTag("asteroid"))
+        if (collision.transform.CompareTag("asteroid") || collision.gameObject.GetComponent<ChildJunk>())
         {
-            hull.hp -= (int)Random.Range(1,10);
+            if (collision.gameObject.GetComponent<ChildJunk>()) hull.hp -= 0.25f;
+            else hull.hp -= (int)Random.Range(1,10);
             Vector3 direction = (transform.position- collision.gameObject.transform.position);
             GameObject explosionObj = GameObject.Instantiate(explosion, transform.position, transform.rotation);
             GetComponent<Rigidbody>().AddExplosionForce(0.1f, transform.position, 1, 1, ForceMode.Impulse);
+        }
+        if(collision.gameObject.GetComponent<Junk>())
+        {
+            hull.hp -= (int)Random.Range(1, 10);
+            Vector3 direction = (transform.position - collision.gameObject.transform.position);
+            GameObject explosionObj = GameObject.Instantiate(explosion, transform.position, transform.rotation);
+            GetComponent<Rigidbody>().AddExplosionForce(0.1f, transform.position, 1, 1, ForceMode.Impulse);
+            collision.gameObject.GetComponent<Junk>().Explode();
+            Destroy(collision.gameObject);
         }
     }
 }

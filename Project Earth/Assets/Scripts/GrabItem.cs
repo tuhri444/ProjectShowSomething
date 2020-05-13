@@ -36,7 +36,8 @@ public class GrabItem : MonoBehaviour
             if (info.IsTag("de"))
             {
                 GameObject item = grabSlot[0];
-                hull.junkCollected++;
+                if (item.GetComponent<ChildJunk>()) hull.junkCollected += 0.25f;
+                else hull.junkCollected++;
                 grabSlot.Clear();
                 Destroy(item);
             }
