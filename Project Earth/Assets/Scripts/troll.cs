@@ -27,7 +27,7 @@ public class troll : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(4);
         }
     }
 }
