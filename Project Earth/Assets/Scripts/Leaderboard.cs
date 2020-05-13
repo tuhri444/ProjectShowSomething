@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Leaderboard : MonoBehaviour
@@ -9,71 +10,70 @@ public class Leaderboard : MonoBehaviour
     public GameManager gameManager;
     private List<GameObject> leaderboardSlots;
     private Dictionary<string,int> leaderboardScores = new Dictionary<string, int>();
-    private List<string> names = new List<string>();
-    List<int> scores = new List<int>();
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         leaderboardSlots = new List<GameObject>();
         for (int i = 0; i < 5; i++)
         {
             GameObject slot = Instantiate(leaderboardSlotPrefab, transform);
             leaderboardSlots.Add(slot);
         }
+
+        leaderboardScores.Add("Fynn", 400);
+        gameManager.names.Add("Fynn");
+
+        leaderboardScores.Add("Rowan", 100);
+        gameManager.names.Add("Rowan");
+
+        leaderboardScores.Add("Jason", 200);
+        gameManager.names.Add("Jason");
+
+        leaderboardScores.Add("Arjen", 300);
+        gameManager.names.Add("Arjen");
+
+        SortDictionary(leaderboardScores);
+
+        gameManager.saveScores(leaderboardScores);
+
+        leaderboardScores.Clear();
+        leaderboardScores = gameManager.loadScores();
+
+        for (int i = 0; i < leaderboardScores.Count; i++)
+        {
+            Debug.Log("Names: "+gameManager.names[i]+" Leaderboard score: " + leaderboardScores[gameManager.names[i]]);
+        }
+
+        gameManager.names.Add(gameManager.Name);
+        leaderboardScores.Add(gameManager.Name, gameManager.GetScore());
+        gameManager.saveScores(leaderboardScores);
+
+        for (int i = 0; i < leaderboardScores.Count; i++)
+        {
+            ScoreSlot slot = leaderboardSlots[i].GetComponent<ScoreSlot>();
+            slot.Name.text = gameManager.names[i];
+            slot.Score.text = leaderboardScores[gameManager.names[i]] + "";
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (gameManager == null)
-        {
-            try
-            {
-                gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-                if (gameManager == null) return;
-                leaderboardScores = gameManager.loadScores();
-                for (int index = 0; index < scores.Count; index++)
-                {
-                    leaderboardScores.Add(gameManager.names[index], leaderboardScores[gameManager.names[index]]);
-                }
-            }
-            catch (Exception e)
-            {
-                Debug.Log(e.Message);
-                return;
-            }
-            for (int i = 0;i<leaderboardScores.Count;i++)
-            {
-                ScoreSlot slot = leaderboardSlots[i].GetComponent<ScoreSlot>();
-                slot.Name.text = gameManager.names[i];
-                slot.Score.text = leaderboardScores[gameManager.names[i]] + "";
-                i++;
-            }
-            gameManager.saveScores(leaderboardScores);
 
-        }
-       
     }
 
-    void sort(List<int> arr)
+    public void SortDictionary(Dictionary<string,int> scores)
     {
-        int n = arr.Count;
+        // Sorted by Value  
 
-        // One by one move boundary of unsorted subarray 
-        for (int i = 0; i < n - 1; i++)
+        Console.WriteLine("Sorted by Value");
+        Console.WriteLine("============="); 
+        leaderboardScores.Clear();
+        foreach (KeyValuePair<string, int> score in scores.OrderBy(key => key.Value))
         {
-            // Find the minimum element in unsorted array 
-            int min_idx = i;
-            for (int j = i + 1; j < n; j++)
-                if (arr[j] < arr[min_idx])
-                    min_idx = j;
-
-            // Swap the found minimum element with the first 
-            // element 
-            int temp = arr[min_idx];
-            arr[min_idx] = arr[i];
-            arr[i] = temp;
+            leaderboardScores.Add(score.Key,score.Value);
         }
-        
     }
+
 }

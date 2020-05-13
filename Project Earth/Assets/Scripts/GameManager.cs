@@ -8,7 +8,6 @@ public class GameManager : MonoBehaviour
     public int score;
     public string Name;
 
-    Dictionary<string,int> highscores;
     public List<string> names = new List<string>();
     public int rating;
     public string feedback;
@@ -31,9 +30,9 @@ public class GameManager : MonoBehaviour
 
     public void saveScores(Dictionary<string, int> _highscores)
     {
-        foreach (string names in _highscores.Keys)
+        for(int i = 0;i<_highscores.Count;i++)
         {
-            PlayerPrefs.SetInt(names, _highscores[names]);
+            PlayerPrefs.SetInt(names[i], _highscores[names[i]]);
         }
         PlayerPrefs.Save();
     }
