@@ -7,29 +7,41 @@ public class ShipMovement : MonoBehaviour
     //Serializable Fields
     [SerializeField]
     private float speed = 5;
+    [SerializeField]
+    private float rotationSpeed = 5;
+
+    [SerializeField]
+    private float linearDrag = 2.5f;
+
+    [SerializeField]
+    private float rotationalDrag = .05f;
 
     //Non-Serializable Fields
-    private Vector2 move = new Vector2();
-    private Rigidbody rigidbody;
+    private float verticalMove = 0;
+    private Vector3 rotationalMove = new Vector2();
+    private new Rigidbody rigidbody;
 
     // Start is called before the first frame update
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
+        rigidbody.drag = linearDrag;
+        rigidbody.angularDrag = rotationalDrag;
     }
 
     // Update is called once per frame
-    void LateUpdate()
+    void FixedUpdate()
     {
-        move = new Vector2(Input.GetAxis("Horizontal"),Input.GetAxis("Vertical"));
-        move *= 100*speed;
-        move *= Time.deltaTime;
-        rigidbody.AddForce(move);
+        rotationalMove = new Vector3(0, 0, Input.GetAxis("Horizontal"));
+        rotationalMove *= 10 * rotationSpeed;
+        rotationalMove *= Time.fixedDeltaTime;
+        transform.Rotate(-rotationalMove);
 
-        //if (Mathf.Abs(move.magnitude) < .1f)
-        //{
-        //    rigidbody.velocity = Vector3.Lerp(rigidbody.velocity, Vector3.zero, 5f);
-        //}
-        Debug.Log(rigidbody.velocity);
+        verticalMove = Input.GetAxis("Vertical");
+        verticalMove *= speed;
+        verticalMove *= Time.fixedDeltaTime;
+        rigidbody.AddForce(transform.up * verticalMove, ForceMode.Impulse);
+
+        Debug.Log(transform.up);
     }
 }

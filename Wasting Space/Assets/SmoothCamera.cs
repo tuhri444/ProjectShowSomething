@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class SmoothCamera : MonoBehaviour
 {
+    //Serializable Fields
     [SerializeField]
     private Transform target;
+
     [SerializeField]
     [Range(0, .5f)]
-    private float time = .1f;
-    [SerializeField]
-    private float range = 10;
+    private float smoothSpeed = .1f;
+
     [SerializeField]
     public Vector3 target_Offset;
 
+    //Non-Serializable Fields
     private Vector3 velocity = Vector3.zero;
     // Start is called before the first frame update
     void Start()
@@ -28,21 +30,10 @@ public class SmoothCamera : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        Vector2 diff = target.position - transform.position;
-        if (diff.magnitude < range)
-        {
-            // Define a target position above and behind the target transform
-            Vector3 targetPosition = target.TransformPoint(new Vector3(0, 0, -10));
+        Vector3 targetPosition = new Vector3(target.position.x,target.position.y,-10);
+        transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothSpeed);
 
-            // Smoothly move the camera towards that target position
-            transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, time);
-
-        }
-        else
-        {
-            transform.position = Vector3.Max(transform.position,new Vector3(target.position.x+diff.x,target.position.y+diff.y,-range));
-        }
     }
 }
