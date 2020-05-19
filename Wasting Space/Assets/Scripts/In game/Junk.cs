@@ -6,7 +6,7 @@ public class Junk : MonoBehaviour
 {
     private List<GameObject> BabyJunk;
     private float Worth;
-    private ParticleSystem Explosion;
+    private GameObject Explosion;
 
     /// <summary>
     /// Creates and returns a gameobject with junk script attached to it. Prefab should be only a 3D model. Nothing more, nothing less.
@@ -17,7 +17,7 @@ public class Junk : MonoBehaviour
     /// <param name="_isChild"></param>
     /// <param name="_amountOfChildren"></param>
     /// <returns></returns>
-    public static GameObject CreateJunk(GameObject _junkPrefab, ParticleSystem _explosionEffect, Vector3 _position, bool _isChild, float _worth = 1, int _amountOfChildren = 0)
+    public static GameObject CreateJunk(GameObject _junkPrefab, GameObject _explosionEffect, Vector3 _position, bool _isChild, float _worth = 1, int _amountOfChildren = 0)
     {
         GameObject JunkObject = Instantiate(_junkPrefab, _position, Quaternion.Euler(0,0,0));
 
@@ -32,7 +32,7 @@ public class Junk : MonoBehaviour
         if (!_isChild) junk.CreateChildren(_junkPrefab, _explosionEffect, _position,_amountOfChildren);
         return JunkObject;
     }
-    private void CreateChildren(GameObject _junkPrefab, ParticleSystem _explosionEffect, Vector3 _position, int _amount)
+    private void CreateChildren(GameObject _junkPrefab, GameObject _explosionEffect, Vector3 _position, int _amount)
     {
         float newWorth = Worth / _amount;
         for (int i = 0; i < _amount; i++)
