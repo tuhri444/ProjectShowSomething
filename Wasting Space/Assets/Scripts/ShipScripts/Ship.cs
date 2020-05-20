@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -30,7 +31,16 @@ public class Ship : MonoBehaviour
         {
             meshRenderer.enabled = true;
             capsuleCollider.enabled = true;
-            Destroy(FindObjectOfType<CustomShip>().gameObject);
+            try
+            {
+                if (FindObjectOfType<CustomShip>() != null)
+                {
+                    Destroy(FindObjectOfType<CustomShip>().gameObject);
+                }
+            } catch (Exception e)
+            {
+
+            }
             return;
         }
         for (int i = 0; i < transform.childCount; i++)
