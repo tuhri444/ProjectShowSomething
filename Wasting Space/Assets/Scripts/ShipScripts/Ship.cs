@@ -10,23 +10,49 @@ public class Ship : MonoBehaviour
 
     //Non-Serializable Fields
     private float health;
+    private GameObject[] shipParts;
+    private MeshRenderer meshRenderer;
+    private CapsuleCollider capsuleCollider;
+    private ShipSettings shipSettings;
     // Start is called before the first frame update
     private void Start()
     {
-        playerSettings = GameObject.Find("PlayerSettings").GetComponent<PlayerSettings>();
+        meshRenderer = GetComponent<MeshRenderer>();
+        meshRenderer.enabled = false;
+        capsuleCollider = GetComponent<CapsuleCollider>();
+        capsuleCollider.enabled = false;
+        playerSettings = FindObjectOfType<PlayerSettings>();
+        shipSettings = ShipSettings.Instance;
+        if (shipSettings != null)
+            shipParts = shipSettings.Parts;
+
+        if (shipParts == null || shipParts[1] == null)
+        {
+            meshRenderer.enabled = true;
+            capsuleCollider.enabled = true;
+            Destroy(FindObjectOfType<CustomShip>().gameObject);
+            return;
+        }
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            Instantiate(shipParts[i], transform.GetChild(i));
+        }
+
+        Destroy(FindObjectOfType<CustomShip>().gameObject);
     }
 
     // Update is called once per frame
-    private void Update()
+    public void Damage(int amount = 10)
     {
-        
+        health -= amount;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "RadarObject")
+        if (collision.gameObject.tag == "RadarObject")
         {
-            health-=10;
+            Debug.Log("Hit");
+            Damage(10);
         }
     }
 
