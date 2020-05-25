@@ -24,10 +24,11 @@ public class Cycler : MonoBehaviour
     {
         foreach (GameObject go in selections)
         {
-            go.SetActive(false);
+            if(go != selections[activeSeleciton])
+                go.SetActive(false);
         }
-
-        selections[activeSeleciton].SetActive(true);
+        if(!selections[activeSeleciton].active)
+            selections[activeSeleciton].SetActive(true);
     }
 
     public void Left()

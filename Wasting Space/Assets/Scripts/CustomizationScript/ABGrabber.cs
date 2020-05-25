@@ -5,14 +5,13 @@ using UnityEngine;
 public abstract class  ABGrabber : MonoBehaviour
 {
     [SerializeField]
-    private MeshCollider hitbox;
+    protected SphereCollider GrabCollider;
     [SerializeField]
     private int grabCapacity;
     [SerializeField]
     private float price;
 
     protected List<GameObject> Grabslots;
-    protected SphereCollider GrabCollider;
     [SerializeField] protected AnimatorStateInfo AnimationInfo;
     [SerializeField] protected Animator AnimController;
     protected Ship ship;
@@ -21,9 +20,9 @@ public abstract class  ABGrabber : MonoBehaviour
     public abstract void OnTriggerEnter(Collider other);
     public abstract void Run();
 
-    public MeshCollider Hitbox
+    public SphereCollider Hitbox
     {
-        get { return hitbox; }
+        get { return GrabCollider; }
     }
     public int GrabCapacity
     {
