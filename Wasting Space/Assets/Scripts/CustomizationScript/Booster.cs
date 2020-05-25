@@ -4,7 +4,25 @@ using UnityEngine;
 
 public class Booster : MonoBehaviour
 {
-    public float AccelerationSpeed;
-    public float RotationSpeed;
-    public float Price;
+    [SerializeField]
+    private float accelerationSpeed;
+    [SerializeField]
+    private float rototationSpeed;
+    [SerializeField]
+    private float price;
+
+    public float Acceleration
+    {
+        get { return accelerationSpeed; }
+    }
+
+    public float AngularAcceleration
+    {
+        get { return rototationSpeed; }
+    }
+
+    public float Price
+    {
+        get { return price; }
+    }
 }

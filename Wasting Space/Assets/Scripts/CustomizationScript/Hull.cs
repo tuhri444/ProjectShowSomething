@@ -4,7 +4,23 @@ using UnityEngine;
 
 public class Hull : MonoBehaviour
 {
-    public float Health;
-    public float Capacity;
-    public float Price;
+    [SerializeField]
+    private float health;
+    [SerializeField]
+    private float capacity;
+    [SerializeField]
+    private float price;
+
+    public float Health
+    {
+        get { return health; }
+    }
+    public float Capacity
+    {
+        get { return capacity; }
+    }
+    public float Price
+    { 
+        get { return price; } 
+    }
 }

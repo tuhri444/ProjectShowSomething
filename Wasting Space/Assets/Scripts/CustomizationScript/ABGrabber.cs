@@ -4,9 +4,12 @@ using UnityEngine;
 
 public abstract class  ABGrabber : MonoBehaviour
 {
-    public MeshCollider Hitbox;
-    public int GrabCapacity;
-    public float Price;
+    [SerializeField]
+    private MeshCollider hitbox;
+    [SerializeField]
+    private int grabCapacity;
+    [SerializeField]
+    private float price;
 
     protected List<GameObject> Grabslots;
     protected SphereCollider GrabCollider;
@@ -17,4 +20,17 @@ public abstract class  ABGrabber : MonoBehaviour
     public abstract void OnClick();
     public abstract void OnTriggerEnter(Collider other);
     public abstract void Run();
+
+    public MeshCollider Hitbox
+    {
+        get { return hitbox; }
+    }
+    public int GrabCapacity
+    {
+        get { return grabCapacity; }
+    }
+    public float Price
+    { 
+        get { return price; } 
+    }
 }
