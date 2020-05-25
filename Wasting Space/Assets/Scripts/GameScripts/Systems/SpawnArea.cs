@@ -44,11 +44,6 @@ public class SpawnArea : MonoBehaviour
         Spawn();
     }
 
-    void Update()
-    {
-
-    }
-
     private void Spawn()
     {
         Vector3 spawnLocation;
@@ -63,6 +58,7 @@ public class SpawnArea : MonoBehaviour
             startVelocity = new Vector3(Random.Range(-MaxSpawnVelocity, MaxSpawnVelocity), Random.Range(-MaxSpawnVelocity, MaxSpawnVelocity), 0);
 
             GameObject temp = Sattelite.CreateSattelite(SattelitePrefabs[randomPrefab], ExplosionPrefab, spawnLocation);
+            temp.transform.parent = this.transform;
             temp.transform.localScale = new Vector3(scale,scale,scale);
             temp.GetComponent<Rigidbody>().velocity = startVelocity;
             Sattelites.Add(temp.GetComponent<Sattelite>());
@@ -75,6 +71,7 @@ public class SpawnArea : MonoBehaviour
             startVelocity = new Vector3(Random.Range(-MaxSpawnVelocity, MaxSpawnVelocity), Random.Range(-MaxSpawnVelocity, MaxSpawnVelocity), 0);
 
             GameObject temp = Junk.CreateJunk(JunkPrefabs[randomPrefab], ExplosionPrefab, spawnLocation,false);
+            temp.transform.parent = this.transform;
             temp.transform.localScale = new Vector3(scale, scale, scale);
             temp.GetComponent<Rigidbody>().velocity = startVelocity;
             Junks.Add(temp.GetComponent<Junk>());
