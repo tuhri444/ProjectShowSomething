@@ -66,7 +66,12 @@ public class Ship : MonoBehaviour
         }
     }
 
-    public PlayerSettings Settings
+    public ShipSettings GetShipSettings
+    {
+        get { return shipSettings; }
+    }
+
+public PlayerSettings Settings
     {
         get { return playerSettings; }
     }

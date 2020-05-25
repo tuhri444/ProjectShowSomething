@@ -15,6 +15,8 @@ public class PlayerSettings : MonoBehaviour
     private float rotationalDrag = .05f;
 
     //Non-Serializable Fields
+    private float junkCollected = 0.0f;
+
 
     // Start is called before the first frame update
     void Start()
@@ -36,4 +38,6 @@ public class PlayerSettings : MonoBehaviour
     { get { return linearDrag; } }
     public float RotationalDrag
     { get { return rotationalDrag; } }
+
+    public float JunkCollected { get => junkCollected; set => junkCollected = value; }
 }
