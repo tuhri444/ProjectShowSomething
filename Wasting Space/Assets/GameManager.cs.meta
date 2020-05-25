@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: f93e90fca89a49b44bf8f8c7e77eebb7
+guid: fdaa1f7a243bb4445ac4987d0c90fd27
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - SpawnAreaPrefab: {fileID: 6948740680853983678, guid: 07a73bd5a61a26e4a8e91b221fe7967e,
-      type: 3}
-  - Ship: {instanceID: 0}
-  - Radar: {instanceID: 0}
-  - EventSystem: {instanceID: 0}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
