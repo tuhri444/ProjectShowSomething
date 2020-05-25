@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private GameObject Ship;
     [SerializeField] private GameObject Radar;
-    [SerializeField] private GameObject EventSystem;
+    [SerializeField] public EventSystem EventSystem;
 
     void Start()
     {

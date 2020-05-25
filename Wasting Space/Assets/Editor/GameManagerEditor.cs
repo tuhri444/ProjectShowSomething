@@ -15,10 +15,13 @@ public class GameManagerEditor : Editor
         myTarget.SpawnAreaPrefab = EditorGUILayout.ObjectField(myTarget.SpawnAreaPrefab, typeof(GameObject)) as GameObject;
         spawnAreaAmount = myTarget.SpawnAreas.Count;
 
+        if (myTarget.EventSystem == null) myTarget.EventSystem = myTarget.gameObject.AddComponent<EventSystem>();
+
         GUI.color = Color.green;
         if (GUILayout.Button("Create SpawnArea"))
         {
             GameObject temp = Instantiate(myTarget.SpawnAreaPrefab);
+            temp.transform.parent = myTarget.transform;
             myTarget.SpawnAreas.Add(temp.GetComponent<SpawnArea>());
         }
         GUI.color = Color.red;
