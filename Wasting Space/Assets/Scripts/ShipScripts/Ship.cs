@@ -11,7 +11,6 @@ public class Ship : MonoBehaviour
 
     //Non-Serializable Fields
     private float health;
-    private GameObject[] shipParts;
     private MeshRenderer meshRenderer;
     private CapsuleCollider capsuleCollider;
     private ShipSettings shipSettings;
@@ -23,35 +22,26 @@ public class Ship : MonoBehaviour
         capsuleCollider = GetComponent<CapsuleCollider>();
         capsuleCollider.enabled = false;
         playerSettings = FindObjectOfType<PlayerSettings>();
-        shipSettings = ShipSettings.Instance;
-        if (shipSettings != null)
-            shipParts = shipSettings.Parts;
 
-        if (shipParts == null || shipParts[1] == null)
+        try
+        {
+            string grabberName = PlayerPrefs.GetString("ActiveGrabber");
+            string hullName = PlayerPrefs.GetString("ActiveHull");
+            string boosterName = PlayerPrefs.GetString("ActiveBooster");
+            GameObject grabber = Resources.Load("Parts/Grabbers/" + grabberName) as GameObject;
+            GameObject hull = Resources.Load("Parts/Hulls/" + hullName) as GameObject;
+            GameObject booster = Resources.Load("Parts/Boosters/" + boosterName) as GameObject;
+            Instantiate(grabber, transform.GetChild(0));
+            Instantiate(hull, transform.GetChild(1));
+            Instantiate(booster, transform.GetChild(2));
+        }
+        catch (Exception e)
         {
             meshRenderer.enabled = true;
             capsuleCollider.enabled = true;
-            try
-            {
-                if (FindObjectOfType<CustomShip>() != null)
-                {
-                    Destroy(FindObjectOfType<CustomShip>().gameObject);
-                }
-            } catch (Exception e)
-            {
-
-            }
-            return;
         }
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            Instantiate(shipParts[i], transform.GetChild(i));
-        }
-
-        Destroy(FindObjectOfType<CustomShip>().gameObject);
     }
 
-    // Update is called once per frame
     public void Damage(int amount = 10)
     {
         health -= amount;

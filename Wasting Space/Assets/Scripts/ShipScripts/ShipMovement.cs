@@ -85,28 +85,9 @@ public class ShipMovement : MonoBehaviour
         if (movementDirection.sqrMagnitude > 0.1)
         {
             float angle = Mathf.Atan2(x, y) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(new Vector3(0, 0, -(angle-90))), Time.deltaTime * rotationSpeed);
-            rigidbody.AddForce(transform.up*speed*Time.deltaTime, ForceMode.Impulse);
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(new Vector3(0, 0, -(angle - 90))), Time.deltaTime * rotationSpeed);
+            rigidbody.AddForce(transform.up * speed * Time.deltaTime, ForceMode.Impulse);
         }
-        //if (x == 0f && y == 0f)
-        //{ // this statement allows it to recenter once the inputs are at zero 
-        //    Vector3 curRot = transform.localEulerAngles; // the object you are rotating
-        //    Vector3 homeRot;
-        //    if (curRot.y > 180f)
-        //    { // this section determines the direction it returns home 
-        //        Debug.Log(curRot.y);
-        //        homeRot = new Vector3(0f, 359.999f, 0f); //it doesnt return to perfect zero 
-        //    }
-        //    else
-        //    {                                                                      // otherwise it rotates wrong direction 
-        //        homeRot = Vector3.zero;
-        //    }
-        //    transform.localEulerAngles = Vector3.Slerp(curRot, homeRot, Time.deltaTime * 2);
-        //}
-        //else
-        //{
-        //     transform.localEulerAngles = new Vector3(0f, Mathf.Atan2(x, y) * 180 / Mathf.PI, 0f);// this does the actual rotaion according to inputs
-        //}
     }
     void VerticalMovement(float verticalValue)
     {
