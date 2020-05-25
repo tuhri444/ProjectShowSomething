@@ -7,10 +7,13 @@ public class ShipMovement : MonoBehaviour
     //Serializable Fields
     [SerializeField]
     private Joystick joystick;
+    [SerializeField]
+    private bool tankControls = false;
 
     //Non-Serializable Fields
     private new Rigidbody rigidbody;
     private PlayerSettings playerSettings;
+    private Camera mainCamera;
 
     private float verticalMove = 0;
     private Vector3 rotationalMove = new Vector2();
@@ -32,6 +35,7 @@ public class ShipMovement : MonoBehaviour
         rigidbody = GetComponent<Rigidbody>();
         rigidbody.drag = linearDrag;
         rigidbody.angularDrag = rotationalDrag;
+        mainCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
 
         UpdateStats();
     }
@@ -52,6 +56,7 @@ public class ShipMovement : MonoBehaviour
         {
             verticalInput = joystick.Vertical;
         }
+
         if(Mathf.Abs(Input.GetAxis("Horizontal")) > 0)
         {
             horizontalInput = Input.GetAxis("Horizontal"); 
@@ -60,10 +65,49 @@ public class ShipMovement : MonoBehaviour
         {
             horizontalInput = joystick.Horizontal;
         }
-        VerticalMovement(verticalInput);
-        RotationalMovement(new Vector3(0, 0, horizontalInput));  
+
+        if (!tankControls)
+        {
+            DirectionMove(new Vector3(verticalInput, -horizontalInput, 0));
+        }
+        else
+        {
+            VerticalMovement(verticalInput);
+            RotationalMovement(new Vector3(0, 0, horizontalInput));  
+        }
+
     }
 
+    void DirectionMove(Vector3 movementDirection)
+    {
+        float x = movementDirection.x;
+        float y = movementDirection.y;
+        if (movementDirection.sqrMagnitude > 0.1)
+        {
+            float angle = Mathf.Atan2(x, y) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(new Vector3(0, 0, -(angle-90))), Time.deltaTime * rotationSpeed);
+            rigidbody.AddForce(transform.up*speed*Time.deltaTime, ForceMode.Impulse);
+        }
+        //if (x == 0f && y == 0f)
+        //{ // this statement allows it to recenter once the inputs are at zero 
+        //    Vector3 curRot = transform.localEulerAngles; // the object you are rotating
+        //    Vector3 homeRot;
+        //    if (curRot.y > 180f)
+        //    { // this section determines the direction it returns home 
+        //        Debug.Log(curRot.y);
+        //        homeRot = new Vector3(0f, 359.999f, 0f); //it doesnt return to perfect zero 
+        //    }
+        //    else
+        //    {                                                                      // otherwise it rotates wrong direction 
+        //        homeRot = Vector3.zero;
+        //    }
+        //    transform.localEulerAngles = Vector3.Slerp(curRot, homeRot, Time.deltaTime * 2);
+        //}
+        //else
+        //{
+        //     transform.localEulerAngles = new Vector3(0f, Mathf.Atan2(x, y) * 180 / Mathf.PI, 0f);// this does the actual rotaion according to inputs
+        //}
+    }
     void VerticalMovement(float verticalValue)
     {
         verticalMove = verticalValue;
