@@ -24,8 +24,7 @@ public class ShortFastGrabber : ABGrabber
         if (other.gameObject.GetComponent<Junk>())
         {
             Junk otherJunk = other.gameObject.GetComponent<Junk>();
-            Hull hull = null;
-            hull = shipHull;
+            Hull hull = transform.parent.parent.GetChild(1).GetChild(0).GetComponent<Hull>();
 
             if (hull != null)
             {
@@ -45,7 +44,7 @@ public class ShortFastGrabber : ABGrabber
     public override void Run()
     {
         AnimationInfo = AnimController.GetCurrentAnimatorStateInfo(0);
-        GrabCollider.enabled = CheckColliderState();
+        GrabCollider.enabled = true/*CheckColliderState()*/;
 
         if (Grabslots.Count != 0 && ship.Settings.JunkCollected < shipHull.Capacity)
         {
@@ -91,6 +90,7 @@ public class ShortFastGrabber : ABGrabber
 
     void Start()
     {
+        ship = FindObjectOfType<Ship>();
         Hitbox.GetComponent<SphereCollider>().enabled = false;
         //GameObject hull = Resources.Load("Parts/Hulls/"+PlayerPrefs.GetString("ActiveHull")) as GameObject;
         Grabslots = new List<GameObject>();

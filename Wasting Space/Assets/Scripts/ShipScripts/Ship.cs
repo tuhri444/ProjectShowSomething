@@ -32,21 +32,21 @@ public class Ship : MonoBehaviour
             string grabberName = PlayerPrefs.GetString("ActiveGrabber");
             string hullName = PlayerPrefs.GetString("ActiveHull");
             string boosterName = PlayerPrefs.GetString("ActiveBooster");
-            grabber = Resources.Load("Parts/Grabbers/" + grabberName) as GameObject;
-            hull = Resources.Load("Parts/Hulls/" + hullName) as GameObject;
-            booster = Resources.Load("Parts/Boosters/" + boosterName) as GameObject;
-            Instantiate(grabber, transform.GetChild(0));
-            Instantiate(hull, transform.GetChild(1));
-            Instantiate(booster, transform.GetChild(2));
+            GameObject grabberPref = Resources.Load("Parts/Grabbers/" + grabberName) as GameObject;
+            GameObject hullPref = Resources.Load("Parts/Hulls/" + hullName) as GameObject;
+            GameObject boosterPref = Resources.Load("Parts/Boosters/" + boosterName) as GameObject;
+            grabber = Instantiate(grabberPref, transform.GetChild(0));
+             hull = Instantiate(hullPref, transform.GetChild(1));
+            booster = Instantiate(boosterPref, transform.GetChild(2));
+
+
+
         }
         catch (Exception e)
         {
             meshRenderer.enabled = true;
             capsuleCollider.enabled = true;
             Debug.Log(e.Message);
-            Debug.Log(grabber != null);
-            Debug.Log(hull != null);
-            Debug.Log(booster != null);
         }
     }
 
@@ -63,9 +63,6 @@ public class Ship : MonoBehaviour
             Damage(10);
         }
     }
-
-
-
 
     public ShipSettings GetShipSettings
     {

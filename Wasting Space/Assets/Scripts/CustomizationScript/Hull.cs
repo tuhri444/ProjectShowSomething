@@ -5,11 +5,11 @@ using UnityEngine;
 public class Hull : MonoBehaviour
 {
     [SerializeField]
-    private float health;
+    private float health=0;
     [SerializeField]
-    private float capacity;
+    private float capacity=0;
     [SerializeField]
-    private float price;
+    private float price=0;
 
     public float Health
     {

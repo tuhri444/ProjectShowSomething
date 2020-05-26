@@ -1287,7 +1287,7 @@ PrefabInstance:
     - target: {fileID: 4979318941632955853, guid: 701717e180b17104e90a01deb5313035,
         type: 3}
       propertyPath: tankControls
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4979318941632955856, guid: 701717e180b17104e90a01deb5313035,
         type: 3}

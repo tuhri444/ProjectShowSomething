@@ -5,7 +5,7 @@ using UnityEngine;
 public class Junk : MonoBehaviour
 {
     private List<GameObject> BabyJunk;
-    private float Worth;
+    private float Worth = 100;
     private GameObject Explosion;
 
     /// <summary>
