@@ -14,6 +14,9 @@ public class Ship : MonoBehaviour
     private MeshRenderer meshRenderer;
     private CapsuleCollider capsuleCollider;
     private ShipSettings shipSettings;
+    private GameObject grabber;
+    private GameObject hull;
+    private GameObject booster;
     // Start is called before the first frame update
     private void Start()
     {
@@ -28,9 +31,9 @@ public class Ship : MonoBehaviour
             string grabberName = PlayerPrefs.GetString("ActiveGrabber");
             string hullName = PlayerPrefs.GetString("ActiveHull");
             string boosterName = PlayerPrefs.GetString("ActiveBooster");
-            GameObject grabber = Resources.Load("Parts/Grabbers/" + grabberName) as GameObject;
-            GameObject hull = Resources.Load("Parts/Hulls/" + hullName) as GameObject;
-            GameObject booster = Resources.Load("Parts/Boosters/" + boosterName) as GameObject;
+            grabber = Resources.Load("Parts/Grabbers/" + grabberName) as GameObject;
+            hull = Resources.Load("Parts/Hulls/" + hullName) as GameObject;
+            booster = Resources.Load("Parts/Boosters/" + boosterName) as GameObject;
             Instantiate(grabber, transform.GetChild(0));
             Instantiate(hull, transform.GetChild(1));
             Instantiate(booster, transform.GetChild(2));
@@ -39,6 +42,10 @@ public class Ship : MonoBehaviour
         {
             meshRenderer.enabled = true;
             capsuleCollider.enabled = true;
+            Debug.Log(e.Message);
+            Debug.Log(grabber != null);
+            Debug.Log(hull != null);
+            Debug.Log(booster != null);
         }
     }
 
@@ -61,7 +68,7 @@ public class Ship : MonoBehaviour
         get { return shipSettings; }
     }
 
-public PlayerSettings Settings
+    public PlayerSettings Settings
     {
         get { return playerSettings; }
     }

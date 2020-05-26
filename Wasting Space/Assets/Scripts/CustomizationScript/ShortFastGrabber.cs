@@ -96,7 +96,8 @@ public class ShortFastGrabber : ABGrabber
 
     void Start()
     {
-        shipHull = ship.GetShipSettings.Parts[0].GetComponent<Hull>();
+        GameObject hull = Resources.Load("Parts/Hulls/"+PlayerPrefs.GetString("ActiveHull")) as GameObject;
+        shipHull = hull.GetComponent<Hull>();
         Grabslots = new List<GameObject>();
     }
 
