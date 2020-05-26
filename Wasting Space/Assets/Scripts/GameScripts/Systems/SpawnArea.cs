@@ -7,7 +7,7 @@ using UnityEditor;
 public class SpawnArea : MonoBehaviour
 {
     [SerializeField] private float SpawnCap;
-    [Range(0.0f, 100.0f)] [SerializeField] private float JunkSatteliteRatio;
+    [Range(0.0f, 100.0f)] [SerializeField] private float SatteliteJunkRatio;
     [Range(0.0f, 100.0f)] [SerializeField] private float MaxSpawnVelocity;
     [Range(0.0f, 5.0f)] [SerializeField] private float JunkScaleModifier;
     [Range(0.0f, 5.0f)] [SerializeField] private float SatteliteScaleModifier;
@@ -38,8 +38,8 @@ public class SpawnArea : MonoBehaviour
         TopLeft = new Vector2(transform.position.x - Size.x * 0.5f, transform.position.y - Size.y * 0.5f);
         BottomRight = new Vector2(transform.position.x + Size.x * 0.5f, transform.position.y + Size.y * 0.5f);
 
-        SatteliteToSpawn = Mathf.RoundToInt(SpawnCap / 100 * (100.0f - JunkSatteliteRatio));
-        JunkToSpawn = Mathf.RoundToInt(SpawnCap / 100 * JunkSatteliteRatio);
+        SatteliteToSpawn = Mathf.RoundToInt(SpawnCap / 100 * (100.0f - SatteliteJunkRatio));
+        JunkToSpawn = Mathf.RoundToInt(SpawnCap / 100 * SatteliteJunkRatio);
 
         Spawn();
     }

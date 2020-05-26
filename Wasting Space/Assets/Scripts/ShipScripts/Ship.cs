@@ -25,6 +25,7 @@ public class Ship : MonoBehaviour
         capsuleCollider = GetComponent<CapsuleCollider>();
         capsuleCollider.enabled = false;
         playerSettings = FindObjectOfType<PlayerSettings>();
+        
 
         try
         {
@@ -63,6 +64,9 @@ public class Ship : MonoBehaviour
         }
     }
 
+
+
+
     public ShipSettings GetShipSettings
     {
         get { return shipSettings; }
@@ -72,4 +76,8 @@ public class Ship : MonoBehaviour
     {
         get { return playerSettings; }
     }
+
+    public GameObject Grabber { get => grabber;}
+    public GameObject Hull { get => hull;}
+    public GameObject Booster { get => booster;}
 }

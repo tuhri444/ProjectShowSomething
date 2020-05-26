@@ -22,23 +22,32 @@ public class EventSystem : MonoBehaviour
 
     private void InitializeEvents()
     {
-        foreach (WorldEvent worldEvent in Events)
+        if (Events != null)
         {
-            worldEvent.Init();
+            foreach (WorldEvent worldEvent in Events)
+            {
+                worldEvent.Init();
+            }
         }
     }
     private void UpdateEvents()
     {
-        foreach (WorldEvent worldEvent in Events)
+        if (Events != null)
         {
-            worldEvent.Timer();
+            foreach (WorldEvent worldEvent in Events)
+            {
+                worldEvent.Timer();
+            }
         }
     }
     private void CheckEvents()
     {
-        foreach (WorldEvent worldEvent in Events)
+        if (Events != null)
         {
-            if (worldEvent.CheckCondition()) ActiveEvent(worldEvent);
+            foreach (WorldEvent worldEvent in Events)
+            {
+                if (worldEvent.CheckCondition()) ActiveEvent(worldEvent);
+            }
         }
     }
     private void ActiveEvent(WorldEvent _eventToActivate)
