@@ -11,49 +11,45 @@ public class ShortFastGrabber : ABGrabber
 
     public override void OnClick()
     {
-        if (AnimationInfo.IsTag(animationTagResting) && !AnimController.IsInTransition(0))
-        {
-            AnimController.SetTrigger(animationNameExtend);
-        }
-        else if (AnimationInfo.IsTag(animationTagExtended) && !AnimController.IsInTransition(0))
-        {
-            AnimController.SetTrigger(animationNameDextend);
-        }
+    //    if (AnimationInfo.IsTag(animationTagResting) && !AnimController.IsInTransition(0))
+    //    {
+    //        AnimController.SetTrigger(animationNameExtend);
+    //    }
     }
 
     public override void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.GetComponent<Junk>())
-        {
-            Junk otherJunk = other.gameObject.GetComponent<Junk>();
-            Hull hull = null;
-            for (int i = 0; i < ship.GetShipSettings.Parts.Length; i++)
-            {
-                GameObject part = ship.GetShipSettings.Parts[i];
-                if (part.GetComponent<Hull>())
-                {
-                    hull = part.GetComponent<Hull>();
-                }
-                else hull = null;
-            }
-            if(hull !=null)
-            {
-                if (ship.Settings.JunkCollected + otherJunk.GetWorth() <= hull.Capacity)
-                {
-                    Grabslots.Add(other.gameObject);
-                }
-            }
-            else
-            {
-                throw new System.Exception("Ok so none of the parts actually have a hull script");
-            }
-        }
+        //if (other.gameObject.GetComponent<Junk>())
+        //{
+        //    Junk otherJunk = other.gameObject.GetComponent<Junk>();
+        //    Hull hull = null;
+        //    for (int i = 0; i < ship.GetShipSettings.Parts.Length; i++)
+        //    {
+        //        GameObject part = ship.GetShipSettings.Parts[i];
+        //        if (part.GetComponent<Hull>())
+        //        {
+        //            hull = part.GetComponent<Hull>();
+        //        }
+        //        else hull = null;
+        //    }
+        //    if(hull !=null)
+        //    {
+        //        if (ship.Settings.JunkCollected + otherJunk.GetWorth() <= hull.Capacity)
+        //        {
+        //            Grabslots.Add(other.gameObject);
+        //        }
+        //    }
+        //    else
+        //    {
+        //        throw new System.Exception("Ok so none of the parts actually have a hull script");
+        //    }
+        //}
     }
 
     public override void Run()
     {
-        AnimationInfo = AnimController.GetCurrentAnimatorStateInfo(0);
-        GrabCollider.enabled = CheckColliderState();
+        //AnimationInfo = AnimController.GetCurrentAnimatorStateInfo(0);
+        //GrabCollider.enabled = CheckColliderState();
         
     }
 
@@ -75,6 +71,6 @@ public class ShortFastGrabber : ABGrabber
     // Update is called once per frame
     void Update()
     {
-        
+        //if(AnimationI)
     }
 }
