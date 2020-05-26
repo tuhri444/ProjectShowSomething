@@ -1,16 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [SerializeField]
 public class CustomShip : MonoBehaviour
 {
     //Serializable Fields
     [SerializeField]
-    private GameObject[] activeParts = new GameObject[3];
+    private Cycler[] cyclers = new Cycler[3];
 
     //Non-Serializable Fields
-    private Cycler[] cyclers = new Cycler[3];
+
 
     // Start is called before the first frame update
     private void Start()
