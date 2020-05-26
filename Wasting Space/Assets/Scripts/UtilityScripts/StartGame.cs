@@ -6,6 +6,7 @@ using TMPro;
 using UnityEngine.SceneManagement;
 public class StartGame : MonoBehaviour
 {
+    [SerializeField]
     private TMP_InputField nameInput;
 
     public void OnClick()

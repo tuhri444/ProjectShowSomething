@@ -5,6 +5,9 @@ using UnityEngine;
 public class PopulateLeaderboard : MonoBehaviour
 {
     [SerializeField]
+    private List<GameObject> leaderboardSlots = new List<GameObject>();
+
+    [SerializeField]
     private GameObject LeaderboardSlotPrefab;
     // Start is called before the first frame update
     void Start()
@@ -20,7 +23,14 @@ public class PopulateLeaderboard : MonoBehaviour
             temp.GetComponent<LeaderboardSlot>().Rank = i+1;
             temp.GetComponent<LeaderboardSlot>().Name = name;
             temp.GetComponent<LeaderboardSlot>().Score = score;
+            leaderboardSlots.Add(temp);
         }
+
+        foreach(GameObject go in leaderboardSlots)
+        {
+            go.
+        }
+
     }
 
     // Update is called once per frame
