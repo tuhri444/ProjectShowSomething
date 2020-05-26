@@ -17,7 +17,7 @@ public abstract class  ABGrabber : MonoBehaviour
     protected Ship ship;
 
     public abstract void OnClick();
-    public abstract void OnTriggerEnter(Collider other);
+    public abstract void Trigger(Collider other);
     public abstract void Run();
 
     public SphereCollider Hitbox

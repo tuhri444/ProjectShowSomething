@@ -14,35 +14,30 @@ public class ShortFastGrabber : ABGrabber
     {
         if (AnimationInfo.IsTag(animationTagResting) && !AnimController.IsInTransition(0))
         {
+            Hitbox.GetComponent<SphereCollider>().enabled = true;
             AnimController.SetTrigger(animationNameExtend);
         }
     }
 
-    public override void OnTriggerEnter(Collider other)
+    public override void Trigger(Collider other)
     {
         if (other.gameObject.GetComponent<Junk>())
         {
             Junk otherJunk = other.gameObject.GetComponent<Junk>();
             Hull hull = null;
-            for (int i = 0; i < ship.GetShipSettings.Parts.Length; i++)
-            {
-                GameObject part = ship.GetShipSettings.Parts[i];
-                if (part.GetComponent<Hull>())
-                {
-                    hull = part.GetComponent<Hull>();
-                }
-                else hull = null;
-            }
+            hull = shipHull;
+
             if (hull != null)
             {
                 if (ship.Settings.JunkCollected + otherJunk.GetWorth() <= hull.Capacity)
                 {
+                    //Hitbox.GetComponent<SphereCollider>().enabled = false;
                     Grabslots.Add(other.gameObject);
                 }
             }
             else
             {
-                throw new System.Exception("Ok so none of the parts actually have a hull script");
+                //throw new System.Exception("Ok so none of the parts actually have a hull script");
             }
         }
     }
@@ -96,13 +91,16 @@ public class ShortFastGrabber : ABGrabber
 
     void Start()
     {
-        GameObject hull = Resources.Load("Parts/Hulls/"+PlayerPrefs.GetString("ActiveHull")) as GameObject;
-        shipHull = hull.GetComponent<Hull>();
+        Hitbox.GetComponent<SphereCollider>().enabled = false;
+        //GameObject hull = Resources.Load("Parts/Hulls/"+PlayerPrefs.GetString("ActiveHull")) as GameObject;
         Grabslots = new List<GameObject>();
     }
 
     void Update()
     {
-        Run();
+        if (shipHull == null)
+            shipHull = FindObjectOfType<Hull>();
+        else
+            Run();
     }
 }

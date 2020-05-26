@@ -26,7 +26,8 @@ public class ShipSettings : MonoBehaviour
 
     private void Update()
     {
-        LoadResources();
+        if(parts[0] == null || parts[1] == null  || parts[2] == null )
+            LoadResources();
     }
 
     void LoadResources()
