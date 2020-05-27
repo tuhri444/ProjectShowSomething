@@ -28,7 +28,7 @@ public class PopulateLeaderboard : MonoBehaviour
 
         foreach(GameObject go in leaderboardSlots)
         {
-            go.
+            //go.
         }
 
     }

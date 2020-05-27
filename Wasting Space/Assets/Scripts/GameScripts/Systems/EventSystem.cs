@@ -5,9 +5,10 @@ using UnityEngine;
 [System.Serializable]
 public class EventSystem : MonoBehaviour
 {
-    [SerializeField] private List<WorldEvent> Events;
+    [SerializeField] private List<WorldEvent> events;
     [SerializeField] private List<GameObject> prefabs;
     public List<GameObject> Prefabs { get => prefabs;}
+    public List<WorldEvent> Events { get => events;}
 
     private void Start()
     {

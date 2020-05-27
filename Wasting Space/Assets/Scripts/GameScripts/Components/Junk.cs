@@ -5,7 +5,7 @@ using UnityEngine;
 public class Junk : MonoBehaviour
 {
     private List<GameObject> BabyJunk;
-    private float Worth = 100;
+    private float Worth = 1;
     private GameObject Explosion;
 
     /// <summary>
@@ -32,6 +32,7 @@ public class Junk : MonoBehaviour
         if (!_isChild) junk.CreateChildren(_junkPrefab, _explosionEffect, _position,_amountOfChildren);
         return JunkObject;
     }
+
     private void CreateChildren(GameObject _junkPrefab, GameObject _explosionEffect, Vector3 _position, int _amount)
     {
         float newWorth = Worth / _amount;

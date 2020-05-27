@@ -5,6 +5,13 @@ using UnityEngine;
 public class TriggerActivation : MonoBehaviour
 {
     ShortFastGrabber parentScript;
+
+    private void Start()
+    {
+        var rb = gameObject.AddComponent<Rigidbody>();
+        rb.isKinematic = true;
+    }
+
     void Update()
     {
         if (parentScript == null)

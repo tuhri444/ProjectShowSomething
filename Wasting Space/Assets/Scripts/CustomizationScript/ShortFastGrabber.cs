@@ -28,9 +28,9 @@ public class ShortFastGrabber : ABGrabber
 
             if (hull != null)
             {
-                if (ship.Settings.JunkCollected + otherJunk.GetWorth() <= hull.Capacity)
+                if (ship.Settings.JunkCollected + otherJunk.GetWorth() <= hull.Capacity && Grabslots.Count == 0)
                 {
-                    //Hitbox.GetComponent<SphereCollider>().enabled = false;
+                    Hitbox.GetComponent<SphereCollider>().enabled = false;
                     Grabslots.Add(other.gameObject);
                 }
             }
@@ -44,11 +44,11 @@ public class ShortFastGrabber : ABGrabber
     public override void Run()
     {
         AnimationInfo = AnimController.GetCurrentAnimatorStateInfo(0);
-        GrabCollider.enabled = true/*CheckColliderState()*/;
+        GrabCollider.enabled = CheckColliderState();
 
         if (Grabslots.Count != 0 && ship.Settings.JunkCollected < shipHull.Capacity)
         {
-            if(AnimationInfo.IsTag("de"))
+            if(AnimationInfo.IsTag("re"))
             {
                 CollectJunk();
             }
@@ -81,7 +81,7 @@ public class ShortFastGrabber : ABGrabber
 
     private bool CheckColliderState()
     {
-        if (AnimationInfo.IsTag(animationNameExtend) && !AnimController.IsInTransition(0))
+        if (AnimationInfo.IsTag(animationTagExtended))
         {
             return true;
         }
