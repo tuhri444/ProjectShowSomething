@@ -41,25 +41,28 @@ public class Radar : MonoBehaviour
         }
         foreach (GameObject go in radarObjects)
         {
-            if (radarUI.ContainsKey(go))
+            if (go != null)
             {
-                radarUI[go].rectTransform.position = new Vector3(go.transform.position.x, go.transform.position.y, -1);
-            }
-            else
-            {
-                GameObject image = Instantiate(radarSprite, canvas.transform);
-                image.layer = 8;
-                Vector3 uiPos = go.transform.localPosition;
-                radarUI[go] = image.GetComponent<RawImage>();
-                radarUI[go].rectTransform.position = new Vector3(uiPos.x, uiPos.y, -1);
-
-                if (go.name == "Ship")
+                if (radarUI.ContainsKey(go))
                 {
-                    radarUI[go].color = new Color(0, 255, 0);
+                    radarUI[go].rectTransform.position = new Vector3(go.transform.position.x, go.transform.position.y, -1);
                 }
                 else
                 {
-                    radarUI[go].color = new Color(255, 0, 0);
+                    GameObject image = Instantiate(radarSprite, canvas.transform);
+                    image.layer = 8;
+                    Vector3 uiPos = go.transform.localPosition;
+                    radarUI[go] = image.GetComponent<RawImage>();
+                    radarUI[go].rectTransform.position = new Vector3(uiPos.x, uiPos.y, -1);
+
+                    if (go.name == "Ship")
+                    {
+                        radarUI[go].color = new Color(0, 255, 0);
+                    }
+                    else
+                    {
+                        radarUI[go].color = new Color(255, 0, 0);
+                    }
                 }
             }
         }
