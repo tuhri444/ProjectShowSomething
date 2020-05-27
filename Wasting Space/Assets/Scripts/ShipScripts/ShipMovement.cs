@@ -30,7 +30,7 @@ public class ShipMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerSettings = GetComponent<Ship>().Settings;
+        playerSettings = FindObjectOfType<PlayerSettings>();
 
         rigidbody = GetComponent<Rigidbody>();
         rigidbody.drag = linearDrag;
