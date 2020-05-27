@@ -8,15 +8,18 @@ public class Ship : MonoBehaviour
     //Serializable Fields
     [SerializeField]
     private PlayerSettings playerSettings;
+    [SerializeField]
+    private Healthbar healthBar;
 
     //Non-Serializable Fields
-    private float health;
+    private float health = 100;
     private MeshRenderer meshRenderer;
     private CapsuleCollider capsuleCollider;
     private ShipSettings shipSettings;
     private GameObject grabber;
     private GameObject hull;
     private GameObject booster;
+    
     // Start is called before the first frame update
     private void Start()
     {
@@ -25,7 +28,7 @@ public class Ship : MonoBehaviour
         capsuleCollider = GetComponent<CapsuleCollider>();
         capsuleCollider.enabled = false;
         playerSettings = FindObjectOfType<PlayerSettings>();
-        
+        healthBar = FindObjectOfType<Healthbar>();
 
         try
         {
@@ -47,6 +50,17 @@ public class Ship : MonoBehaviour
             meshRenderer.enabled = true;
             capsuleCollider.enabled = true;
             Debug.Log(e.Message);
+            Debug.Log("There where no parts selected");
+        }
+        health = healthBar.MaxHealth;
+    }
+
+    public void Update()
+    {
+        healthBar.Health = health;
+        if(health <= 0)
+        {
+            Destroy(gameObject);
         }
     }
 

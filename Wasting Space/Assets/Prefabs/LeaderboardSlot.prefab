@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 266969354482691896}
   - component: {fileID: 266969354482691898}
-  - component: {fileID: 266969354482691897}
   - component: {fileID: 1620426749}
+  - component: {fileID: 2189553935462476515}
   m_Layer: 5
   m_Name: LeaderboardSlot
   m_TagString: Untagged
@@ -49,33 +49,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 266969354482691903}
   m_CullTransparentMesh: 0
---- !u!114 &266969354482691897
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 266969354482691903}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Texture: {fileID: 6192944022281365145, guid: ec5a6b14071f4d8408785ff376b9f178,
-    type: 3}
-  m_UVRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
 --- !u!114 &1620426749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88,6 +61,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6643ecba89b45a74c812a91ad06026de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2189553935462476515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 266969354482691903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef8b96895a0ec4ba685178a052544251, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 3286163911610860551, guid: ec5a6b14071f4d8408785ff376b9f178,
+    type: 3}
+  m_PreserveAspect: 0
 --- !u!1 &266969354517747011
 GameObject:
   m_ObjectHideFlags: 0

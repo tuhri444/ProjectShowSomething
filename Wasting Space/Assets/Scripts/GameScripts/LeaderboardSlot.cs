@@ -9,7 +9,7 @@ public class LeaderboardSlot : MonoBehaviour
 
     private float rank;
     private string name;
-    private int score;
+    private string score;
 
     private GameObject nameText;
     private GameObject rankText;
@@ -17,16 +17,15 @@ public class LeaderboardSlot : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        rankText = transform.GetChild(0).gameObject;
+        nameText = transform.GetChild(1).gameObject;
+        scoreText = transform.GetChild(2).gameObject;
+
         nameText.GetComponent<TMP_Text>().text = name;
         rankText.GetComponent <TMP_Text>().text = rank + "";
         scoreText.GetComponent<TMP_Text>().text = score + "";
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     public float Rank
     {
@@ -40,7 +39,7 @@ public class LeaderboardSlot : MonoBehaviour
         set { name = value; }
     }
 
-    public int Score
+    public string Score
     {
         get { return score; }
         set { score = value; }

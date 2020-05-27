@@ -32,4 +32,10 @@ public class Healthbar : MonoBehaviour
         set { health = value; }
     }
 
+    public float MaxHealth
+    {
+        get { return maxHealth; }
+        set { maxHealth = value; }
+    }
+
 }
