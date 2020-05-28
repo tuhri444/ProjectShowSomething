@@ -10,6 +10,8 @@ public class TriggerActivation : MonoBehaviour
     {
         var rb = gameObject.AddComponent<Rigidbody>();
         rb.isKinematic = true;
+        if (parentScript == null)
+            parentScript = FindObjectOfType<ShortFastGrabber>();
     }
 
     void Update()
@@ -20,6 +22,7 @@ public class TriggerActivation : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        parentScript.Trigger(other);
+        if(parentScript!=null)
+            parentScript.Trigger(other);
     }
 }

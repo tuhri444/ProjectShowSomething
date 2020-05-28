@@ -26,6 +26,7 @@ public class ShipMovement : MonoBehaviour
     private float linearDrag = 2.5f;
     private float rotationalDrag = .05f;
 
+    public bool EnableMovement = true;
 
     // Start is called before the first frame update
     void Start()
@@ -48,34 +49,36 @@ public class ShipMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(Mathf.Abs(Input.GetAxis("Vertical")) > 0)
+        if (EnableMovement)
         {
-            verticalInput = Input.GetAxis("Vertical");
-        }
-        else if(joystick != null)
-        {
-            verticalInput = joystick.Vertical;
-        }
+            if (Mathf.Abs(Input.GetAxis("Vertical")) > 0)
+            {
+                verticalInput = Input.GetAxis("Vertical");
+            }
+            else if (joystick != null)
+            {
+                verticalInput = joystick.Vertical;
+            }
 
-        if(Mathf.Abs(Input.GetAxis("Horizontal")) > 0)
-        {
-            horizontalInput = Input.GetAxis("Horizontal"); 
-        }
-        else if (joystick != null)
-        {
-            horizontalInput = joystick.Horizontal;
-        }
+            if (Mathf.Abs(Input.GetAxis("Horizontal")) > 0)
+            {
+                horizontalInput = Input.GetAxis("Horizontal");
+            }
+            else if (joystick != null)
+            {
+                horizontalInput = joystick.Horizontal;
+            }
 
-        if (!tankControls)
-        {
-            DirectionMove(new Vector3(verticalInput, -horizontalInput, 0));
+            if (!tankControls)
+            {
+                DirectionMove(new Vector3(verticalInput, -horizontalInput, 0));
+            }
+            else
+            {
+                VerticalMovement(verticalInput);
+                RotationalMovement(new Vector3(0, 0, horizontalInput));
+            }
         }
-        else
-        {
-            VerticalMovement(verticalInput);
-            RotationalMovement(new Vector3(0, 0, horizontalInput));  
-        }
-
     }
 
     void DirectionMove(Vector3 movementDirection)
