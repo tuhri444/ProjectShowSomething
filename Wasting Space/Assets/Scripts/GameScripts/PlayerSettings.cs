@@ -16,7 +16,9 @@ public class PlayerSettings : MonoBehaviour
 
     //Non-Serializable Fields
     private float junkCollected = 0.0f;
+    private float internalJunkCollected = 0.0f;
 
+    private Hull hull;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +29,9 @@ public class PlayerSettings : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (hull == null) hull = FindObjectOfType<Hull>();
+        else internalJunkCollected = Mathf.Clamp(internalJunkCollected, 0.0f, hull.Capacity);
 
     }
 
@@ -40,4 +45,5 @@ public class PlayerSettings : MonoBehaviour
     { get { return rotationalDrag; } }
 
     public float JunkCollected { get => junkCollected; set => junkCollected = value; }
+    public float InternalJunkCollected { get => internalJunkCollected; set => internalJunkCollected = value; }
 }

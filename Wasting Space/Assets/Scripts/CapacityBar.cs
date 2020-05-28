@@ -7,27 +7,30 @@ public class CapacityBar : MonoBehaviour
 
     //Serializable Fields
     [SerializeField]
-    private int freeSpace = 50;
-    [SerializeField]
-    private int maxCapacity = 50;
+    private float freeSpace = 50;
 
     //Non-Serializable Fields
     private Slider slider;
     private PlayerSettings playerSettings;
+    private Hull hull;
 
 
     void Start()
     {
         slider = GetComponent<Slider>();
         playerSettings = FindObjectOfType<PlayerSettings>();
+        hull = FindObjectOfType<Hull>();
+        freeSpace = hull.Capacity;
+        slider.maxValue = hull.Capacity;
+
     }
 
     void Update()
     {
-        slider.value = freeSpace-playerSettings.JunkCollected;
+        slider.value = freeSpace - playerSettings.InternalJunkCollected;
     }
 
-    public int Capacity
+    public float Capacity
     {
         get { return freeSpace; }
         set { freeSpace = value; }
