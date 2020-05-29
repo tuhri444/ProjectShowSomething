@@ -11,7 +11,6 @@ public class OnDeath : MonoBehaviour
     private bool currentPlayer = false;
     private void OnDestroy()
     {
-        Debug.Log("Yeay");
         PlayerSettings playerSettings = FindObjectOfType<PlayerSettings>();
         //PlayerPrefs.SetInt("CurrentPlayer", (int)playerSettings.JunkCollected);
         PlayerPrefs.SetInt(PlayerPrefs.GetString("CurrentPlayer"), (int)playerSettings.JunkCollected);
