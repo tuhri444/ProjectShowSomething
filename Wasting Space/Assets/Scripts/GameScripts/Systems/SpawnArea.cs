@@ -53,6 +53,24 @@ public class SpawnArea : MonoBehaviour
         for (int i = 0; i < SatteliteToSpawn; i++)
         {
             spawnLocation = new Vector3(Random.Range(TopLeft.x, BottomRight.x), Random.Range(TopLeft.y, BottomRight.y), 0);
+
+            //bool goodlocation = false;
+            //while (goodlocation != true)
+            //{
+            //    foreach (Junk item in Junks)
+            //    {
+            //        spawnLocation = new Vector3(Random.Range(TopLeft.x, BottomRight.x), Random.Range(TopLeft.y, BottomRight.y), 0);
+            //        goodlocation = CompareSpawnLocation(spawnLocation, item.transform.position);
+            //        if (goodlocation) break;
+            //    }
+            //    foreach (Sattelite item in Sattelites)
+            //    {
+            //        spawnLocation = new Vector3(Random.Range(TopLeft.x, BottomRight.x), Random.Range(TopLeft.y, BottomRight.y), 0);
+            //        goodlocation = CompareSpawnLocation(spawnLocation, item.transform.position);
+            //        if (goodlocation) break;
+            //    }
+            //}
+
             scale = Random.Range(1, 1 + SatteliteScaleModifier);
             randomPrefab = Random.Range(0, SattelitePrefabs.Count - 1);
             startVelocity = new Vector3(Random.Range(-MaxSpawnVelocity, MaxSpawnVelocity), Random.Range(-MaxSpawnVelocity, MaxSpawnVelocity), 0);
@@ -66,6 +84,24 @@ public class SpawnArea : MonoBehaviour
         for (int i = 0; i < JunkToSpawn; i++)
         {
             spawnLocation = new Vector3(Random.Range(TopLeft.x, BottomRight.x), Random.Range(TopLeft.y, BottomRight.y), 0);
+
+            //bool goodlocation = false;
+            //while (goodlocation != true)
+            //{
+            //    foreach (Junk item in Junks)
+            //    {
+            //        spawnLocation = new Vector3(Random.Range(TopLeft.x, BottomRight.x), Random.Range(TopLeft.y, BottomRight.y), 0);
+            //        goodlocation = CompareSpawnLocation(spawnLocation, item.transform.position);
+            //        if (goodlocation) break;
+            //    }
+            //    foreach (Sattelite item in Sattelites)
+            //    {
+            //        spawnLocation = new Vector3(Random.Range(TopLeft.x, BottomRight.x), Random.Range(TopLeft.y, BottomRight.y), 0);
+            //        goodlocation = CompareSpawnLocation(spawnLocation, item.transform.position);
+            //        if (goodlocation) break;
+            //    }
+            //}
+
             scale = Random.Range(1 - JunkScaleModifier, 1 + JunkScaleModifier);
             randomPrefab = Random.Range(0, JunkPrefabs.Count - 1);
             startVelocity = new Vector3(Random.Range(-MaxSpawnVelocity, MaxSpawnVelocity), Random.Range(-MaxSpawnVelocity, MaxSpawnVelocity), 0);
@@ -106,7 +142,14 @@ public class SpawnArea : MonoBehaviour
         }
     }
 
-
+    private bool CompareSpawnLocation(Vector3 locA, Vector3 locB)
+    {
+        if(Vector3.Distance(locA,locB) > 1.0f)
+        {
+            return true;
+        }
+        return false;
+    }
         
 
 
