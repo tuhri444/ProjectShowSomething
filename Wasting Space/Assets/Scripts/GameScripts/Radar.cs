@@ -55,15 +55,28 @@ public class Radar : MonoBehaviour
                     radarUI[go] = image.GetComponent<RawImage>();
                     radarUI[go].rectTransform.position = new Vector3(uiPos.x, uiPos.y, -1);
 
-                    if (go.name == "Ship")
+                    if (go.GetComponent<Ship>() != null)
                     {
                         radarUI[go].color = new Color(0, 255, 0);
+                        continue;
                     }
-                    else
+
+                    if (go.GetComponent<Junk>() != null) 
+                    {
+                        radarUI[go].color = new Color(0, 0, 255);
+                        continue;
+                    }
+                    
+                    if(go.GetComponent<Sattelite>() != null)
                     {
                         radarUI[go].color = new Color(255, 0, 0);
+                        continue;
                     }
                 }
+            } 
+            else
+            {
+                radarUI.Remove(go);
             }
         }
     }

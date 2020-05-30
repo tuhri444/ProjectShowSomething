@@ -29,6 +29,7 @@ public class Junk : MonoBehaviour
         rigidbody.constraints = RigidbodyConstraints.FreezePositionZ;
 
         junk.Explosion = _explosionEffect;
+        JunkObject.tag = "RadarObject";
         if (!_isChild) junk.CreateChildren(_junkPrefab, _explosionEffect, _position,_amountOfChildren);
         return JunkObject;
     }

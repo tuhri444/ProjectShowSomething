@@ -27,6 +27,8 @@ public class Sattelite : MonoBehaviour
         rigidbody.constraints = RigidbodyConstraints.FreezePositionZ;
         sattelite.Explosion = _explosionEffect;
 
+        sattelite.gameObject.tag = "RadarObject";
+
         return satteliteObject;
     }
     //TODO
