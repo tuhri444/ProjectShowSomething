@@ -22,7 +22,6 @@ public class CapacityBar : MonoBehaviour
         hull = FindObjectOfType<Hull>();
         freeSpace = hull.Capacity;
         slider.maxValue = hull.Capacity;
-
     }
 
     void Update()
