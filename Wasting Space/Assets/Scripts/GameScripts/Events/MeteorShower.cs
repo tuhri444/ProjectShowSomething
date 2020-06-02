@@ -19,7 +19,7 @@ public class MeteorShower : MonoBehaviour, WorldEvent
 
     public void Init()
     {
-        List<GameObject> prefabs = FindObjectOfType<EventSystem>().Prefabs;
+        List<GameObject> prefabs = FindObjectOfType<CustomEventSystem>().Prefabs;
         foreach (GameObject prefabObject in prefabs)
         {
             if(prefabObject.GetComponent<Meteor>())
@@ -55,6 +55,7 @@ public class MeteorShower : MonoBehaviour, WorldEvent
     {
         if(!Activated)
         {
+            Debug.Log("Activating event");
             Vector3 GeneralSpawnPosition = new Vector3(Random.Range(-20.0f, 20.0f), Random.Range(-20.0f, 20.0f), 0);
             GeneralSpawnPosition = player.transform.position + GeneralSpawnPosition;
             for (int i = 0; i < AmountOfMeteors; i++)

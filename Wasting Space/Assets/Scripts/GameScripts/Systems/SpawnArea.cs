@@ -77,7 +77,7 @@ public class SpawnArea : MonoBehaviour
 
             GameObject temp = Sattelite.CreateSattelite(SattelitePrefabs[randomPrefab], ExplosionPrefab, spawnLocation);
             temp.transform.parent = this.transform;
-            temp.transform.localScale = new Vector3(scale,scale,scale);
+            temp.transform.localScale = new Vector3(scale*0.2f,scale * 0.2f, scale * 0.2f);
             temp.GetComponent<Rigidbody>().velocity = startVelocity;
             Sattelites.Add(temp.GetComponent<Sattelite>());
         }
@@ -113,7 +113,7 @@ public class SpawnArea : MonoBehaviour
             Junks.Add(temp.GetComponent<Junk>());
         }
     }
-
+#if UNITY_EDITOR
     [DrawGizmo(GizmoType.NotInSelectionHierarchy | GizmoType.InSelectionHierarchy)]
     public static void RenderCustomGizmo(SpawnArea _target, GizmoType _gizmoType)
     {
@@ -141,6 +141,8 @@ public class SpawnArea : MonoBehaviour
             myTarget.transform.position = checkPos;
         }
     }
+    //Code here for Editor only.
+#endif
 
     private bool CompareSpawnLocation(Vector3 locA, Vector3 locB)
     {

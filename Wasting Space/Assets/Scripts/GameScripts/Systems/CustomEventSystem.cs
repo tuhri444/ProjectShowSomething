@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class EventSystem : MonoBehaviour
+public class CustomEventSystem : MonoBehaviour
 {
     [SerializeField] private List<WorldEvent> events;
     [SerializeField] private List<GameObject> prefabs;
-    public List<GameObject> Prefabs { get => prefabs;}
+    [SerializeField] public List<Condition> conditions;
+    public List<GameObject> Prefabs { set => prefabs = value; get => prefabs; }
+    public List<bool> editorSaveSpace;
     public List<WorldEvent> Events { get => events;}
 
     private void Start()
@@ -19,17 +21,30 @@ public class EventSystem : MonoBehaviour
         UpdateEvents();
         CheckEvents();
     }
-
-
     private void InitializeEvents()
     {
-        if (Events != null)
+        events = new List<WorldEvent>();
+        if(prefabs != null)
         {
-            foreach (WorldEvent worldEvent in Events)
+            foreach(GameObject eventObjects in Prefabs)
             {
-                worldEvent.Init();
+                if (eventObjects.GetComponent<MeteorShower>()) events.Add(eventObjects.GetComponent<MeteorShower>());
+                else Debug.Log("couldn't find meteorshower script");              
+            }
+            if (Events != null)
+            {
+                foreach (WorldEvent worldEvent in Events)
+                {
+                    Debug.Log("This part is working");
+                    worldEvent.Init();
+                }
             }
         }
+        else
+        {
+            Debug.Log("No events found");
+        }
+        
     }
     private void UpdateEvents()
     {

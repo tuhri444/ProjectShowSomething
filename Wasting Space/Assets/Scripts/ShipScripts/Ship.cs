@@ -41,9 +41,6 @@ public class Ship : MonoBehaviour
             grabber = Instantiate(grabberPref, transform.GetChild(0));
              hull = Instantiate(hullPref, transform.GetChild(1));
             booster = Instantiate(boosterPref, transform.GetChild(2));
-
-
-
         }
         catch (Exception e)
         {
