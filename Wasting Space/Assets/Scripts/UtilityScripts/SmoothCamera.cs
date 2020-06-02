@@ -31,6 +31,11 @@ public class SmoothCamera : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (target == null)
+        {
+            Debug.Log("No trarget found");
+            return;
+        }
         Vector3 targetPosition = new Vector3(target.position.x,target.position.y,transform.position.z);
         transform.position = Vector3.SmoothDamp(transform.position+target_Offset, targetPosition, ref velocity, smoothSpeed);
 
