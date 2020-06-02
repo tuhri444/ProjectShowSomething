@@ -20,12 +20,20 @@ public class CapacityBar : MonoBehaviour
         slider = GetComponent<Slider>();
         playerSettings = FindObjectOfType<PlayerSettings>();
         hull = FindObjectOfType<Hull>();
-        freeSpace = hull.Capacity;
-        slider.maxValue = hull.Capacity;
+
     }
 
     void Update()
     {
+        if(hull == null)
+        {
+            hull = FindObjectOfType<Hull>();
+            if (hull != null)
+            {
+                freeSpace = hull.Capacity;
+                slider.maxValue = hull.Capacity;
+            }
+        }
         slider.value = freeSpace - playerSettings.InternalJunkCollected;
     }
 

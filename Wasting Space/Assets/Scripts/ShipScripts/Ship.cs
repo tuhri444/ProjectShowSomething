@@ -19,7 +19,7 @@ public class Ship : MonoBehaviour
     private GameObject grabber;
     private GameObject hull;
     private GameObject booster;
-    
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -39,11 +39,8 @@ public class Ship : MonoBehaviour
             GameObject hullPref = Resources.Load("Parts/Hulls/" + hullName) as GameObject;
             GameObject boosterPref = Resources.Load("Parts/Boosters/" + boosterName) as GameObject;
             grabber = Instantiate(grabberPref, transform.GetChild(0));
-             hull = Instantiate(hullPref, transform.GetChild(1));
+            hull = Instantiate(hullPref, transform.GetChild(1));
             booster = Instantiate(boosterPref, transform.GetChild(2));
-
-
-
         }
         catch (Exception e)
         {
@@ -58,7 +55,7 @@ public class Ship : MonoBehaviour
     public void Update()
     {
         healthBar.Health = health;
-        if(health <= 0)
+        if (health <= 0)
         {
             Destroy(gameObject);
         }
@@ -88,7 +85,7 @@ public class Ship : MonoBehaviour
         get { return playerSettings; }
     }
 
-    public GameObject Grabber { get => grabber;}
-    public GameObject Hull { get => hull;}
-    public GameObject Booster { get => booster;}
+    public GameObject Grabber { get => grabber; }
+    public GameObject Hull { get => hull; }
+    public GameObject Booster { get => booster; }
 }

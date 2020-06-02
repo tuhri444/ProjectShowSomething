@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class OnDeath : MonoBehaviour
 {
+
+    [SerializeField]
+    private Canvas canvas;
     private List<KeyValuePair<string, int>> scorers = new List<KeyValuePair<string, int>>();
 
     private bool currentPlayer = false;
@@ -21,7 +24,9 @@ public class OnDeath : MonoBehaviour
 
         SaveScores();
 
-        SceneManager.LoadScene(3);
+        GameObject endMenu = Resources.Load("EndMenu") as GameObject;
+        Instantiate(endMenu,canvas.transform);
+        //SceneManager.LoadScene(3);
     }
 
     private void Start()
