@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class ShortFastGrabber : ABGrabber
 {
     [SerializeField] private string animationTagResting;
@@ -9,6 +9,8 @@ public class ShortFastGrabber : ABGrabber
     [SerializeField] private string animationNameExtend;
     [SerializeField] private string animationNameDextend;
     private Hull shipHull;
+
+
 
     public override void OnClick()
     {
@@ -93,12 +95,19 @@ public class ShortFastGrabber : ABGrabber
     {
         ship = FindObjectOfType<Ship>();
         Hitbox.GetComponent<SphereCollider>().enabled = false;
+
         //GameObject hull = Resources.Load("Parts/Hulls/"+PlayerPrefs.GetString("ActiveHull")) as GameObject;
         Grabslots = new List<GameObject>();
     }
 
     void Update()
     {
+        GameObject grabButton = GameObject.Find("GrabButton");
+        if (grabButton != null)
+        {
+            Button btn = grabButton.GetComponent<Button>();
+            btn.onClick.AddListener(OnClick);
+        }
         if (shipHull == null)
             shipHull = FindObjectOfType<Hull>();
         else
