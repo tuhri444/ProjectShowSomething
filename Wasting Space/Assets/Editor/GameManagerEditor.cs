@@ -29,7 +29,8 @@ public class GameManagerEditor : Editor
         {
             if (spawnAreaAmount > 0)
             {
-                DestroyImmediate(myTarget.SpawnAreas[myTarget.SpawnAreas.Count - 1].gameObject);
+                if(myTarget.SpawnAreas.Count  >= myTarget.SpawnAreas.Count - 1)
+                    DestroyImmediate(myTarget.SpawnAreas[myTarget.SpawnAreas.Count - 1].gameObject);
                 myTarget.SpawnAreas.RemoveAt(myTarget.SpawnAreas.Count - 1);
             }
         }

@@ -14,6 +14,7 @@ public class EventSystemEditor : Editor
         if (myTarget.editorSaveSpace == null) myTarget.editorSaveSpace = new List<bool>();
         if (prefabs == null) prefabs = myTarget.editorSaveSpace;
         if (myTarget.Prefabs == null) myTarget.Prefabs = new List<GameObject>();
+        myTarget.HotFixCondition = EditorGUILayout.ObjectField(myTarget.HotFixCondition, typeof(GameObject)) as GameObject;
 
         ShowPrefabList = EditorGUILayout.Foldout(ShowPrefabList, "Show Events");
         if (ShowPrefabList && prefabs.Count >0) RenderPrefabList(myTarget);
@@ -77,8 +78,7 @@ public class EventSystemEditor : Editor
             if(prefabs[i] && es.Prefabs.Count != 0)
             {
                 es.Prefabs[i] = EditorGUILayout.ObjectField(es.Prefabs[i], typeof(GameObject)) as GameObject;
-                
-            }
+            } 
         }
     }
 }

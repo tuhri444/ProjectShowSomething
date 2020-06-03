@@ -75,6 +75,8 @@ public class Ship : MonoBehaviour
         if (collision.gameObject.tag == "RadarObject")
         {
             Debug.Log("Hit");
+            Vector3 directionOfImpact = (collision.transform.position - transform.position).normalized;
+            collision.gameObject.GetComponent<Rigidbody>().AddForce(directionOfImpact * 10, ForceMode.Force);
             Damage(10);
             GetComponent<Rigidbody>().AddExplosionForce(200,collision.contacts[0].point,10);
         }

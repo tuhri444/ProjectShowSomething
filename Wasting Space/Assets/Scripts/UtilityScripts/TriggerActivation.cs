@@ -4,20 +4,23 @@ using UnityEngine;
 
 public class TriggerActivation : MonoBehaviour
 {
-    ShortFastGrabber parentScript;
+    ABGrabber parentScript;
 
     private void Start()
     {
         var rb = gameObject.AddComponent<Rigidbody>();
         rb.isKinematic = true;
-        if (parentScript == null)
-            parentScript = FindObjectOfType<ShortFastGrabber>();
     }
 
     void Update()
     {
         if (parentScript == null)
-            parentScript = FindObjectOfType<ShortFastGrabber>();
+        {
+            if (FindObjectOfType<ShortFastGrabber>())
+                parentScript = FindObjectOfType<ShortFastGrabber>();
+            else if (FindObjectOfType<LongSlowGrabber>())
+                parentScript = FindObjectOfType<LongSlowGrabber>();
+        }
     }
 
     private void OnTriggerEnter(Collider other)

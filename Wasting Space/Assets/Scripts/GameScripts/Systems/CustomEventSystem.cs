@@ -8,6 +8,7 @@ public class CustomEventSystem : MonoBehaviour
     [SerializeField] private List<WorldEvent> events;
     [SerializeField] private List<GameObject> prefabs;
     [SerializeField] public List<Condition> conditions;
+    public GameObject HotFixCondition;
     public List<GameObject> Prefabs { set => prefabs = value; get => prefabs; }
     public List<bool> editorSaveSpace;
     public List<WorldEvent> Events { get => events;}
@@ -28,15 +29,17 @@ public class CustomEventSystem : MonoBehaviour
         {
             foreach(GameObject eventObjects in Prefabs)
             {
-                if (eventObjects.GetComponent<MeteorShower>()) events.Add(eventObjects.GetComponent<MeteorShower>());
+                GameObject temp = Instantiate(eventObjects);
+                temp.transform.parent = transform;
+                if (temp.GetComponent<MeteorShower>()) events.Add(temp.GetComponent<MeteorShower>());
                 else Debug.Log("couldn't find meteorshower script");              
             }
-            if (Events != null)
+            if (events != null)
             {
-                foreach (WorldEvent worldEvent in Events)
+                foreach (WorldEvent worldEvent in events)
                 {
                     Debug.Log("This part is working");
-                    worldEvent.Init();
+                    worldEvent.Init(HotFixCondition.GetComponent<Condition>());
                 }
             }
         }
