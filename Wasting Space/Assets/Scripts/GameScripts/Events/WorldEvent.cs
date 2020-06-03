@@ -4,7 +4,7 @@ using UnityEngine;
 
 public interface WorldEvent
 {
-    void Init();
+    void Init(Condition _condition);
     void Timer();
     bool CheckCondition();
     void ActivateEvent();
