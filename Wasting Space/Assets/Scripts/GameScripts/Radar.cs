@@ -19,6 +19,7 @@ public class Radar : MonoBehaviour
     private Plane[] planes;
     private List<GameObject> radarObjects = new List<GameObject>();
     private Dictionary<GameObject, RawImage> radarUI = new Dictionary<GameObject, RawImage>();
+    private Dictionary<GameObject,RawImage> toBeDestroyed = new Dictionary<GameObject,RawImage>();
 
 
     void Start()
@@ -28,6 +29,7 @@ public class Radar : MonoBehaviour
 
     void Update()
     {
+        toBeDestroyed.Clear();
         planes = GeometryUtility.CalculateFrustumPlanes(cam);
         foreach (GameObject go in GameObject.FindGameObjectsWithTag("RadarObject"))
         {
@@ -76,7 +78,8 @@ public class Radar : MonoBehaviour
             } 
             else
             {
-                radarUI.Remove(go);
+                Debug.Log("Removed");
+                radarUI[go].enabled = false;
             }
         }
     }

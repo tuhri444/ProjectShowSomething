@@ -5,9 +5,13 @@ using UnityEngine.UI;
 using TMPro;
 public class Magnet : MonoBehaviour
 {
-    List<GameObject> attractable = new List<GameObject>();
-    bool isAttracting = false;
-    GameObject grabButton;
+    [SerializeField]
+    private float force;
+
+    private List<GameObject> attractable = new List<GameObject>();
+    private bool isAttracting = false;
+    private GameObject grabButton;
+
     
     // Start is called before the first frame update
     void Start()
@@ -52,13 +56,13 @@ public class Magnet : MonoBehaviour
             Rigidbody rb = go.GetComponent<Rigidbody>();
             Vector3 diff = transform.position - go.transform.position;
             Vector3 dir = diff.normalized;
-            rb.AddForce(dir*10,ForceMode.Impulse);
+            rb.AddForce(dir * force * Time.deltaTime, ForceMode.Impulse);
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.GetComponent<Junk>() != null || other.gameObject.GetComponent<Sattelite>())
+        if(other.gameObject.GetComponent<Junk>() != null /*|| other.gameObject.GetComponent<Sattelite>()*/)
         {
             Debug.Log("Junk has entered");
             attractable.Add(other.gameObject);
@@ -67,7 +71,7 @@ public class Magnet : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.GetComponent<Junk>() != null || other.gameObject.GetComponent<Sattelite>())
+        if (other.gameObject.GetComponent<Junk>() != null /*|| other.gameObject.GetComponent<Sattelite>()*/)
         {
             if (attractable.Contains(other.gameObject))
             {
@@ -77,10 +81,11 @@ public class Magnet : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision other)
+    public void Collect(Collider other)
     {
-        if(attractable.Contains(other.gameObject))
+        if(attractable.Contains(other.gameObject) && isAttracting)
         {
+            Debug.Log("Hello");
             FindObjectOfType<PlayerSettings>().InternalJunkCollected++;
             attractable.Remove(other.gameObject);
             Destroy(other.gameObject);

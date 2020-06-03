@@ -14,14 +14,10 @@ public class OnDeath : MonoBehaviour
     {
         GameObject endMenu = Resources.Load("EndMenu") as GameObject;
         Instantiate(endMenu, canvas.transform);
-        //SceneManager.LoadScene(3);
     }
 
     private void Start()
     {
-        //LoadScores();
-
-        //SaveScores();
     }
 
 }

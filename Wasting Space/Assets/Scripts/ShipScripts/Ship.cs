@@ -76,6 +76,7 @@ public class Ship : MonoBehaviour
         {
             Debug.Log("Hit");
             Damage(10);
+            GetComponent<Rigidbody>().AddExplosionForce(200,collision.contacts[0].point,10);
         }
     }
 

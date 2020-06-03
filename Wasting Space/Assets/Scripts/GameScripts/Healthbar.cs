@@ -12,18 +12,18 @@ public class Healthbar : MonoBehaviour
     private float maxHealth = 100;
 
     //Non-Serializable Fields
-    private Slider slider;
+    private Image image;
     
 
     void Start()
     {
-        slider = GetComponent<Slider>();
+        image = transform.GetChild(0).GetComponent<Image>();
         health = maxHealth;
     }
 
     void Update()
     {
-        slider.value = health;
+        image.fillAmount = health / maxHealth;
     }
 
     public float Health

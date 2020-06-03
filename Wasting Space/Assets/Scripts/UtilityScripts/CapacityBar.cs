@@ -10,14 +10,15 @@ public class CapacityBar : MonoBehaviour
     private float freeSpace = 50;
 
     //Non-Serializable Fields
-    private Slider slider;
+    private Image image;
     private PlayerSettings playerSettings;
     private Hull hull;
+    private float hullCap;
 
 
     void Start()
     {
-        slider = GetComponent<Slider>();
+        image = transform.GetChild(0).GetComponent<Image>();
         playerSettings = FindObjectOfType<PlayerSettings>();
         hull = FindObjectOfType<Hull>();
 
@@ -31,10 +32,10 @@ public class CapacityBar : MonoBehaviour
             if (hull != null)
             {
                 freeSpace = hull.Capacity;
-                slider.maxValue = hull.Capacity;
+                hullCap = hull.Capacity;
             }
         }
-        slider.value = freeSpace - playerSettings.InternalJunkCollected;
+        image.fillAmount = (freeSpace - playerSettings.InternalJunkCollected)/hullCap;
     }
 
     public float Capacity
