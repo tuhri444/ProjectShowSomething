@@ -96,14 +96,14 @@ public class ShipMovement : MonoBehaviour
     {
         verticalMove = verticalValue;
         verticalMove *= speed;
-        verticalMove *= Time.fixedDeltaTime;
+        verticalMove *= Time.deltaTime;
         rigidbody.AddForce(transform.up * verticalMove, ForceMode.Impulse);
     }
     void RotationalMovement(Vector3 rotationValue)
     {
         rotationalMove = rotationValue;
         rotationalMove *= 10 * rotationSpeed;
-        rotationalMove *= Time.fixedDeltaTime;
+        rotationalMove *= Time.deltaTime;
         //transform.eulerAngles = new Vector3(transform.eulerAngles.x, -rotationValue.z * 20, transform.eulerAngles.z);
         transform.Rotate(-rotationalMove);
     }

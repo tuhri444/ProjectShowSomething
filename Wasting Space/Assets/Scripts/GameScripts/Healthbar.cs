@@ -7,9 +7,9 @@ public class Healthbar : MonoBehaviour
 {
     //Serializable Fields
     [SerializeField]
-    private float health = 100;
+    private float health = 150;
     [SerializeField]
-    private float maxHealth = 100;
+    private float maxHealth = 150;
 
     //Non-Serializable Fields
     private Image image;
