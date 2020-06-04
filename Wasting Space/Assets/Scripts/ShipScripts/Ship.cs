@@ -61,7 +61,8 @@ public class Ship : MonoBehaviour
         healthBar.Health = health;
         if (health <= 0)
         {
-            Destroy(gameObject);
+            GetComponent<ShipMovement>().EnableMovement = false;
+            Destroy(GetComponent<OnDeath>());
         }
     }
 
