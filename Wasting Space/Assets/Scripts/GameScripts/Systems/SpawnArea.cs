@@ -77,7 +77,7 @@ public class SpawnArea : MonoBehaviour
 
             GameObject temp = Sattelite.CreateSattelite(SattelitePrefabs[randomPrefab], ExplosionPrefab, spawnLocation);
             temp.transform.parent = this.transform;
-            temp.transform.localScale = new Vector3(scale*0.2f,scale * 0.2f, scale * 0.2f);
+            temp.transform.localScale = new Vector3(scale*0.3f,scale * 0.3f, scale * 0.3f);
             temp.GetComponent<Rigidbody>().velocity = startVelocity;
             temp.GetComponent<Rigidbody>().mass = Random.Range(3, 8);
             Sattelites.Add(temp.GetComponent<Sattelite>());
