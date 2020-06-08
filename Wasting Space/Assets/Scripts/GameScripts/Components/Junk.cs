@@ -24,7 +24,7 @@ public class Junk : MonoBehaviour
         Junk junk = JunkObject.AddComponent<Junk>() as Junk;
         Rigidbody rigidbody = JunkObject.AddComponent<Rigidbody>() as Rigidbody;
         JunkObject.AddComponent<BoxCollider>();
-
+        JunkObject.layer = 10;
         rigidbody.useGravity = false;
         rigidbody.constraints = RigidbodyConstraints.FreezePositionZ;
 

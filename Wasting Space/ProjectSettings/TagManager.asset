@@ -15,9 +15,9 @@ TagManager:
   - 
   - 
   - RadarUI
-  - 
-  - 
-  - 
+  - Shield
+  - Asteroid
+  - Animation
   - 
   - 
   - 
@@ -41,4 +41,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: doors
+    uniqueID: 2659131165
     locked: 0
