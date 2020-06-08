@@ -352,22 +352,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 217045886}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 296bfe6c09b431441af47ab1f07ce4e1, type: 3}
+  m_Script: {fileID: 11500000, guid: f450778e78ebe12489b96b4d7e0b7dca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnCap: 80
-  SatteliteJunkRatio: 30
+  SpawnCap: 0
+  SatteliteJunkRatio: 0
   MaxSpawnVelocity: 0
   JunkScaleModifier: 0
-  SatteliteScaleModifier: 1.29
-  JunkPrefabs:
-  - {fileID: -927199367670048503, guid: 2a7d291af344e72498846cae224f2049, type: 3}
-  SattelitePrefabs:
-  - {fileID: -927199367670048503, guid: 0a443395bee4f1941b9f9ce98b63cc44, type: 3}
-  - {fileID: -927199367670048503, guid: 2750cc44472325246adbabc82b28093f, type: 3}
-  ExplosionPrefab: {fileID: 2412892323634352373, guid: 1b261df5907575b4ba0b1511e39dfffd,
-    type: 3}
-  EditorColor: {r: 1, g: 0.5529412, b: 0.5529412, a: 0.21176471}
+  SatteliteScaleModifier: 0
+  JunkPrefabs: []
+  SattelitePrefabs: []
+  ExplosionPrefab: {fileID: 0}
+  EditorColor: {r: 0, g: 0, b: 0, a: 0}
   dragging: 0
 --- !u!224 &217045888
 RectTransform:
@@ -414,22 +410,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 258087501}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 296bfe6c09b431441af47ab1f07ce4e1, type: 3}
+  m_Script: {fileID: 11500000, guid: f450778e78ebe12489b96b4d7e0b7dca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnCap: 10
-  SatteliteJunkRatio: 70
+  SpawnCap: 0
+  SatteliteJunkRatio: 0
   MaxSpawnVelocity: 0
   JunkScaleModifier: 0
   SatteliteScaleModifier: 0
-  JunkPrefabs:
-  - {fileID: -927199367670048503, guid: 74f0a2de703f5c84dbe7b251a1cdfbb5, type: 3}
-  SattelitePrefabs:
-  - {fileID: -927199367670048503, guid: c6a25b5f45924bf49922a906a45da72d, type: 3}
-  - {fileID: -927199367670048503, guid: 7848ab7bd5d609f4e95b5941416c8531, type: 3}
-  ExplosionPrefab: {fileID: 2412892323634352373, guid: 1b261df5907575b4ba0b1511e39dfffd,
-    type: 3}
-  EditorColor: {r: 1, g: 0.73333335, b: 0, a: 0.21176471}
+  JunkPrefabs: []
+  SattelitePrefabs: []
+  ExplosionPrefab: {fileID: 0}
+  EditorColor: {r: 0, g: 0, b: 0, a: 0}
   dragging: 0
 --- !u!224 &258087503
 RectTransform:
@@ -476,22 +468,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 270652689}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 296bfe6c09b431441af47ab1f07ce4e1, type: 3}
+  m_Script: {fileID: 11500000, guid: f450778e78ebe12489b96b4d7e0b7dca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnCap: 80
-  SatteliteJunkRatio: 30
+  SpawnCap: 0
+  SatteliteJunkRatio: 0
   MaxSpawnVelocity: 0
   JunkScaleModifier: 0
-  SatteliteScaleModifier: 1.44
-  JunkPrefabs:
-  - {fileID: -927199367670048503, guid: 4c124edcefc5ce84cbfc775f4523fced, type: 3}
-  SattelitePrefabs:
-  - {fileID: -927199367670048503, guid: 0a443395bee4f1941b9f9ce98b63cc44, type: 3}
-  - {fileID: -927199367670048503, guid: 2750cc44472325246adbabc82b28093f, type: 3}
-  ExplosionPrefab: {fileID: 2412892323634352373, guid: 1b261df5907575b4ba0b1511e39dfffd,
-    type: 3}
-  EditorColor: {r: 1, g: 0.5529412, b: 0.5529412, a: 0.21176471}
+  SatteliteScaleModifier: 0
+  JunkPrefabs: []
+  SattelitePrefabs: []
+  ExplosionPrefab: {fileID: 0}
+  EditorColor: {r: 0, g: 0, b: 0, a: 0}
   dragging: 0
 --- !u!224 &270652691
 RectTransform:
@@ -538,22 +526,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 336734911}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 296bfe6c09b431441af47ab1f07ce4e1, type: 3}
+  m_Script: {fileID: 11500000, guid: f450778e78ebe12489b96b4d7e0b7dca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnCap: 80
-  SatteliteJunkRatio: 30
+  SpawnCap: 0
+  SatteliteJunkRatio: 0
   MaxSpawnVelocity: 0
   JunkScaleModifier: 0
-  SatteliteScaleModifier: 0.97
-  JunkPrefabs:
-  - {fileID: -927199367670048503, guid: 4c124edcefc5ce84cbfc775f4523fced, type: 3}
-  SattelitePrefabs:
-  - {fileID: -927199367670048503, guid: 0a443395bee4f1941b9f9ce98b63cc44, type: 3}
-  - {fileID: -927199367670048503, guid: 2750cc44472325246adbabc82b28093f, type: 3}
-  ExplosionPrefab: {fileID: 2412892323634352373, guid: 1b261df5907575b4ba0b1511e39dfffd,
-    type: 3}
-  EditorColor: {r: 1, g: 0.5529412, b: 0.5529412, a: 0.21176471}
+  SatteliteScaleModifier: 0
+  JunkPrefabs: []
+  SattelitePrefabs: []
+  ExplosionPrefab: {fileID: 0}
+  EditorColor: {r: 0, g: 0, b: 0, a: 0}
   dragging: 0
 --- !u!224 &336734913
 RectTransform:
@@ -594,7 +578,12 @@ PrefabInstance:
     - target: {fileID: 6361069386137028227, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: SattelitePrefabs.Array.size
-      value: 2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361069386137028227, guid: a648ebf3fd387114a8b8b793de8c8233,
+        type: 3}
+      propertyPath: JunkPrefabs.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6361069386137028227, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
@@ -616,12 +605,12 @@ PrefabInstance:
     - target: {fileID: 6361069386137028227, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: JunkScaleModifier
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6361069386137028227, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: SatteliteScaleModifier
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6361069386137028227, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
@@ -631,22 +620,22 @@ PrefabInstance:
     - target: {fileID: 6361069386137028227, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: SatteliteJunkRatio
-      value: 85
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6361069386137028227, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: EditorColor.r
-      value: 0.5529412
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6361069386137028227, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: EditorColor.g
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6361069386137028227, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: EditorColor.b
-      value: 0.6039216
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6361069386137028227, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
@@ -654,6 +643,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -927199367670048503, guid: d6148d2d9fa600a4aa0459d1cec4a59b,
         type: 3}
+    - target: {fileID: 6361069386137028227, guid: a648ebf3fd387114a8b8b793de8c8233,
+        type: 3}
+      propertyPath: SpawnCap
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361069386137028227, guid: a648ebf3fd387114a8b8b793de8c8233,
+        type: 3}
+      propertyPath: ExplosionPrefab
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361069386137028227, guid: a648ebf3fd387114a8b8b793de8c8233,
+        type: 3}
+      propertyPath: EditorColor.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6361069386246628266, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -667,7 +671,12 @@ PrefabInstance:
     - target: {fileID: 6361069386246628267, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: SattelitePrefabs.Array.size
-      value: 2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361069386246628267, guid: a648ebf3fd387114a8b8b793de8c8233,
+        type: 3}
+      propertyPath: JunkPrefabs.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6361069386246628267, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
@@ -689,12 +698,12 @@ PrefabInstance:
     - target: {fileID: 6361069386246628267, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: JunkScaleModifier
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6361069386246628267, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: SatteliteScaleModifier
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6361069386246628267, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
@@ -704,22 +713,22 @@ PrefabInstance:
     - target: {fileID: 6361069386246628267, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: SatteliteJunkRatio
-      value: 80
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6361069386246628267, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: EditorColor.r
-      value: 0.5529412
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6361069386246628267, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: EditorColor.g
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6361069386246628267, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: EditorColor.b
-      value: 0.6039216
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6361069386246628267, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
@@ -727,10 +736,30 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -927199367670048503, guid: d6148d2d9fa600a4aa0459d1cec4a59b,
         type: 3}
+    - target: {fileID: 6361069386246628267, guid: a648ebf3fd387114a8b8b793de8c8233,
+        type: 3}
+      propertyPath: SpawnCap
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361069386246628267, guid: a648ebf3fd387114a8b8b793de8c8233,
+        type: 3}
+      propertyPath: ExplosionPrefab
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361069386246628267, guid: a648ebf3fd387114a8b8b793de8c8233,
+        type: 3}
+      propertyPath: EditorColor.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6361069386503080372, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: SattelitePrefabs.Array.size
-      value: 2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361069386503080372, guid: a648ebf3fd387114a8b8b793de8c8233,
+        type: 3}
+      propertyPath: JunkPrefabs.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6361069386503080372, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
@@ -752,17 +781,17 @@ PrefabInstance:
     - target: {fileID: 6361069386503080372, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: JunkScaleModifier
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6361069386503080372, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: SatteliteScaleModifier
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6361069386503080372, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: SatteliteJunkRatio
-      value: 86
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6361069386503080372, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
@@ -775,6 +804,36 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -927199367670048503, guid: d6148d2d9fa600a4aa0459d1cec4a59b,
         type: 3}
+    - target: {fileID: 6361069386503080372, guid: a648ebf3fd387114a8b8b793de8c8233,
+        type: 3}
+      propertyPath: SpawnCap
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361069386503080372, guid: a648ebf3fd387114a8b8b793de8c8233,
+        type: 3}
+      propertyPath: ExplosionPrefab
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361069386503080372, guid: a648ebf3fd387114a8b8b793de8c8233,
+        type: 3}
+      propertyPath: EditorColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361069386503080372, guid: a648ebf3fd387114a8b8b793de8c8233,
+        type: 3}
+      propertyPath: EditorColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361069386503080372, guid: a648ebf3fd387114a8b8b793de8c8233,
+        type: 3}
+      propertyPath: EditorColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361069386503080372, guid: a648ebf3fd387114a8b8b793de8c8233,
+        type: 3}
+      propertyPath: EditorColor.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6361069386503080375, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -798,7 +857,12 @@ PrefabInstance:
     - target: {fileID: 6361069387153032783, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: SattelitePrefabs.Array.size
-      value: 2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361069387153032783, guid: a648ebf3fd387114a8b8b793de8c8233,
+        type: 3}
+      propertyPath: JunkPrefabs.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6361069387153032783, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
@@ -820,12 +884,12 @@ PrefabInstance:
     - target: {fileID: 6361069387153032783, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: JunkScaleModifier
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6361069387153032783, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: SatteliteScaleModifier
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6361069387153032783, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
@@ -835,7 +899,7 @@ PrefabInstance:
     - target: {fileID: 6361069387153032783, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: SatteliteJunkRatio
-      value: 86
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6361069387153032783, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
@@ -843,6 +907,36 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -927199367670048503, guid: d6148d2d9fa600a4aa0459d1cec4a59b,
         type: 3}
+    - target: {fileID: 6361069387153032783, guid: a648ebf3fd387114a8b8b793de8c8233,
+        type: 3}
+      propertyPath: SpawnCap
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361069387153032783, guid: a648ebf3fd387114a8b8b793de8c8233,
+        type: 3}
+      propertyPath: ExplosionPrefab
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361069387153032783, guid: a648ebf3fd387114a8b8b793de8c8233,
+        type: 3}
+      propertyPath: EditorColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361069387153032783, guid: a648ebf3fd387114a8b8b793de8c8233,
+        type: 3}
+      propertyPath: EditorColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361069387153032783, guid: a648ebf3fd387114a8b8b793de8c8233,
+        type: 3}
+      propertyPath: EditorColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361069387153032783, guid: a648ebf3fd387114a8b8b793de8c8233,
+        type: 3}
+      propertyPath: EditorColor.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6361069387204548105, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -856,7 +950,12 @@ PrefabInstance:
     - target: {fileID: 6361069387204548110, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: SattelitePrefabs.Array.size
-      value: 2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361069387204548110, guid: a648ebf3fd387114a8b8b793de8c8233,
+        type: 3}
+      propertyPath: JunkPrefabs.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6361069387204548110, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
@@ -878,12 +977,12 @@ PrefabInstance:
     - target: {fileID: 6361069387204548110, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: JunkScaleModifier
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6361069387204548110, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: SatteliteScaleModifier
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6361069387204548110, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
@@ -893,7 +992,7 @@ PrefabInstance:
     - target: {fileID: 6361069387204548110, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: SatteliteJunkRatio
-      value: 82
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6361069387204548110, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
@@ -901,10 +1000,45 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -927199367670048503, guid: d6148d2d9fa600a4aa0459d1cec4a59b,
         type: 3}
+    - target: {fileID: 6361069387204548110, guid: a648ebf3fd387114a8b8b793de8c8233,
+        type: 3}
+      propertyPath: SpawnCap
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361069387204548110, guid: a648ebf3fd387114a8b8b793de8c8233,
+        type: 3}
+      propertyPath: ExplosionPrefab
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361069387204548110, guid: a648ebf3fd387114a8b8b793de8c8233,
+        type: 3}
+      propertyPath: EditorColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361069387204548110, guid: a648ebf3fd387114a8b8b793de8c8233,
+        type: 3}
+      propertyPath: EditorColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361069387204548110, guid: a648ebf3fd387114a8b8b793de8c8233,
+        type: 3}
+      propertyPath: EditorColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361069387204548110, guid: a648ebf3fd387114a8b8b793de8c8233,
+        type: 3}
+      propertyPath: EditorColor.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6361069387275131636, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: SattelitePrefabs.Array.size
-      value: 2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361069387275131636, guid: a648ebf3fd387114a8b8b793de8c8233,
+        type: 3}
+      propertyPath: JunkPrefabs.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6361069387275131636, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
@@ -931,12 +1065,12 @@ PrefabInstance:
     - target: {fileID: 6361069387275131636, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: JunkScaleModifier
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6361069387275131636, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: SatteliteScaleModifier
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6361069387275131636, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
@@ -951,22 +1085,22 @@ PrefabInstance:
     - target: {fileID: 6361069387275131636, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: EditorColor.r
-      value: 0.5529412
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6361069387275131636, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: EditorColor.g
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6361069387275131636, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: EditorColor.b
-      value: 0.6039216
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6361069387275131636, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: SatteliteJunkRatio
-      value: 81
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6361069387275131636, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
@@ -974,6 +1108,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -927199367670048503, guid: d6148d2d9fa600a4aa0459d1cec4a59b,
         type: 3}
+    - target: {fileID: 6361069387275131636, guid: a648ebf3fd387114a8b8b793de8c8233,
+        type: 3}
+      propertyPath: SpawnCap
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361069387275131636, guid: a648ebf3fd387114a8b8b793de8c8233,
+        type: 3}
+      propertyPath: ExplosionPrefab
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361069387275131636, guid: a648ebf3fd387114a8b8b793de8c8233,
+        type: 3}
+      propertyPath: EditorColor.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6361069387275131639, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -997,7 +1146,12 @@ PrefabInstance:
     - target: {fileID: 6361069387739714342, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: SattelitePrefabs.Array.size
-      value: 2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361069387739714342, guid: a648ebf3fd387114a8b8b793de8c8233,
+        type: 3}
+      propertyPath: JunkPrefabs.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6361069387739714342, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
@@ -1019,12 +1173,12 @@ PrefabInstance:
     - target: {fileID: 6361069387739714342, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: JunkScaleModifier
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6361069387739714342, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: SatteliteScaleModifier
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6361069387739714342, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
@@ -1034,22 +1188,22 @@ PrefabInstance:
     - target: {fileID: 6361069387739714342, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: SatteliteJunkRatio
-      value: 80
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6361069387739714342, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: EditorColor.r
-      value: 0.5529412
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6361069387739714342, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: EditorColor.g
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6361069387739714342, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: EditorColor.b
-      value: 0.6039216
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6361069387739714342, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
@@ -1057,10 +1211,30 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -927199367670048503, guid: d6148d2d9fa600a4aa0459d1cec4a59b,
         type: 3}
+    - target: {fileID: 6361069387739714342, guid: a648ebf3fd387114a8b8b793de8c8233,
+        type: 3}
+      propertyPath: SpawnCap
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361069387739714342, guid: a648ebf3fd387114a8b8b793de8c8233,
+        type: 3}
+      propertyPath: ExplosionPrefab
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361069387739714342, guid: a648ebf3fd387114a8b8b793de8c8233,
+        type: 3}
+      propertyPath: EditorColor.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6361069388043179464, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: SattelitePrefabs.Array.size
-      value: 2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361069388043179464, guid: a648ebf3fd387114a8b8b793de8c8233,
+        type: 3}
+      propertyPath: JunkPrefabs.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6361069388043179464, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
@@ -1076,12 +1250,12 @@ PrefabInstance:
     - target: {fileID: 6361069388043179464, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: JunkScaleModifier
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6361069388043179464, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: SatteliteScaleModifier
-      value: 0.3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6361069388043179464, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
@@ -1091,7 +1265,7 @@ PrefabInstance:
     - target: {fileID: 6361069388043179464, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: SatteliteJunkRatio
-      value: 87
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6361069388043179464, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
@@ -1105,6 +1279,36 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -927199367670048503, guid: 1365d4b568a20f24d82609bdc5d852bd,
         type: 3}
+    - target: {fileID: 6361069388043179464, guid: a648ebf3fd387114a8b8b793de8c8233,
+        type: 3}
+      propertyPath: SpawnCap
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361069388043179464, guid: a648ebf3fd387114a8b8b793de8c8233,
+        type: 3}
+      propertyPath: ExplosionPrefab
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361069388043179464, guid: a648ebf3fd387114a8b8b793de8c8233,
+        type: 3}
+      propertyPath: EditorColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361069388043179464, guid: a648ebf3fd387114a8b8b793de8c8233,
+        type: 3}
+      propertyPath: EditorColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361069388043179464, guid: a648ebf3fd387114a8b8b793de8c8233,
+        type: 3}
+      propertyPath: EditorColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361069388043179464, guid: a648ebf3fd387114a8b8b793de8c8233,
+        type: 3}
+      propertyPath: EditorColor.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6361069388043179467, guid: a648ebf3fd387114a8b8b793de8c8233,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1601,22 +1805,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 523862248}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 296bfe6c09b431441af47ab1f07ce4e1, type: 3}
+  m_Script: {fileID: 11500000, guid: f450778e78ebe12489b96b4d7e0b7dca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnCap: 10
-  SatteliteJunkRatio: 70
+  SpawnCap: 0
+  SatteliteJunkRatio: 0
   MaxSpawnVelocity: 0
   JunkScaleModifier: 0
   SatteliteScaleModifier: 0
-  JunkPrefabs:
-  - {fileID: -927199367670048503, guid: 53d1c35f9e13d9748abfca6b76e1917e, type: 3}
-  SattelitePrefabs:
-  - {fileID: -927199367670048503, guid: c6a25b5f45924bf49922a906a45da72d, type: 3}
-  - {fileID: -927199367670048503, guid: 7848ab7bd5d609f4e95b5941416c8531, type: 3}
-  ExplosionPrefab: {fileID: 2412892323634352373, guid: 1b261df5907575b4ba0b1511e39dfffd,
-    type: 3}
-  EditorColor: {r: 1, g: 0.73333335, b: 0, a: 0.21176471}
+  JunkPrefabs: []
+  SattelitePrefabs: []
+  ExplosionPrefab: {fileID: 0}
+  EditorColor: {r: 0, g: 0, b: 0, a: 0}
   dragging: 0
 --- !u!224 &523862250
 RectTransform:
@@ -1663,22 +1863,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 583926121}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 296bfe6c09b431441af47ab1f07ce4e1, type: 3}
+  m_Script: {fileID: 11500000, guid: f450778e78ebe12489b96b4d7e0b7dca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnCap: 10
-  SatteliteJunkRatio: 70
+  SpawnCap: 0
+  SatteliteJunkRatio: 0
   MaxSpawnVelocity: 0
   JunkScaleModifier: 0
   SatteliteScaleModifier: 0
-  JunkPrefabs:
-  - {fileID: -927199367670048503, guid: 2c0d2c5de8ed97d4fbab526707375d6b, type: 3}
-  SattelitePrefabs:
-  - {fileID: -927199367670048503, guid: c6a25b5f45924bf49922a906a45da72d, type: 3}
-  - {fileID: -927199367670048503, guid: 7848ab7bd5d609f4e95b5941416c8531, type: 3}
-  ExplosionPrefab: {fileID: 2412892323634352373, guid: 1b261df5907575b4ba0b1511e39dfffd,
-    type: 3}
-  EditorColor: {r: 1, g: 0.73333335, b: 0, a: 0.21176471}
+  JunkPrefabs: []
+  SattelitePrefabs: []
+  ExplosionPrefab: {fileID: 0}
+  EditorColor: {r: 0, g: 0, b: 0, a: 0}
   dragging: 0
 --- !u!224 &583926123
 RectTransform:
@@ -1793,22 +1989,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 669875847}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 296bfe6c09b431441af47ab1f07ce4e1, type: 3}
+  m_Script: {fileID: 11500000, guid: f450778e78ebe12489b96b4d7e0b7dca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnCap: 80
-  SatteliteJunkRatio: 30
+  SpawnCap: 0
+  SatteliteJunkRatio: 0
   MaxSpawnVelocity: 0
   JunkScaleModifier: 0
-  SatteliteScaleModifier: 1.21
-  JunkPrefabs:
-  - {fileID: -927199367670048503, guid: 5a15f17754b1cf84aaac63e9a4c43253, type: 3}
-  SattelitePrefabs:
-  - {fileID: -927199367670048503, guid: 0a443395bee4f1941b9f9ce98b63cc44, type: 3}
-  - {fileID: -927199367670048503, guid: 2750cc44472325246adbabc82b28093f, type: 3}
-  ExplosionPrefab: {fileID: 2412892323634352373, guid: 1b261df5907575b4ba0b1511e39dfffd,
-    type: 3}
-  EditorColor: {r: 1, g: 0.5529412, b: 0.5529412, a: 0.21176471}
+  SatteliteScaleModifier: 0
+  JunkPrefabs: []
+  SattelitePrefabs: []
+  ExplosionPrefab: {fileID: 0}
+  EditorColor: {r: 0, g: 0, b: 0, a: 0}
   dragging: 0
 --- !u!224 &669875849
 RectTransform:
@@ -1891,22 +2083,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 874767598}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 296bfe6c09b431441af47ab1f07ce4e1, type: 3}
+  m_Script: {fileID: 11500000, guid: f450778e78ebe12489b96b4d7e0b7dca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnCap: 10
-  SatteliteJunkRatio: 70
+  SpawnCap: 0
+  SatteliteJunkRatio: 0
   MaxSpawnVelocity: 0
   JunkScaleModifier: 0
   SatteliteScaleModifier: 0
-  JunkPrefabs:
-  - {fileID: -927199367670048503, guid: 36aa84ebc206c9f4bbca9587dd631063, type: 3}
-  SattelitePrefabs:
-  - {fileID: -927199367670048503, guid: c6a25b5f45924bf49922a906a45da72d, type: 3}
-  - {fileID: -927199367670048503, guid: 7848ab7bd5d609f4e95b5941416c8531, type: 3}
-  ExplosionPrefab: {fileID: 2412892323634352373, guid: 1b261df5907575b4ba0b1511e39dfffd,
-    type: 3}
-  EditorColor: {r: 1, g: 0.73333335, b: 0, a: 0.21176471}
+  JunkPrefabs: []
+  SattelitePrefabs: []
+  ExplosionPrefab: {fileID: 0}
+  EditorColor: {r: 0, g: 0, b: 0, a: 0}
   dragging: 0
 --- !u!224 &874767600
 RectTransform:
@@ -1953,22 +2141,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 889154133}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 296bfe6c09b431441af47ab1f07ce4e1, type: 3}
+  m_Script: {fileID: 11500000, guid: f450778e78ebe12489b96b4d7e0b7dca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnCap: 80
-  SatteliteJunkRatio: 30
+  SpawnCap: 0
+  SatteliteJunkRatio: 0
   MaxSpawnVelocity: 0
   JunkScaleModifier: 0
-  SatteliteScaleModifier: 1.21
-  JunkPrefabs:
-  - {fileID: -927199367670048503, guid: ce036a10df16afe42befccb1cb15cd6e, type: 3}
-  SattelitePrefabs:
-  - {fileID: -927199367670048503, guid: 0a443395bee4f1941b9f9ce98b63cc44, type: 3}
-  - {fileID: -927199367670048503, guid: 2750cc44472325246adbabc82b28093f, type: 3}
-  ExplosionPrefab: {fileID: 2412892323634352373, guid: 1b261df5907575b4ba0b1511e39dfffd,
-    type: 3}
-  EditorColor: {r: 1, g: 0.5529412, b: 0.5529412, a: 0.21176471}
+  SatteliteScaleModifier: 0
+  JunkPrefabs: []
+  SattelitePrefabs: []
+  ExplosionPrefab: {fileID: 0}
+  EditorColor: {r: 0, g: 0, b: 0, a: 0}
   dragging: 0
 --- !u!224 &889154135
 RectTransform:
@@ -2172,22 +2356,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1005693092}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 296bfe6c09b431441af47ab1f07ce4e1, type: 3}
+  m_Script: {fileID: 11500000, guid: f450778e78ebe12489b96b4d7e0b7dca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnCap: 10
-  SatteliteJunkRatio: 70
+  SpawnCap: 0
+  SatteliteJunkRatio: 0
   MaxSpawnVelocity: 0
   JunkScaleModifier: 0
   SatteliteScaleModifier: 0
-  JunkPrefabs:
-  - {fileID: -927199367670048503, guid: 05381b610d627ec46b6eac9343b1d843, type: 3}
-  SattelitePrefabs:
-  - {fileID: -927199367670048503, guid: c6a25b5f45924bf49922a906a45da72d, type: 3}
-  - {fileID: -927199367670048503, guid: 7848ab7bd5d609f4e95b5941416c8531, type: 3}
-  ExplosionPrefab: {fileID: 2412892323634352373, guid: 1b261df5907575b4ba0b1511e39dfffd,
-    type: 3}
-  EditorColor: {r: 1, g: 0.7327648, b: 0, a: 0.21176471}
+  JunkPrefabs: []
+  SattelitePrefabs: []
+  ExplosionPrefab: {fileID: 0}
+  EditorColor: {r: 0, g: 0, b: 0, a: 0}
   dragging: 0
 --- !u!224 &1005693094
 RectTransform:
@@ -2525,22 +2705,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1146735713}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 296bfe6c09b431441af47ab1f07ce4e1, type: 3}
+  m_Script: {fileID: 11500000, guid: f450778e78ebe12489b96b4d7e0b7dca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnCap: 10
-  SatteliteJunkRatio: 70
+  SpawnCap: 0
+  SatteliteJunkRatio: 0
   MaxSpawnVelocity: 0
   JunkScaleModifier: 0
   SatteliteScaleModifier: 0
-  JunkPrefabs:
-  - {fileID: -927199367670048503, guid: a15204554cddbd844a0f3261ce81d326, type: 3}
-  SattelitePrefabs:
-  - {fileID: -927199367670048503, guid: c6a25b5f45924bf49922a906a45da72d, type: 3}
-  - {fileID: -927199367670048503, guid: 7848ab7bd5d609f4e95b5941416c8531, type: 3}
-  ExplosionPrefab: {fileID: 2412892323634352373, guid: 1b261df5907575b4ba0b1511e39dfffd,
-    type: 3}
-  EditorColor: {r: 1, g: 0.73333335, b: 0, a: 0.21176471}
+  JunkPrefabs: []
+  SattelitePrefabs: []
+  ExplosionPrefab: {fileID: 0}
+  EditorColor: {r: 0, g: 0, b: 0, a: 0}
   dragging: 0
 --- !u!224 &1146735715
 RectTransform:
@@ -2587,22 +2763,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1191705717}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 296bfe6c09b431441af47ab1f07ce4e1, type: 3}
+  m_Script: {fileID: 11500000, guid: f450778e78ebe12489b96b4d7e0b7dca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnCap: 10
-  SatteliteJunkRatio: 70
+  SpawnCap: 0
+  SatteliteJunkRatio: 0
   MaxSpawnVelocity: 0
   JunkScaleModifier: 0
   SatteliteScaleModifier: 0
-  JunkPrefabs:
-  - {fileID: -927199367670048503, guid: 4c124edcefc5ce84cbfc775f4523fced, type: 3}
-  SattelitePrefabs:
-  - {fileID: -927199367670048503, guid: c6a25b5f45924bf49922a906a45da72d, type: 3}
-  - {fileID: -927199367670048503, guid: 7848ab7bd5d609f4e95b5941416c8531, type: 3}
-  ExplosionPrefab: {fileID: 2412892323634352373, guid: 1b261df5907575b4ba0b1511e39dfffd,
-    type: 3}
-  EditorColor: {r: 1, g: 0.73333335, b: 0, a: 0.21176471}
+  JunkPrefabs: []
+  SattelitePrefabs: []
+  ExplosionPrefab: {fileID: 0}
+  EditorColor: {r: 0, g: 0, b: 0, a: 0}
   dragging: 0
 --- !u!224 &1191705719
 RectTransform:
@@ -2649,22 +2821,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1217396493}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 296bfe6c09b431441af47ab1f07ce4e1, type: 3}
+  m_Script: {fileID: 11500000, guid: f450778e78ebe12489b96b4d7e0b7dca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnCap: 80
-  SatteliteJunkRatio: 30
+  SpawnCap: 0
+  SatteliteJunkRatio: 0
   MaxSpawnVelocity: 0
   JunkScaleModifier: 0
-  SatteliteScaleModifier: 1.34
-  JunkPrefabs:
-  - {fileID: -927199367670048503, guid: 36aa84ebc206c9f4bbca9587dd631063, type: 3}
-  SattelitePrefabs:
-  - {fileID: -927199367670048503, guid: 0a443395bee4f1941b9f9ce98b63cc44, type: 3}
-  - {fileID: -927199367670048503, guid: 2750cc44472325246adbabc82b28093f, type: 3}
-  ExplosionPrefab: {fileID: 2412892323634352373, guid: 1b261df5907575b4ba0b1511e39dfffd,
-    type: 3}
-  EditorColor: {r: 1, g: 0.5529412, b: 0.5529412, a: 0.21176471}
+  SatteliteScaleModifier: 0
+  JunkPrefabs: []
+  SattelitePrefabs: []
+  ExplosionPrefab: {fileID: 0}
+  EditorColor: {r: 0, g: 0, b: 0, a: 0}
   dragging: 0
 --- !u!224 &1217396495
 RectTransform:
@@ -2711,22 +2879,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1221769774}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 296bfe6c09b431441af47ab1f07ce4e1, type: 3}
+  m_Script: {fileID: 11500000, guid: f450778e78ebe12489b96b4d7e0b7dca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnCap: 10
-  SatteliteJunkRatio: 70
+  SpawnCap: 0
+  SatteliteJunkRatio: 0
   MaxSpawnVelocity: 0
   JunkScaleModifier: 0
   SatteliteScaleModifier: 0
-  JunkPrefabs:
-  - {fileID: -927199367670048503, guid: 4aa089d00e7caaf429c5d18d07a6aed3, type: 3}
-  SattelitePrefabs:
-  - {fileID: -927199367670048503, guid: c6a25b5f45924bf49922a906a45da72d, type: 3}
-  - {fileID: -927199367670048503, guid: 7848ab7bd5d609f4e95b5941416c8531, type: 3}
-  ExplosionPrefab: {fileID: 2412892323634352373, guid: 1b261df5907575b4ba0b1511e39dfffd,
-    type: 3}
-  EditorColor: {r: 1, g: 0.73333335, b: 0, a: 0.21176471}
+  JunkPrefabs: []
+  SattelitePrefabs: []
+  ExplosionPrefab: {fileID: 0}
+  EditorColor: {r: 0, g: 0, b: 0, a: 0}
   dragging: 0
 --- !u!224 &1221769776
 RectTransform:
@@ -3746,22 +3910,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1431995852}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 296bfe6c09b431441af47ab1f07ce4e1, type: 3}
+  m_Script: {fileID: 11500000, guid: f450778e78ebe12489b96b4d7e0b7dca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnCap: 10
-  SatteliteJunkRatio: 70
+  SpawnCap: 0
+  SatteliteJunkRatio: 0
   MaxSpawnVelocity: 0
   JunkScaleModifier: 0
   SatteliteScaleModifier: 0
-  JunkPrefabs:
-  - {fileID: -927199367670048503, guid: fea86c83426e5174e92a44ef23c886be, type: 3}
-  SattelitePrefabs:
-  - {fileID: -927199367670048503, guid: c6a25b5f45924bf49922a906a45da72d, type: 3}
-  - {fileID: -927199367670048503, guid: 7848ab7bd5d609f4e95b5941416c8531, type: 3}
-  ExplosionPrefab: {fileID: 2412892323634352373, guid: 1b261df5907575b4ba0b1511e39dfffd,
-    type: 3}
-  EditorColor: {r: 1, g: 0.73333335, b: 0, a: 0.21176471}
+  JunkPrefabs: []
+  SattelitePrefabs: []
+  ExplosionPrefab: {fileID: 0}
+  EditorColor: {r: 0, g: 0, b: 0, a: 0}
   dragging: 0
 --- !u!224 &1431995854
 RectTransform:
@@ -3814,22 +3974,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1435439304}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 296bfe6c09b431441af47ab1f07ce4e1, type: 3}
+  m_Script: {fileID: 11500000, guid: f450778e78ebe12489b96b4d7e0b7dca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnCap: 10
-  SatteliteJunkRatio: 70
+  SpawnCap: 0
+  SatteliteJunkRatio: 0
   MaxSpawnVelocity: 0
   JunkScaleModifier: 0
   SatteliteScaleModifier: 0
-  JunkPrefabs:
-  - {fileID: -927199367670048503, guid: 32aff8746c5bac742a53815c2dce2c44, type: 3}
-  SattelitePrefabs:
-  - {fileID: -927199367670048503, guid: c6a25b5f45924bf49922a906a45da72d, type: 3}
-  - {fileID: -927199367670048503, guid: 7848ab7bd5d609f4e95b5941416c8531, type: 3}
-  ExplosionPrefab: {fileID: 2412892323634352373, guid: 1b261df5907575b4ba0b1511e39dfffd,
-    type: 3}
-  EditorColor: {r: 1, g: 0.73333335, b: 0, a: 0.21176471}
+  JunkPrefabs: []
+  SattelitePrefabs: []
+  ExplosionPrefab: {fileID: 0}
+  EditorColor: {r: 0, g: 0, b: 0, a: 0}
   dragging: 0
 --- !u!224 &1435439306
 RectTransform:
@@ -3876,22 +4032,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1439819925}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 296bfe6c09b431441af47ab1f07ce4e1, type: 3}
+  m_Script: {fileID: 11500000, guid: f450778e78ebe12489b96b4d7e0b7dca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnCap: 10
-  SatteliteJunkRatio: 70
+  SpawnCap: 0
+  SatteliteJunkRatio: 0
   MaxSpawnVelocity: 0
   JunkScaleModifier: 0
   SatteliteScaleModifier: 0
-  JunkPrefabs:
-  - {fileID: -927199367670048503, guid: c72510d0a20c55c4e8f6b124d9c0044e, type: 3}
-  SattelitePrefabs:
-  - {fileID: -927199367670048503, guid: c6a25b5f45924bf49922a906a45da72d, type: 3}
-  - {fileID: -927199367670048503, guid: 7848ab7bd5d609f4e95b5941416c8531, type: 3}
-  ExplosionPrefab: {fileID: 2412892323634352373, guid: 1b261df5907575b4ba0b1511e39dfffd,
-    type: 3}
-  EditorColor: {r: 1, g: 0.73333335, b: 0, a: 0.21176471}
+  JunkPrefabs: []
+  SattelitePrefabs: []
+  ExplosionPrefab: {fileID: 0}
+  EditorColor: {r: 0, g: 0, b: 0, a: 0}
   dragging: 0
 --- !u!224 &1439819927
 RectTransform:
@@ -3941,6 +4093,92 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 356222811}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1507041870
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1507041871}
+  - component: {fileID: 1507041874}
+  - component: {fileID: 1507041873}
+  - component: {fileID: 1507041872}
+  m_Layer: 5
+  m_Name: Indicator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1507041871
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1507041870}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7431340362783610953}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 70, y: 70}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1507041872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1507041870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9841944d2518f54dae6a4b79c19c66b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ship: {fileID: 1418893080}
+  DropOff: {fileID: 2942195612261420895}
+  radar: {fileID: 453857369}
+  rectCanvas: {fileID: 0}
+  distanceFromPlayer: 300
+  dir: {x: 0, y: 0, z: 0}
+--- !u!114 &1507041873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1507041870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef8b96895a0ec4ba685178a052544251, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 3286163911610860551, guid: bcefa6f8631b60043b9c3e1b1b62476b,
+    type: 3}
+  m_PreserveAspect: 0
+--- !u!222 &1507041874
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1507041870}
+  m_CullTransparentMesh: 0
 --- !u!1 &1618212955 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4140398144507680539, guid: 350b7d56930c1374f80867fb63cb3d52,
@@ -4060,22 +4298,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1742287429}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 296bfe6c09b431441af47ab1f07ce4e1, type: 3}
+  m_Script: {fileID: 11500000, guid: f450778e78ebe12489b96b4d7e0b7dca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnCap: 80
-  SatteliteJunkRatio: 30
+  SpawnCap: 0
+  SatteliteJunkRatio: 0
   MaxSpawnVelocity: 0
   JunkScaleModifier: 0
-  SatteliteScaleModifier: 0.96
-  JunkPrefabs:
-  - {fileID: -927199367670048503, guid: f94cddc3b1c800f4ba7472bdfdd353d7, type: 3}
-  SattelitePrefabs:
-  - {fileID: -927199367670048503, guid: 0a443395bee4f1941b9f9ce98b63cc44, type: 3}
-  - {fileID: -927199367670048503, guid: 2750cc44472325246adbabc82b28093f, type: 3}
-  ExplosionPrefab: {fileID: 2412892323634352373, guid: 1b261df5907575b4ba0b1511e39dfffd,
-    type: 3}
-  EditorColor: {r: 1, g: 0.5529412, b: 0.5529412, a: 0.21176471}
+  SatteliteScaleModifier: 0
+  JunkPrefabs: []
+  SattelitePrefabs: []
+  ExplosionPrefab: {fileID: 0}
+  EditorColor: {r: 0, g: 0, b: 0, a: 0}
   dragging: 0
 --- !u!224 &1742287431
 RectTransform:
@@ -4122,22 +4356,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1823239385}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 296bfe6c09b431441af47ab1f07ce4e1, type: 3}
+  m_Script: {fileID: 11500000, guid: f450778e78ebe12489b96b4d7e0b7dca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnCap: 10
-  SatteliteJunkRatio: 70
+  SpawnCap: 0
+  SatteliteJunkRatio: 0
   MaxSpawnVelocity: 0
   JunkScaleModifier: 0
   SatteliteScaleModifier: 0
-  JunkPrefabs:
-  - {fileID: -927199367670048503, guid: 5a805838303734a43b888d636d00798e, type: 3}
-  SattelitePrefabs:
-  - {fileID: -927199367670048503, guid: c6a25b5f45924bf49922a906a45da72d, type: 3}
-  - {fileID: -927199367670048503, guid: 7848ab7bd5d609f4e95b5941416c8531, type: 3}
-  ExplosionPrefab: {fileID: 2412892323634352373, guid: 1b261df5907575b4ba0b1511e39dfffd,
-    type: 3}
-  EditorColor: {r: 1, g: 0.73333335, b: 0, a: 0.21176471}
+  JunkPrefabs: []
+  SattelitePrefabs: []
+  ExplosionPrefab: {fileID: 0}
+  EditorColor: {r: 0, g: 0, b: 0, a: 0}
   dragging: 0
 --- !u!224 &1823239387
 RectTransform:
@@ -4158,6 +4388,176 @@ RectTransform:
   m_AnchoredPosition: {x: 29.733673, y: 14.792763}
   m_SizeDelta: {x: 15, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1858586850
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1858586851}
+  - component: {fileID: 1858586853}
+  - component: {fileID: 1858586852}
+  - component: {fileID: 1858586854}
+  m_Layer: 8
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1858586851
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858586850}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2134046264}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.05045184, y: 0.15575129}
+  m_AnchorMax: {x: 0.90345186, y: 0.90549743}
+  m_AnchoredPosition: {x: 14.311005, y: -4.5360985}
+  m_SizeDelta: {x: 47.156677, y: 37.067642}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1858586852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858586850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Timer
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 27e6a478dfbcadf4eae5b9b06a0d229d, type: 2}
+  m_sharedMaterial: {fileID: -3088628978871626160, guid: 27e6a478dfbcadf4eae5b9b06a0d229d,
+    type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_outlineColor:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontSize: 70
+  m_fontSizeBase: 70
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_textAlignment: 516
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_firstOverflowCharacterIndex: -1
+  m_linkedTextComponent: {fileID: 0}
+  m_isLinkedTextComponent: 0
+  m_isTextTruncated: 0
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_ignoreRectMaskCulling: 0
+  m_ignoreCulling: 1
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_VertexBufferAutoSizeReduction: 1
+  m_firstVisibleCharacter: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: -0.0019398022, z: 114.4767, w: 0}
+  m_textInfo:
+    textComponent: {fileID: 1858586852}
+    characterCount: 5
+    spriteCount: 0
+    spaceCount: 0
+    wordCount: 1
+    linkCount: 0
+    lineCount: 1
+    pageCount: 1
+    materialCount: 1
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_spriteAnimator: {fileID: 0}
+  m_hasFontAssetChanged: 0
+  m_subTextObjects:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1858586853
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858586850}
+  m_CullTransparentMesh: 0
+--- !u!114 &1858586854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858586850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9730b9932253344ca6603ddaac240a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1884532687
 GameObject:
   m_ObjectHideFlags: 0
@@ -4265,22 +4665,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1907472255}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 296bfe6c09b431441af47ab1f07ce4e1, type: 3}
+  m_Script: {fileID: 11500000, guid: f450778e78ebe12489b96b4d7e0b7dca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnCap: 10
-  SatteliteJunkRatio: 70
+  SpawnCap: 0
+  SatteliteJunkRatio: 0
   MaxSpawnVelocity: 0
   JunkScaleModifier: 0
   SatteliteScaleModifier: 0
-  JunkPrefabs:
-  - {fileID: -927199367670048503, guid: 05381b610d627ec46b6eac9343b1d843, type: 3}
-  SattelitePrefabs:
-  - {fileID: -927199367670048503, guid: c6a25b5f45924bf49922a906a45da72d, type: 3}
-  - {fileID: -927199367670048503, guid: 7848ab7bd5d609f4e95b5941416c8531, type: 3}
-  ExplosionPrefab: {fileID: 2412892323634352373, guid: 1b261df5907575b4ba0b1511e39dfffd,
-    type: 3}
-  EditorColor: {r: 1, g: 0.73333335, b: 0, a: 0.21176471}
+  JunkPrefabs: []
+  SattelitePrefabs: []
+  ExplosionPrefab: {fileID: 0}
+  EditorColor: {r: 0, g: 0, b: 0, a: 0}
   dragging: 0
 --- !u!224 &1907472257
 RectTransform:
@@ -4465,22 +4861,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1951357902}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 296bfe6c09b431441af47ab1f07ce4e1, type: 3}
+  m_Script: {fileID: 11500000, guid: f450778e78ebe12489b96b4d7e0b7dca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnCap: 10
-  SatteliteJunkRatio: 70
+  SpawnCap: 0
+  SatteliteJunkRatio: 0
   MaxSpawnVelocity: 0
   JunkScaleModifier: 0
   SatteliteScaleModifier: 0
-  JunkPrefabs:
-  - {fileID: -927199367670048503, guid: 4aa089d00e7caaf429c5d18d07a6aed3, type: 3}
-  SattelitePrefabs:
-  - {fileID: -927199367670048503, guid: c6a25b5f45924bf49922a906a45da72d, type: 3}
-  - {fileID: -927199367670048503, guid: 7848ab7bd5d609f4e95b5941416c8531, type: 3}
-  ExplosionPrefab: {fileID: 2412892323634352373, guid: 1b261df5907575b4ba0b1511e39dfffd,
-    type: 3}
-  EditorColor: {r: 1, g: 0.73333335, b: 0, a: 0.21176471}
+  JunkPrefabs: []
+  SattelitePrefabs: []
+  ExplosionPrefab: {fileID: 0}
+  EditorColor: {r: 0, g: 0, b: 0, a: 0}
   dragging: 0
 --- !u!224 &1951357904
 RectTransform:
@@ -4527,22 +4919,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1964130252}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 296bfe6c09b431441af47ab1f07ce4e1, type: 3}
+  m_Script: {fileID: 11500000, guid: f450778e78ebe12489b96b4d7e0b7dca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnCap: 10
-  SatteliteJunkRatio: 70
+  SpawnCap: 0
+  SatteliteJunkRatio: 0
   MaxSpawnVelocity: 0
   JunkScaleModifier: 0
   SatteliteScaleModifier: 0
-  JunkPrefabs:
-  - {fileID: -927199367670048503, guid: 5a805838303734a43b888d636d00798e, type: 3}
-  SattelitePrefabs:
-  - {fileID: -927199367670048503, guid: c6a25b5f45924bf49922a906a45da72d, type: 3}
-  - {fileID: -927199367670048503, guid: 7848ab7bd5d609f4e95b5941416c8531, type: 3}
-  ExplosionPrefab: {fileID: 2412892323634352373, guid: 1b261df5907575b4ba0b1511e39dfffd,
-    type: 3}
-  EditorColor: {r: 1, g: 0.73333335, b: 0, a: 0.21176471}
+  JunkPrefabs: []
+  SattelitePrefabs: []
+  ExplosionPrefab: {fileID: 0}
+  EditorColor: {r: 0, g: 0, b: 0, a: 0}
   dragging: 0
 --- !u!224 &1964130254
 RectTransform:
@@ -4637,22 +5025,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1981084447}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 296bfe6c09b431441af47ab1f07ce4e1, type: 3}
+  m_Script: {fileID: 11500000, guid: f450778e78ebe12489b96b4d7e0b7dca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnCap: 80
-  SatteliteJunkRatio: 30
+  SpawnCap: 0
+  SatteliteJunkRatio: 0
   MaxSpawnVelocity: 0
   JunkScaleModifier: 0
-  SatteliteScaleModifier: 1.36
-  JunkPrefabs:
-  - {fileID: -927199367670048503, guid: aaf6339c7330a5440bc4943a62e7d6d2, type: 3}
-  SattelitePrefabs:
-  - {fileID: -927199367670048503, guid: 0a443395bee4f1941b9f9ce98b63cc44, type: 3}
-  - {fileID: -927199367670048503, guid: 2750cc44472325246adbabc82b28093f, type: 3}
-  ExplosionPrefab: {fileID: 2412892323634352373, guid: 1b261df5907575b4ba0b1511e39dfffd,
-    type: 3}
-  EditorColor: {r: 1, g: 0.5529412, b: 0.5529412, a: 0.21176471}
+  SatteliteScaleModifier: 0
+  JunkPrefabs: []
+  SattelitePrefabs: []
+  ExplosionPrefab: {fileID: 0}
+  EditorColor: {r: 0, g: 0, b: 0, a: 0}
   dragging: 0
 --- !u!224 &1981084449
 RectTransform:
@@ -4809,22 +5193,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 2091293086}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 296bfe6c09b431441af47ab1f07ce4e1, type: 3}
+  m_Script: {fileID: 11500000, guid: f450778e78ebe12489b96b4d7e0b7dca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnCap: 10
-  SatteliteJunkRatio: 70
+  SpawnCap: 0
+  SatteliteJunkRatio: 0
   MaxSpawnVelocity: 0
   JunkScaleModifier: 0
   SatteliteScaleModifier: 0
-  JunkPrefabs:
-  - {fileID: -927199367670048503, guid: 74f0a2de703f5c84dbe7b251a1cdfbb5, type: 3}
-  SattelitePrefabs:
-  - {fileID: -927199367670048503, guid: c6a25b5f45924bf49922a906a45da72d, type: 3}
-  - {fileID: -927199367670048503, guid: 7848ab7bd5d609f4e95b5941416c8531, type: 3}
-  ExplosionPrefab: {fileID: 2412892323634352373, guid: 1b261df5907575b4ba0b1511e39dfffd,
-    type: 3}
-  EditorColor: {r: 1, g: 0.73333335, b: 0, a: 0.21176471}
+  JunkPrefabs: []
+  SattelitePrefabs: []
+  ExplosionPrefab: {fileID: 0}
+  EditorColor: {r: 0, g: 0, b: 0, a: 0}
   dragging: 0
 --- !u!224 &2091293088
 RectTransform:
@@ -4845,6 +5225,74 @@ RectTransform:
   m_AnchoredPosition: {x: -29.878918, y: -15.242226}
   m_SizeDelta: {x: 15, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &2134046263
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2134046264}
+  - component: {fileID: 2134046266}
+  - component: {fileID: 2134046265}
+  m_Layer: 8
+  m_Name: Timer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2134046264
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134046263}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1858586851}
+  m_Father: {fileID: 7431340362783610953}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.014125021, y: 0.8474074}
+  m_AnchorMax: {x: 0.21852085, y: 0.98455554}
+  m_AnchoredPosition: {x: 429.52, y: -0.000061035156}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2134046265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134046263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef8b96895a0ec4ba685178a052544251, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 3286163911610860551, guid: 21478e7fa5a87ad42835c77ea5b9e537,
+    type: 3}
+  m_PreserveAspect: 1
+--- !u!222 &2134046266
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134046263}
+  m_CullTransparentMesh: 0
 --- !u!1 &2145281214 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4140398143987510230, guid: 350b7d56930c1374f80867fb63cb3d52,
@@ -5641,7 +6089,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 32006be676009c442b64c93bb20c3f58, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9339b24119f477c4aa625ea101fd2003, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5689,6 +6137,8 @@ RectTransform:
   - {fileID: 7828861776956177268}
   - {fileID: 9067702298984180836}
   - {fileID: 2074115625}
+  - {fileID: 1507041871}
+  - {fileID: 2134046264}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6525,7 +6975,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 32006be676009c442b64c93bb20c3f58, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9339b24119f477c4aa625ea101fd2003, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
