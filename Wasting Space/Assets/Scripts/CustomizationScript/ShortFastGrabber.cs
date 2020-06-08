@@ -77,7 +77,7 @@ public class ShortFastGrabber : ABGrabber
         foreach (GameObject item in Grabslots)
         {
             item.transform.position = Hitbox.transform.position;
-            item.transform.rotation = Hitbox.transform.rotation;
+            //item.transform.rotation = Hitbox.transform.rotation;
             item.GetComponent<BoxCollider>().enabled = false;
         }
     }

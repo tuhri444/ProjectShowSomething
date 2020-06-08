@@ -23,6 +23,10 @@ public class SpawnArea : MonoBehaviour
     private int SatteliteToSpawn;
     private int JunkToSpawn;
 
+    private float TimePassed;
+    private float Timer = 0.2f;
+    private bool Timed;
+
     private List<Junk> Junks;
     private List<Sattelite> Sattelites;
     private Vector2 Size;
@@ -42,6 +46,25 @@ public class SpawnArea : MonoBehaviour
         JunkToSpawn = Mathf.RoundToInt(SpawnCap / 100 * SatteliteJunkRatio);
 
         Spawn();
+
+    }
+
+    private void Update()
+    {
+        if(TimePassed > Timer && !Timed)
+        {
+            for (int i = 0; i < Sattelites.Count; i++)
+            {
+                Sattelites[i].GetComponent<Rigidbody>().velocity = new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f));
+            }
+            for (int i = 0; i < Junks.Count; i++)
+            {
+                Junks[i].GetComponent<Rigidbody>().velocity = new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f));
+            }
+            Timed = true;
+        }
+        if(Timed == false)
+            TimePassed += Time.deltaTime;
     }
 
     private void Spawn()
@@ -78,7 +101,8 @@ public class SpawnArea : MonoBehaviour
             GameObject temp = Sattelite.CreateSattelite(SattelitePrefabs[randomPrefab], ExplosionPrefab, spawnLocation);
             temp.layer = 10;
             temp.transform.parent = this.transform;
-            temp.transform.localScale = new Vector3(scale*0.3f,scale * 0.3f, scale * 0.3f);
+            temp.transform.localScale = new Vector3(0.6f, 0.6f, 0.6f);
+            //temp.transform.localScale = new Vector3(scale*0.3f,scale * 0.3f, scale * 0.3f);
             temp.GetComponent<Rigidbody>().velocity = startVelocity;
             temp.GetComponent<Rigidbody>().mass = Random.Range(3, 8);
             Sattelites.Add(temp.GetComponent<Sattelite>());
@@ -110,7 +134,8 @@ public class SpawnArea : MonoBehaviour
 
             GameObject temp = Junk.CreateJunk(JunkPrefabs[randomPrefab], ExplosionPrefab, spawnLocation,false);
             temp.transform.parent = this.transform;
-            temp.transform.localScale = new Vector3(scale, scale, scale);
+            temp.transform.localScale = new Vector3(0.6f, 0.6f, 0.6f);
+            //temp.transform.localScale = new Vector3(scale, scale, scale);
             temp.GetComponent<Rigidbody>().velocity = startVelocity;
             Junks.Add(temp.GetComponent<Junk>());
         }
