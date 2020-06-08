@@ -40,12 +40,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1347166178960642864}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d434c98efa8a0b41a139f5f92bb4199, type: 3}
+  m_Script: {fileID: 11500000, guid: c856f530ab0d9ab47a39ddfd3f27a801, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   SecondsInBetweenShowers: 10
   AmountOfMeteors: 1
-  Speed: 10.6
+  Speed: 4.5
   TimePassed: 0
   Activated: 0
   meteoritePrefabs:

@@ -13,7 +13,7 @@ EditorBuildSettings:
     guid: 262f07f50773bab4291e307834cf84f1
   - enabled: 1
     path: Assets/Scenes/Testing/FlightTest.unity
-    guid: b77b814bb479ce04e9b8981d165e642c
+    guid: 5990804f2dae5b34dbfac4dc7fb3f31d
   - enabled: 1
     path: Assets/Scenes/Testing/Leaderboard.unity
     guid: 3f7ea939b17c3944a9e5a1e1ae1b40fe

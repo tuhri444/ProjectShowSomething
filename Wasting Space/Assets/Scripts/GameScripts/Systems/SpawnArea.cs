@@ -101,7 +101,7 @@ public class SpawnArea : MonoBehaviour
             GameObject temp = Sattelite.CreateSattelite(SattelitePrefabs[randomPrefab], ExplosionPrefab, spawnLocation);
             temp.layer = 10;
             temp.transform.parent = this.transform;
-            temp.transform.localScale = new Vector3(0.6f, 0.6f, 0.6f);
+            temp.transform.localScale = new Vector3(0.7f, 0.7f, 0.7f);
             //temp.transform.localScale = new Vector3(scale*0.3f,scale * 0.3f, scale * 0.3f);
             temp.GetComponent<Rigidbody>().velocity = startVelocity;
             temp.GetComponent<Rigidbody>().mass = Random.Range(3, 8);
@@ -134,7 +134,7 @@ public class SpawnArea : MonoBehaviour
 
             GameObject temp = Junk.CreateJunk(JunkPrefabs[randomPrefab], ExplosionPrefab, spawnLocation,false);
             temp.transform.parent = this.transform;
-            temp.transform.localScale = new Vector3(0.6f, 0.6f, 0.6f);
+            temp.transform.localScale = new Vector3(1f, 1f, 1f);
             //temp.transform.localScale = new Vector3(scale, scale, scale);
             temp.GetComponent<Rigidbody>().velocity = startVelocity;
             Junks.Add(temp.GetComponent<Junk>());
