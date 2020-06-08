@@ -10,6 +10,7 @@ public class PopulateLeaderboard : MonoBehaviour
 
     //Non-Serializable Fields
     private List<GameObject> leaderboardSlots = new List<GameObject>();
+    private List<ScoreboardObject> scorelist = new List<ScoreboardObject>();
     // Start is called before the first frame update
     void Start()
     {
@@ -18,24 +19,13 @@ public class PopulateLeaderboard : MonoBehaviour
             GameObject temp = Instantiate(leaderboardSlotPrefab, transform);
             leaderboardSlots.Add(temp);
         }
+        scorelist = Sheets.GetScores();
         for(int i = 0;i<leaderboardSlots.Count;i++)
         {
-            if (PlayerPrefs.GetString("Scorer" + i) == "") return;
-            string topScorer = PlayerPrefs.GetString("Scorer" + i);
-            string[] split = topScorer.Split(',');
-            string name = split[0];
-            string scoreStr = split[1];
-
             leaderboardSlots[i].GetComponent<LeaderboardSlot>().Rank = i + 1;
-            leaderboardSlots[i].GetComponent<LeaderboardSlot>().Name = name;
-            leaderboardSlots[i].GetComponent<LeaderboardSlot>().Score = scoreStr;
+            leaderboardSlots[i].GetComponent<LeaderboardSlot>().Name = scorelist[i].name.ToString();
+            leaderboardSlots[i].GetComponent<LeaderboardSlot>().Score = scorelist[i].score.ToString();
         }
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

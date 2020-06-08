@@ -24,18 +24,12 @@ public class LoadScene : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "FlightTest")
         {
+            Sheets.ConnectToGoogle();
             PlayerSettings playerSettings = FindObjectOfType<PlayerSettings>();
             string name = GameObject.Find("NameInput").GetComponent<TMP_InputField>().text;
             Debug.Log(name);
-            PlayerPrefs.SetString("CurrentPlayer", name);
-            Debug.Log("CurrentPlayer Name:"+PlayerPrefs.GetString("CurrentPlayer"));
-            PlayerPrefs.SetInt(name, (int)playerSettings.JunkCollected);
-
-            LoadScores();
-
-            QuickSort(scorers, 0, scorers.Count - 1);
-
-            SaveScores();
+            Sheets.AddScoreEntry((int)playerSettings.JunkCollected, name);
+            Sheets.SortRequest();
         }
 
         SceneManager.LoadScene(id);
@@ -59,7 +53,7 @@ public class LoadScene : MonoBehaviour
                     PlayerPrefs.SetString(scorer, currentPlayerName + "," + PlayerPrefs.GetInt(currentPlayerName));
                     currentPlayer = true;
                 }
-                else if(currentPlayer == true)
+                else if (currentPlayer == true)
                 {
                     break;
                 }
@@ -79,40 +73,8 @@ public class LoadScene : MonoBehaviour
         for (int i = 0; i < scorers.Count; i++)
         {
             string scorer = "Scorer" + i;
+            PlayerPrefs.DeleteKey(scorer);
             PlayerPrefs.SetString(scorer, scorers[i].Key + "," + scorers[i].Value);
         }
-    }
-
-    //O(nlogn) 
-    public static void QuickSort(List<KeyValuePair<string, int>> array, int init, int end)
-    {
-        if (init < end)
-        {
-            int pivot = Partition(array, init, end);
-            QuickSort(array, init, pivot - 1);
-            QuickSort(array, pivot + 1, end);
-        }
-    }
-    //O(n)
-    private static int Partition(List<KeyValuePair<string, int>> array, int init, int end)
-    {
-        int last = array[end].Value;
-        int i = init - 1;
-        for (int j = init; j < end; j++)
-        {
-            if (array[j].Value <= last)
-            {
-                i++;
-                Exchange(array, i, j);
-            }
-        }
-        Exchange(array, i + 1, end);
-        return i + 1;
-    }
-    private static void Exchange(List<KeyValuePair<string, int>> array, int i, int j)
-    {
-        KeyValuePair<string, int> temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
     }
 }

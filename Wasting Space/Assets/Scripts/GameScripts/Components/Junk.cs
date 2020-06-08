@@ -30,6 +30,7 @@ public class Junk : MonoBehaviour
 
         junk.Explosion = _explosionEffect;
         JunkObject.tag = "RadarObject";
+        JunkObject.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
         if (!_isChild) junk.CreateChildren(_junkPrefab, _explosionEffect, _position,_amountOfChildren);
         return JunkObject;
     }

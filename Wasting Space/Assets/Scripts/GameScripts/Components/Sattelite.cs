@@ -28,7 +28,7 @@ public class Sattelite : MonoBehaviour
         sattelite.Explosion = _explosionEffect;
 
         sattelite.gameObject.tag = "RadarObject";
-
+        satteliteObject.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
         return satteliteObject;
     }
     //TODO
