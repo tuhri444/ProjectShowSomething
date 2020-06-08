@@ -21,21 +21,25 @@ public class CapacityBar : MonoBehaviour
         image = transform.GetChild(0).GetComponent<Image>();
         playerSettings = FindObjectOfType<PlayerSettings>();
         hull = FindObjectOfType<Hull>();
+        if(hull != null)
+        {
+            freeSpace = hull.Capacity;
+            hullCap = hull.Capacity;
+        }
 
     }
 
     void Update()
     {
-        if(hull == null)
+        if (hull == null)
         {
             hull = FindObjectOfType<Hull>();
-            if (hull != null)
-            {
-                freeSpace = hull.Capacity;
-                hullCap = hull.Capacity;
-            }
+            freeSpace = hull.Capacity;
+            hullCap = hull.Capacity;
         }
-        image.fillAmount = (freeSpace - playerSettings.InternalJunkCollected)/hullCap;
+        if (hull != null)
+            image.fillAmount = 1 / hullCap * playerSettings.InternalJunkCollected;
+
     }
 
     public float Capacity
