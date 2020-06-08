@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7792639874342383698}
   - component: {fileID: 8045889554258800139}
-  - component: {fileID: 7735872687667544160}
   - component: {fileID: 3638804510857903710}
+  - component: {fileID: 5891425895888102130}
   m_Layer: 5
   m_Name: LeaderboardSlot 1
   m_TagString: Untagged
@@ -49,18 +49,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2940393976495901052}
   m_CullTransparentMesh: 0
---- !u!114 &7735872687667544160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2940393976495901052}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6643ecba89b45a74c812a91ad06026de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3638804510857903710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83,6 +71,18 @@ MonoBehaviour:
   m_Sprite: {fileID: 3286163911610860551, guid: ec5a6b14071f4d8408785ff376b9f178,
     type: 3}
   m_PreserveAspect: 0
+--- !u!114 &5891425895888102130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2940393976495901052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51892eca7a94289418288ed65eecfb2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5373330536079545953
 GameObject:
   m_ObjectHideFlags: 0

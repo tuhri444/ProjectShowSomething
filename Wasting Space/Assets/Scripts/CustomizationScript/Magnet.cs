@@ -52,10 +52,13 @@ public class Magnet : MonoBehaviour
     {
         foreach(GameObject go in attractable)
         {
-            Rigidbody rb = go.GetComponent<Rigidbody>();
-            Vector3 diff = transform.position - go.transform.position;
-            Vector3 dir = diff.normalized;
-            rb.AddForce(dir * force * Time.deltaTime, ForceMode.Impulse);
+            if (go != null)
+            {
+                Rigidbody rb = go.GetComponent<Rigidbody>();
+                Vector3 diff = transform.position - go.transform.position;
+                Vector3 dir = diff.normalized;
+                rb.AddForce(dir * force * Time.deltaTime, ForceMode.Impulse);
+            }
         }
     }
 

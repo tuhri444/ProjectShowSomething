@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -603,7 +603,6 @@ GameObject:
   - component: {fileID: 640614703}
   - component: {fileID: 640614705}
   - component: {fileID: 640614704}
-  - component: {fileID: 640614706}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -661,20 +660,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 640614702}
   m_CullTransparentMesh: 0
---- !u!114 &640614706
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 640614702}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fbf43f941da8b74f94b94903d5abf5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  amplitude: 0.1
-  speed: 1
 --- !u!1 &753823601
 GameObject:
   m_ObjectHideFlags: 0
@@ -1962,9 +1947,7 @@ GameObject:
   - component: {fileID: 2104301096}
   - component: {fileID: 2104301101}
   - component: {fileID: 2104301100}
-  - component: {fileID: 2104301099}
   - component: {fileID: 2104301098}
-  - component: {fileID: 2104301097}
   m_Layer: 5
   m_Name: Options
   m_TagString: Untagged
@@ -1992,20 +1975,6 @@ RectTransform:
   m_AnchoredPosition: {x: -102, y: -300}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2104301097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2104301095}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fbf43f941da8b74f94b94903d5abf5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  amplitude: 0.1
-  speed: 1
 --- !u!114 &2104301098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2049,7 +2018,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2104301099}
+      - m_Target: {fileID: 1851453893148622697}
         m_MethodName: Load
         m_Mode: 3
         m_Arguments:
@@ -2060,18 +2029,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &2104301099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2104301095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc5f3177f9be5e64da852de40fb81708, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2104301100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2246,13 +2203,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1851453893148622695}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fbf43f941da8b74f94b94903d5abf5c, type: 3}
+  m_Script: {fileID: 11500000, guid: dc5f3177f9be5e64da852de40fb81708, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amplitude: 0.1
-  speed: 1
 --- !u!224 &1851453893328147691
 RectTransform:
   m_ObjectHideFlags: 0

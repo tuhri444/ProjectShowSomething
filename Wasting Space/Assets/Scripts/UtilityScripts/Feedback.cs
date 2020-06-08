@@ -10,6 +10,7 @@ public class Feedback : MonoBehaviour
     {
         Rating rating = FindObjectOfType<Rating>();
         YesNo yesno = FindObjectOfType<YesNo>();
+        Sheets.AddFeebackEntry(PlayerPrefs.GetString("CurrentPlayer"),rating.Ratings,yesno.HadFun+"");
         PlayerPrefs.SetString(PlayerPrefs.GetString("CurrentPlayer"),rating.Ratings+","+yesno.HadFun);
 
         SceneManager.LoadScene(0);
