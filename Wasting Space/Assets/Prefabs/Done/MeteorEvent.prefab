@@ -45,7 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SecondsInBetweenShowers: 10
   AmountOfMeteors: 1
-  Speed: 2.6
+  Speed: 10.6
   TimePassed: 0
   Activated: 0
   meteoritePrefabs:
