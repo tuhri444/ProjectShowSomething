@@ -20,7 +20,7 @@ public class CollectionPoint : MonoBehaviour
     {
         if(other.gameObject.GetComponent<Junk>() != null/* || other.gameObject.GetComponent<Sattelite>()*/)
         {
-            GetComponentInParent<Magnet>().Collect(other);
+            //GetComponentInParent<Magnet>().Collect(other);
         }
     }
 }

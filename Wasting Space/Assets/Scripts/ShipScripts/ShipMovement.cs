@@ -36,7 +36,6 @@ public class ShipMovement : MonoBehaviour
         rigidbody = GetComponent<Rigidbody>();
         rigidbody.drag = linearDrag;
         rigidbody.angularDrag = rotationalDrag;
-        mainCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
 
         UpdateStats();
     }

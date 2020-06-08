@@ -8,8 +8,8 @@ public class Magnet : MonoBehaviour
     [SerializeField]
     private float force;
 
-    private List<GameObject> attractable = new List<GameObject>();
-    private bool isAttracting = false;
+    [SerializeField] private List<GameObject> attractable = new List<GameObject>();
+    [SerializeField] private bool isAttracting = false;
     private GameObject grabButton;
 
     
@@ -24,10 +24,9 @@ public class Magnet : MonoBehaviour
     {
         if(grabButton == null)
         {
-            grabButton = GameObject.Find("GrabButton");
+            grabButton = GameObject.Find("MagnetButton");
             if (grabButton != null)
             {
-
                 grabButton.GetComponent<Button>().onClick.AddListener(ToggleAttract);
             }
         }
@@ -81,14 +80,14 @@ public class Magnet : MonoBehaviour
         }
     }
 
-    public void Collect(Collider other)
-    {
-        if(attractable.Contains(other.gameObject) && isAttracting)
-        {
-            Debug.Log("Hello");
-            FindObjectOfType<PlayerSettings>().InternalJunkCollected++;
-            attractable.Remove(other.gameObject);
-            Destroy(other.gameObject);
-        }
-    }
+    //public void Collect(Collider other)
+    //{
+    //    if(attractable.Contains(other.gameObject) && isAttracting)
+    //    {
+    //        Debug.Log("Hello");
+    //        FindObjectOfType<PlayerSettings>().InternalJunkCollected++;
+    //        attractable.Remove(other.gameObject);
+    //        Destroy(other.gameObject);
+    //    }
+    //}
 }

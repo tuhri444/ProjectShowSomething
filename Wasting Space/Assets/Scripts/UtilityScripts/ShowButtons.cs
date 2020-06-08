@@ -21,14 +21,17 @@ public class ShowButtons : MonoBehaviour
         if(Vector3.Distance(player.transform.position,spaceStationLocation) < 3.0f && !spaceStation.GetLockIn)
         {
             buttons[0].SetActive(true);
+            buttons[2].SetActive(false);
         }
         else
         {
             buttons[0].SetActive(false);
+            buttons[2].SetActive(true);
         }
         if(spaceStation.GetLockIn)
         {
             buttons[1].SetActive(true);
+            buttons[2].SetActive(false);
         }
         else
         {

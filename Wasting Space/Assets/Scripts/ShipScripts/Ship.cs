@@ -19,7 +19,7 @@ public class Ship : MonoBehaviour
     private GameObject grabber;
     private GameObject hull;
     private GameObject booster;
-
+    private bool healthSet;
     // Start is called before the first frame update
     private void Start()
     {
@@ -53,16 +53,27 @@ public class Ship : MonoBehaviour
             Debug.Log(e.Message);
             Debug.Log("There where no parts selected");
         }
-        health = healthBar.MaxHealth;
     }
 
     public void Update()
     {
-        healthBar.Health = health;
-        if (health <= 0)
+        if(healthBar == null) healthBar = FindObjectOfType<Healthbar>();
+        else
         {
-            GetComponent<ShipMovement>().EnableMovement = false;
-            Destroy(GetComponent<OnDeath>());
+            if(!healthSet)
+            {
+                health = healthBar.MaxHealth;
+                healthSet = true;
+            }
+            else
+            {
+                healthBar.Health = health;
+                if (health <= 0)
+                {
+                    GetComponent<ShipMovement>().EnableMovement = false;
+                    Destroy(GetComponent<OnDeath>());
+                }
+            }
         }
     }
 
