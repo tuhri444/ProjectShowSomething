@@ -3,7 +3,12 @@ guid: d6148d2d9fa600a4aa0459d1cec4a59b
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Asteroid
+    second: {fileID: 2100000, guid: 9ae35fbfc0bd2ba44b7d10d9490d4943, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -80,7 +85,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.59999996
+    globalScale: 60
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

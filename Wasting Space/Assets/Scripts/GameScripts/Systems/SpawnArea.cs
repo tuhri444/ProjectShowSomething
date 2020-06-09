@@ -134,7 +134,7 @@ public class SpawnArea : MonoBehaviour
 
             GameObject temp = Junk.CreateJunk(JunkPrefabs[randomPrefab], ExplosionPrefab, spawnLocation,false);
             temp.transform.parent = this.transform;
-            temp.transform.localScale = new Vector3(1f, 1f, 1f);
+            temp.transform.localScale = new Vector3(20f, 20f, 20f);
             //temp.transform.localScale = new Vector3(scale, scale, scale);
             temp.GetComponent<Rigidbody>().velocity = startVelocity;
             Junks.Add(temp.GetComponent<Junk>());

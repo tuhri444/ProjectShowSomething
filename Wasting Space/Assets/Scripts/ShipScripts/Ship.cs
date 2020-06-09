@@ -31,7 +31,7 @@ public class Ship : MonoBehaviour
         if (!CAR)
         {
 
-            GameObject.Find("Tesla").SetActive(false);
+
             meshRenderer.enabled = false;
             capsuleCollider.enabled = false;
 
