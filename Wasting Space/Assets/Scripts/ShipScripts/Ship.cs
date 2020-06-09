@@ -10,7 +10,8 @@ public class Ship : MonoBehaviour
     private PlayerSettings playerSettings;
     [SerializeField]
     private Healthbar healthBar;
-
+    [SerializeField]
+    private bool CAR = false;
     //Non-Serializable Fields
     private float health = 100;
     private MeshRenderer meshRenderer;
@@ -24,34 +25,45 @@ public class Ship : MonoBehaviour
     private void Start()
     {
         meshRenderer = GetComponent<MeshRenderer>();
-        meshRenderer.enabled = false;
         capsuleCollider = GetComponent<CapsuleCollider>();
-        capsuleCollider.enabled = false;
         playerSettings = FindObjectOfType<PlayerSettings>();
         healthBar = FindObjectOfType<Healthbar>();
+        if (!CAR)
+        {
 
-        try
-        {
-            string grabberName = PlayerPrefs.GetString("ActiveGrabber");
-            Debug.Log(grabberName);
-            string hullName = PlayerPrefs.GetString("ActiveHull");
-            string boosterName = PlayerPrefs.GetString("ActiveBooster");
-            GameObject grabberPref = Resources.Load("Parts/Grabbers/" + grabberName) as GameObject;
-            Debug.Log(grabberPref == null);
-            GameObject hullPref = Resources.Load("Parts/Hulls/" + hullName) as GameObject;
-            Debug.Log(hullPref == null);
-            GameObject boosterPref = Resources.Load("Parts/Boosters/" + boosterName) as GameObject;
-            Debug.Log(boosterPref == null);
-            grabber = Instantiate(grabberPref, transform.GetChild(0));
-            hull = Instantiate(hullPref, transform.GetChild(1));
-            booster = Instantiate(boosterPref, transform.GetChild(2));
+            GameObject.Find("Tesla").SetActive(false);
+            meshRenderer.enabled = false;
+            capsuleCollider.enabled = false;
+
+
+            try
+            {
+                string grabberName = PlayerPrefs.GetString("ActiveGrabber");
+                Debug.Log(grabberName);
+                string hullName = PlayerPrefs.GetString("ActiveHull");
+                string boosterName = PlayerPrefs.GetString("ActiveBooster");
+                GameObject grabberPref = Resources.Load("Parts/Grabbers/" + grabberName) as GameObject;
+                Debug.Log(grabberPref == null);
+                GameObject hullPref = Resources.Load("Parts/Hulls/" + hullName) as GameObject;
+                Debug.Log(hullPref == null);
+                GameObject boosterPref = Resources.Load("Parts/Boosters/" + boosterName) as GameObject;
+                Debug.Log(boosterPref == null);
+                grabber = Instantiate(grabberPref, transform.GetChild(0));
+                hull = Instantiate(hullPref, transform.GetChild(1));
+                booster = Instantiate(boosterPref, transform.GetChild(2));
+            }
+            catch (Exception e)
+            {
+                meshRenderer.enabled = true;
+                capsuleCollider.enabled = true;
+                Debug.Log(e.Message);
+                Debug.Log("There where no parts selected");
+            }
         }
-        catch (Exception e)
+        else
         {
-            meshRenderer.enabled = true;
-            capsuleCollider.enabled = true;
-            Debug.Log(e.Message);
-            Debug.Log("There where no parts selected");
+            meshRenderer.enabled = false;
+            capsuleCollider.enabled = false;
         }
     }
 
