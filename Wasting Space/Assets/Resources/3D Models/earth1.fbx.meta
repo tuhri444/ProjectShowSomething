@@ -3,12 +3,7 @@ guid: f0fd916d8f50e9a46977a2e6a8596f5b
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Earth
-    second: {fileID: 2100000, guid: d9290d389ff49a04da88b2db9eb9bd24, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0

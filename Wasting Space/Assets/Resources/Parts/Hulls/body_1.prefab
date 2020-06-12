@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 200
-  capacity: 20
+  capacity: 30
   price: 0
 --- !u!64 &136680066463877118
 MeshCollider:
