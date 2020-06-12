@@ -9,6 +9,10 @@ public class ShipMovement : MonoBehaviour
     private Joystick joystick;
     [SerializeField]
     private bool tankControls = false;
+    [SerializeField]
+    private bool DragControls = false;
+    [SerializeField]
+    private Camera cam;
 
     //Non-Serializable Fields
     private new Rigidbody rigidbody;
@@ -50,44 +54,59 @@ public class ShipMovement : MonoBehaviour
     {
         if (EnableMovement)
         {
-            if (Mathf.Abs(Input.GetAxis("Vertical")) > 0)
+            if (DragControls)
             {
-                verticalInput = Input.GetAxis("Vertical");
-            }
-            else if (joystick != null)
-            {
-                verticalInput = joystick.Vertical;
-            }
-
-            if (Mathf.Abs(Input.GetAxis("Horizontal")) > 0)
-            {
-                horizontalInput = Input.GetAxis("Horizontal");
-            }
-            else if (joystick != null)
-            {
-                horizontalInput = joystick.Horizontal;
-            }
-
-            if (!tankControls)
-            {
-                DirectionMove(new Vector3(verticalInput, -horizontalInput, 0));
+                if (Input.GetMouseButton(0))
+                {
+                    Vector2 direction = Vector3.one;
+                    direction.x = Input.mousePosition.x - Screen.width * 0.5f;
+                    direction.y = Input.mousePosition.y - Screen.height * 0.5f;
+                    DirectionMove(direction.normalized);
+                }
             }
             else
             {
-                VerticalMovement(verticalInput);
-                RotationalMovement(new Vector3(0, 0, horizontalInput));
+                if (Mathf.Abs(Input.GetAxis("Vertical")) > 0)
+                {
+                    verticalInput = Input.GetAxis("Vertical");
+                }
+                else if (joystick != null)
+                {
+                    verticalInput = joystick.Vertical;
+                }
+
+                if (Mathf.Abs(Input.GetAxis("Horizontal")) > 0)
+                {
+                    horizontalInput = Input.GetAxis("Horizontal");
+                }
+                else if (joystick != null)
+                {
+                    horizontalInput = joystick.Horizontal;
+                }
+
+                if (!tankControls)
+                {
+                    DirectionMove(new Vector2(verticalInput, -horizontalInput).Rotate(90));
+                }
+                else
+                {
+                    VerticalMovement(verticalInput);
+                    RotationalMovement(new Vector3(0, 0, horizontalInput));
+                }
             }
         }
     }
 
-    void DirectionMove(Vector3 movementDirection)
+    void DirectionMove(Vector2 movementDirection)
     {
         float x = movementDirection.x;
         float y = movementDirection.y;
+
         if (movementDirection.sqrMagnitude > 0.1)
         {
             float angle = Mathf.Atan2(x, y) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(new Vector3(0, 0, -(angle - 90))), Time.deltaTime * rotationSpeed);
+            var targetRotation = Quaternion.Euler(new Vector3(0, 0, -angle));
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
             rigidbody.AddForce(transform.up * speed * Time.deltaTime, ForceMode.Impulse);
         }
     }

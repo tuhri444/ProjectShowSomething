@@ -79,7 +79,7 @@ public class ShortFastGrabber : ABGrabber
         foreach (GameObject item in Grabslots)
         {
             item.transform.position = Hitbox.transform.position;
-            item.transform.localScale = Vector3.Lerp(item.transform.localScale, new Vector3(0, 0, 0), Time.deltaTime * ShrinkSpeed);
+            item.transform.localScale = Vector3.Lerp(item.transform.localScale, new Vector3(0, 0, 0), 1/0.25f * Time.deltaTime);
             //item.transform.rotation = Hitbox.transform.rotation;
             item.GetComponent<BoxCollider>().enabled = false;
         }
