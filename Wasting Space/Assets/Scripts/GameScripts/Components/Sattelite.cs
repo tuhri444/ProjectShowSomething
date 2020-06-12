@@ -20,15 +20,17 @@ public class Sattelite : MonoBehaviour
 
         Sattelite sattelite = satteliteObject.AddComponent<Sattelite>() as Sattelite;
         Rigidbody rigidbody = satteliteObject.AddComponent<Rigidbody>() as Rigidbody;
-        Debug.Log(satteliteObject.GetComponent<Sattelite>());
-        satteliteObject.AddComponent<BoxCollider>();
+        satteliteObject.AddComponent<SphereCollider>();
+        satteliteObject.layer = 10;
 
         rigidbody.useGravity = false;
         rigidbody.constraints = RigidbodyConstraints.FreezePositionZ;
         sattelite.Explosion = _explosionEffect;
 
         sattelite.gameObject.tag = "RadarObject";
-        satteliteObject.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+        if(satteliteObject.GetComponent<MeshRenderer>()) satteliteObject.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+        else if (satteliteObject.GetComponentInChildren<MeshRenderer>()) satteliteObject.GetComponentInChildren<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+
         return satteliteObject;
     }
     //TODO

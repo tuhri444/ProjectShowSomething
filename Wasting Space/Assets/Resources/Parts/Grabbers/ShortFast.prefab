@@ -624,6 +624,7 @@ MonoBehaviour:
   animationTagExtended: ex
   animationNameExtend: Extend
   animationNameDextend: Dextend
+  ShrinkSpeed: 0.5
 --- !u!95 &3950311394878604270
 Animator:
   serializedVersion: 3

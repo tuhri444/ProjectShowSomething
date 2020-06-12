@@ -13,7 +13,7 @@ public class Ship : MonoBehaviour
     [SerializeField]
     private bool CAR = false;
     //Non-Serializable Fields
-    private float health = 100;
+    [SerializeField] private float health = 100;
     private MeshRenderer meshRenderer;
     private CapsuleCollider capsuleCollider;
     private ShipSettings shipSettings;
@@ -39,15 +39,15 @@ public class Ship : MonoBehaviour
             try
             {
                 string grabberName = PlayerPrefs.GetString("ActiveGrabber");
-                Debug.Log(grabberName);
+                //Debug.Log(grabberName);
                 string hullName = PlayerPrefs.GetString("ActiveHull");
                 string boosterName = PlayerPrefs.GetString("ActiveBooster");
                 GameObject grabberPref = Resources.Load("Parts/Grabbers/" + grabberName) as GameObject;
-                Debug.Log(grabberPref == null);
+                //Debug.Log(grabberPref == null);
                 GameObject hullPref = Resources.Load("Parts/Hulls/" + hullName) as GameObject;
-                Debug.Log(hullPref == null);
+                //Debug.Log(hullPref == null);
                 GameObject boosterPref = Resources.Load("Parts/Boosters/" + boosterName) as GameObject;
-                Debug.Log(boosterPref == null);
+                //Debug.Log(boosterPref == null);
                 grabber = Instantiate(grabberPref, transform.GetChild(0));
                 hull = Instantiate(hullPref, transform.GetChild(1));
                 booster = Instantiate(boosterPref, transform.GetChild(2));
@@ -89,7 +89,7 @@ public class Ship : MonoBehaviour
         }
     }
 
-    public void Damage(int amount = 10)
+    public void Damage(float amount = 10)
     {
         health -= amount;
     }

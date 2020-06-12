@@ -9,8 +9,8 @@ public class ShortFastGrabber : ABGrabber
     [SerializeField] private string animationNameExtend;
     [SerializeField] private string animationNameDextend;
     private Hull shipHull;
-
-
+    private Vector3 itemHoldScale;
+    [SerializeField] private float ShrinkSpeed;
 
     public override void OnClick()
     {
@@ -35,6 +35,7 @@ public class ShortFastGrabber : ABGrabber
                     Hitbox.GetComponent<SphereCollider>().enabled = false;
                     otherJunk.GetComponent<BoxCollider>().enabled = false;
                     Grabslots.Add(other.gameObject);
+                    itemHoldScale = other.transform.localScale;
                 }
             }
             else
@@ -74,9 +75,11 @@ public class ShortFastGrabber : ABGrabber
 
     private void HoldJunk()
     {
+
         foreach (GameObject item in Grabslots)
         {
             item.transform.position = Hitbox.transform.position;
+            item.transform.localScale = Vector3.Lerp(item.transform.localScale, new Vector3(0, 0, 0), 1/0.25f * Time.deltaTime);
             //item.transform.rotation = Hitbox.transform.rotation;
             item.GetComponent<BoxCollider>().enabled = false;
         }

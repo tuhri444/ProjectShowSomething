@@ -17,9 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Testing/Leaderboard.unity
     guid: 3f7ea939b17c3944a9e5a1e1ae1b40fe
-  - enabled: 1
-    path: Assets/Scenes/Testing/SampleScene.unity
-    guid: d1c3109bdb54ad54c8a2b2838528e640
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Testing/Feedback.unity
     guid: c3ee0c9a5c5dc9c469f8ad052bb4bff3
