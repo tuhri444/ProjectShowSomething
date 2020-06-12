@@ -7,20 +7,17 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/Testing/Start.unity
-    guid: eeb5c8f4953516d47b429211cda2662a
+    guid: f31ca459ea0ef5844be51951929fdee5
   - enabled: 1
     path: Assets/Scenes/Testing/Customization.unity
-    guid: 262f07f50773bab4291e307834cf84f1
+    guid: 269d89e91d5ccdc45ba1199d311add6e
   - enabled: 1
     path: Assets/Scenes/Testing/FlightTest.unity
     guid: 5990804f2dae5b34dbfac4dc7fb3f31d
   - enabled: 1
     path: Assets/Scenes/Testing/Leaderboard.unity
-    guid: 3f7ea939b17c3944a9e5a1e1ae1b40fe
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+    guid: 8d1ad0fd0fe57fe4cad9e14885b76de7
   - enabled: 1
     path: Assets/Scenes/Testing/Feedback.unity
-    guid: c3ee0c9a5c5dc9c469f8ad052bb4bff3
+    guid: 5ead290f2c5129d48b148f7cc29179de
   m_configObjects: {}
