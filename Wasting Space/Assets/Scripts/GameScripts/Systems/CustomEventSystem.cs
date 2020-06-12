@@ -38,7 +38,7 @@ public class CustomEventSystem : MonoBehaviour
             {
                 foreach (WorldEvent worldEvent in events)
                 {
-                    Debug.Log("This part is working");
+                    //Debug.Log("This part is working");
                     worldEvent.Init(HotFixCondition.GetComponent<Condition>());
                 }
             }

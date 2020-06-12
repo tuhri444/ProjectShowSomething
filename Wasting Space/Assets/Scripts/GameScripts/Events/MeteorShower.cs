@@ -51,16 +51,18 @@ public class MeteorShower : MonoBehaviour, WorldEvent
     {
         if (!Activated)
         {
-            Debug.Log("Activating event " + timesActivated);
-            Vector3 GeneralSpawnPosition = new Vector3(Random.Range(-20.0f, 20.0f), Random.Range(-20.0f, 20.0f), 0).normalized * 20.0f;
+            //Debug.Log("Activating event " + timesActivated);
+            Vector3 GeneralSpawnPosition = new Vector3(Random.Range(-20.0f, 20.0f), Random.Range(-20.0f, 20.0f), 0).normalized * 30.0f;
             GeneralSpawnPosition = player.transform.position + GeneralSpawnPosition;
             for (int i = 0; i < AmountOfMeteors; i++)
             {
                 Vector3 randoSpawn = GeneralSpawnPosition + new Vector3(Random.Range(-2.0f, 2.0f), Random.Range(-2.0f, 2.0f), 0);
-                Vector3 target = player.transform.position + new Vector3(Random.Range(-1.0f, 1.0f), Random.Range(-1.0f, 1.0f), 0.0f);
+                Vector3 target = player.transform.position;
                 Vector3 Direction = (target - randoSpawn).normalized;
-                GameObject temp = Instantiate(meteoritePrefabs[Random.Range(0, meteoritePrefabs.Count - 1)], randoSpawn, Quaternion.Euler(0, 0, 0));
+                GameObject temp = Sattelite.CreateSattelite(meteoritePrefabs[Random.Range(0, meteoritePrefabs.Count - 1)], meteoritePrefabs[0], randoSpawn);
                 temp.GetComponent<Rigidbody>().AddForce(Direction * Speed);
+                //SphereCollider col = temp.GetComponentInChildren<SphereCollider>();
+                //col.radius = 0.9f;
             }
             timesActivated++;
             Activated = true;
