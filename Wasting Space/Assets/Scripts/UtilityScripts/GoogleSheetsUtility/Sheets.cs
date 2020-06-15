@@ -7,7 +7,8 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading;
-//using UnityEngine;
+using UnityEngine;
+using Newtonsoft.Json;
 
 public class Sheets
 {
@@ -15,20 +16,24 @@ public class Sheets
     private static string applicationName = "WastingSpace Leaderboard";
     private static string spreadsheetId = "1qspFp4iMcoRntV_UNfm5Pt8cm4xXYRoK9UhJbB74ebw";
     private static SheetsService service;
-    private static string path = Environment.CurrentDirectory + "/Assets/Resources/Credentials";
 
 
     public static void ConnectToGoogle()
     {
-        GoogleCredential credential;
+        GoogleCredential credential = null;
 
         //Debug.Log(Environment.CurrentDirectory);
         // Put your credentials json file in the root of the solution and make sure copy to output dir property is set to always copy 
-        using (var stream = new FileStream(Path.Combine(path + "/credentials.json"),
-            FileMode.Open, FileAccess.Read))
-        {
-            credential = GoogleCredential.FromStream(stream).CreateScoped(scopes);
-        }
+        //using (var stream = new FileStream(Path.Combine(path + "/credentials.json"),
+        //    FileMode.Open, FileAccess.Read))
+        //{
+        //    //credential = GoogleCredential.FromStream(stream).CreateScoped(scopes);
+        //    //credential = GoogleCredential.FromJson(Resources.Load<TextAsset>("Credentials/credentials").ToString()).CreateScoped(scopes);
+        //}
+
+        TextAsset textAsset = Resources.Load<TextAsset>("Credentials/credentials");
+        ServiceAccountCredential seriveCredential = JsonConvert.DeserializeObject(textAsset.text)  as ServiceAccountCredential;
+        credential = GoogleCredential.FromServiceAccountCredential(seriveCredential).CreateScoped(scopes);
 
         // Create Google Sheets API service.
         service = new SheetsService(new BaseClientService.Initializer()
@@ -117,7 +122,7 @@ public class Sheets
         SpreadsheetsResource.ValuesResource.GetRequest request =
                     service.Spreadsheets.Values.Get(spreadsheetId, range);
         ValueRange response = request.Execute();
-        IList<IList<Object>> values = response.Values;
+        IList<IList<object>> values = response.Values;
         if (values != null && values.Count > 0)
         {
             List<ScoreboardObject> scoreList = new List<ScoreboardObject>();

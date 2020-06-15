@@ -15,6 +15,24 @@ MonoBehaviour:
   components:
   - {fileID: 8948016315547140766}
   - {fileID: 9185968492506334348}
+  - {fileID: 8052048360091019723}
+--- !u!114 &8052048360091019723
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97c23e3b12dc18c42a140437e53d3951, type: 3}
+  m_Name: Tonemapping
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  mode:
+    m_OverrideState: 1
+    m_Value: 1
 --- !u!114 &8948016315547140766
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -30,8 +48,8 @@ MonoBehaviour:
   active: 1
   m_AdvancedMode: 0
   threshold:
-    m_OverrideState: 0
-    m_Value: 1
+    m_OverrideState: 1
+    m_Value: 0.88
     min: 0
   intensity:
     m_OverrideState: 1
@@ -48,7 +66,7 @@ MonoBehaviour:
     min: 0
   tint:
     m_OverrideState: 1
-    m_Value: {r: 0, g: 0.49547148, b: 1, a: 1}
+    m_Value: {r: 0, g: 0.5105083, b: 1, a: 1}
     hdr: 0
     showAlpha: 0
     showEyeDropper: 1

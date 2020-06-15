@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: 5a52d6c805bb67244aa3c3439591ad59
+guid: 1633f8aba34d98a438c03b63325cec5c
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Textexture
+    second: {fileID: 2100000, guid: cac32b2a2a6685b40a9a70cfe92c2043, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -80,7 +85,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.01
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
