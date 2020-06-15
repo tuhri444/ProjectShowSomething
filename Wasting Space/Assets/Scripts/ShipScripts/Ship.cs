@@ -30,12 +30,8 @@ public class Ship : MonoBehaviour
         healthBar = FindObjectOfType<Healthbar>();
         if (!CAR)
         {
-
-
             meshRenderer.enabled = false;
             capsuleCollider.enabled = false;
-
-
             try
             {
                 string grabberName = PlayerPrefs.GetString("ActiveGrabber");
@@ -65,6 +61,7 @@ public class Ship : MonoBehaviour
             meshRenderer.enabled = false;
             capsuleCollider.enabled = false;
         }
+        healthBar.MaxHealth = FindObjectOfType<Hull>().Health;
     }
 
     public void Update()

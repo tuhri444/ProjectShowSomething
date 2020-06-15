@@ -16,24 +16,22 @@ public class Sheets
     private static string applicationName = "WastingSpace Leaderboard";
     private static string spreadsheetId = "1qspFp4iMcoRntV_UNfm5Pt8cm4xXYRoK9UhJbB74ebw";
     private static SheetsService service;
+    private static string path = Environment.CurrentDirectory + "/Assets/Resources/Credentials";
 
 
     public static void ConnectToGoogle()
     {
         GoogleCredential credential = null;
 
-        //Debug.Log(Environment.CurrentDirectory);
-        // Put your credentials json file in the root of the solution and make sure copy to output dir property is set to always copy 
-        //using (var stream = new FileStream(Path.Combine(path + "/credentials.json"),
-        //    FileMode.Open, FileAccess.Read))
-        //{
-        //    //credential = GoogleCredential.FromStream(stream).CreateScoped(scopes);
-        //    //credential = GoogleCredential.FromJson(Resources.Load<TextAsset>("Credentials/credentials").ToString()).CreateScoped(scopes);
-        //}
+        path = Application.streamingAssetsPath+"/Credentials";
+        //Put your credentials json file in the root of the solution and make sure copy to output dir property is set to always copy
+        using (var stream = new FileStream(Path.Combine(path+ "/credentials.json"),
+            FileMode.Open, FileAccess.Read))
+        {
+            credential = GoogleCredential.FromStream(stream).CreateScoped(scopes);
+        }
 
-        TextAsset textAsset = Resources.Load<TextAsset>("Credentials/credentials");
-        ServiceAccountCredential seriveCredential = JsonConvert.DeserializeObject(textAsset.text)  as ServiceAccountCredential;
-        credential = GoogleCredential.FromServiceAccountCredential(seriveCredential).CreateScoped(scopes);
+
 
         // Create Google Sheets API service.
         service = new SheetsService(new BaseClientService.Initializer()

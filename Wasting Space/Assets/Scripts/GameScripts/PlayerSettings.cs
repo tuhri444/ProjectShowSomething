@@ -21,6 +21,7 @@ public class PlayerSettings : MonoBehaviour
     private float internalJunkCollected = 0.0f;
 
     private Hull hull;
+    private Booster booster;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +35,16 @@ public class PlayerSettings : MonoBehaviour
 
         if (hull == null) hull = FindObjectOfType<Hull>();
         else internalJunkCollected = Mathf.Clamp(internalJunkCollected, 0.0f, hull.Capacity);
+
+        if (booster == null)
+        {
+            booster = FindObjectOfType<Booster>();
+        }
+        else
+        {
+            speed = booster.Acceleration; 
+            rotationSpeed = booster.AngularAcceleration;
+        }
 
     }
 
