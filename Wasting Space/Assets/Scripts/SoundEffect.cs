@@ -6,6 +6,8 @@ public class SoundEffect : MonoBehaviour
 {
     public AudioSource Click;
     public AudioSource Whoosh;
+    public AudioSource Grabber;
+    public AudioSource Magnet;
 
     public void PlayClick ()
     {
@@ -15,5 +17,15 @@ public class SoundEffect : MonoBehaviour
     public void PlayWoosh ()
     {
         Whoosh.Play();
+    }
+
+    public void PlayGrabber ()
+    {
+        Grabber.Play();
+    }
+
+    public void PlayMagnet ()
+    {
+        Magnet.Play();
     }
 }
