@@ -5,7 +5,7 @@ using UnityEngine.Rendering.PostProcessing;
 
 public class DeadzoneEffect : MonoBehaviour
 {
-    private bool effectOn = false;
+    [SerializeField] private bool effectOn = false;
     [SerializeField] private UnityEngine.Rendering.VolumeProfile ppv;
     [SerializeField] private UnityEngine.Rendering.Universal.Vignette solarFlares;
     private bool GoingUp;
