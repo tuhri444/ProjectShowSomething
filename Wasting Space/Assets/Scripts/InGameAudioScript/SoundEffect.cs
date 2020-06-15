@@ -8,6 +8,9 @@ public class SoundEffect : MonoBehaviour
     public AudioSource Whoosh;
     public AudioSource Grabber;
     public AudioSource Magnet;
+    public AudioSource Docking;
+    public AudioSource Unloading;
+    public AudioSource Launch;
 
     public void PlayClick ()
     {
@@ -27,5 +30,20 @@ public class SoundEffect : MonoBehaviour
     public void PlayMagnet ()
     {
         Magnet.Play();
+    }
+
+    public void PlayDocking()
+    {
+        Docking.Play();
+    }
+
+    public void PlayUnloading()
+    {
+        Unloading.Play();
+    }
+
+    public void PlayLaunch()
+    {
+        Launch.Play();
     }
 }
