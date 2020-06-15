@@ -24,7 +24,6 @@ public class LoadScene : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "FlightTest")
         {
-            Sheets.ConnectToGoogle();
             PlayerSettings playerSettings = FindObjectOfType<PlayerSettings>();
             string name = GameObject.Find("NameInput").GetComponent<TMP_InputField>().text;
             Debug.Log(name);
