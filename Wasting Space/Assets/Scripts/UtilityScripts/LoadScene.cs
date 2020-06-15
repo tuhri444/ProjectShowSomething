@@ -5,34 +5,55 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using System.Linq;
 
 public class LoadScene : MonoBehaviour
 {
 
     private List<KeyValuePair<string, int>> scorers = new List<KeyValuePair<string, int>>();
     private bool currentPlayer = false;
+    private NoNoWarning nonoWarning;
     int sceneId;
+
+    List<string> nonoNames = new List<string>() {
+        "kut", "hoer", "slet", "piemel", "penis", "nigger", "fuck", "neger", "kanker", "tering", "tyfus", "cunt", "bitch",
+        "dick", "cock", "vag", "kenker", "anal", "kuck", "poop", "sex", "sexy", "hoe", "rape", "kill", "murder", "hitler", "kok",
+        "slaaf", "slave", "jood", "kech", "thot", "fag", "faggot", "gay", "shit", "homo", "pot", "weed", "drugs", "wiet", "dead",
+        "lsd", "death", "chink", "nigga", "nibba", "chigga", "niggle", "porn", "porno", "hentai”, “oppai”, “rawrxd”, “arsch", "fotze",
+        "anaal", "moord", "geil", "horny", "furry","niger","neeger","pimmel","vagina","pussy","slut","pick"
+    };
     // Start is called before the first frame update
     void Start()
     {
-
     }
 
     // Update is called once per frame
 
     public void Load(int id)
     {
+        nonoWarning = FindObjectOfType<NoNoWarning>();
         if (SceneManager.GetActiveScene().name == "FlightTest")
         {
             PlayerSettings playerSettings = FindObjectOfType<PlayerSettings>();
             string name = GameObject.Find("NameInput").GetComponent<TMP_InputField>().text;
-            Debug.Log(name);
-            Sheets.AddScoreEntry((int)playerSettings.JunkCollected, name);
-            Sheets.SortRequest();
+            if (!nonoNames.Any(name.ToLower().Contains))
+            {
+                nonoWarning.Activate(false);
+                PlayerPrefs.SetString("CurrentPlayer", name);
+                Debug.Log(name);
+                Sheets.AddScoreEntry((int)playerSettings.JunkCollected, name);
+                Sheets.SortRequest();
+                SceneManager.LoadScene(id);
+            }
+            else
+            {
+                nonoWarning.Activate(true);
+            }
         }
-
-        SceneManager.LoadScene(id);
-
+        else
+        {
+            SceneManager.LoadScene(id);
+        }
 
     }
 

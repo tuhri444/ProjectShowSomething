@@ -27,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7053364941447114428}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.71586, y: 0.71586, z: 0.71586}
   m_Children:
@@ -94,8 +94,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3de48f3fa9a843e4580ed21a780e030a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 200
-  capacity: 30
+  health: 250
+  capacity: 20
   price: 0
 --- !u!64 &7053364941447114431
 MeshCollider:
