@@ -1470,7 +1470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isGlobal: 0
+  isGlobal: 1
   priority: 0
   blendDistance: 1
   weight: 1
@@ -5406,6 +5406,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1866205453896355633, guid: 3128c285d225f7d478d9420a4c5f8a86,
+        type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1866205453952370492, guid: 3128c285d225f7d478d9420a4c5f8a86,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5640,6 +5645,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_FontSize
       value: 41
+      objectReference: {fileID: 0}
+    - target: {fileID: 7782569138373836420, guid: 3128c285d225f7d478d9420a4c5f8a86,
+        type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7782569138373836423, guid: 3128c285d225f7d478d9420a4c5f8a86,
         type: 3}
