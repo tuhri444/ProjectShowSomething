@@ -21,6 +21,7 @@ public class Ship : MonoBehaviour
     private GameObject hull;
     private GameObject booster;
     private bool healthSet;
+    public bool died = false;
     // Start is called before the first frame update
     private void Start()
     {
@@ -77,10 +78,12 @@ public class Ship : MonoBehaviour
             else
             {
                 healthBar.Health = health;
-                if (health <= 0)
+                if (health <= 0 && !died)
                 {
+                    AudioManager.instance.PlayGameOverSound();
                     GetComponent<ShipMovement>().EnableMovement = false;
                     Destroy(GetComponent<OnDeath>());
+                    died = true;
                 }
             }
         }
@@ -116,4 +119,6 @@ public class Ship : MonoBehaviour
     public GameObject Grabber { get => grabber; }
     public GameObject Hull { get => hull; }
     public GameObject Booster { get => booster; }
+
+    public float GetHealth() { return health; }
 }

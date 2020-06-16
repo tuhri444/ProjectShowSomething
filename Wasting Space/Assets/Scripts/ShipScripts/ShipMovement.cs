@@ -97,6 +97,11 @@ public class ShipMovement : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        AudioManager.instance.PlayCollisionSound();
+    }
+
     void DirectionMove(Vector2 movementDirection)
     {
         float x = movementDirection.x;
