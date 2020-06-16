@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Asteroid
-    second: {fileID: 2100000, guid: 090fc6fba1da01147ad8db76ad07d6ad, type: 2}
+    second: {fileID: 2100000, guid: 8828c067afe0939488d62643caf40898, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

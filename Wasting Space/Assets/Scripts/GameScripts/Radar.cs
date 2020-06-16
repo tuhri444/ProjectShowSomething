@@ -78,7 +78,7 @@ public class Radar : MonoBehaviour
             } 
             else
             {
-                Debug.Log("Removed");
+                //Debug.Log("Removed");
                 radarUI[go].enabled = false;
             }
         }
