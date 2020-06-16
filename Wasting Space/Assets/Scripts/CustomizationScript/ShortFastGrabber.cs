@@ -14,7 +14,7 @@ public class ShortFastGrabber : ABGrabber
 
     public override void OnClick()
     {
-        if (AnimationInfo.IsTag(animationTagResting) && !AnimController.IsInTransition(0))
+        if (AnimationInfo.IsTag(animationTagResting)/* && !AnimController.IsInTransition(0)*/)
         {
             Hitbox.GetComponent<SphereCollider>().enabled = true;
             AnimController.SetTrigger(animationNameExtend);
@@ -30,17 +30,13 @@ public class ShortFastGrabber : ABGrabber
 
             if (hull != null)
             {
-                if (ship.Settings.InternalJunkCollected + otherJunk.GetWorth() <= hull.Capacity && Grabslots.Count == 0)
+                if (ship.Settings.InternalJunkCollected <= hull.Capacity && Grabslots.Count == 0)
                 {
                     Hitbox.GetComponent<SphereCollider>().enabled = false;
                     otherJunk.GetComponent<BoxCollider>().enabled = false;
                     Grabslots.Add(other.gameObject);
                     itemHoldScale = other.transform.localScale;
                 }
-            }
-            else
-            {
-                //throw new System.Exception("Ok so none of the parts actually have a hull script");
             }
         }
     }
