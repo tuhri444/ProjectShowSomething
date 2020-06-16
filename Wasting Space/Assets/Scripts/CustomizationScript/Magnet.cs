@@ -66,7 +66,7 @@ public class Magnet : MonoBehaviour
     {
         if(other.gameObject.GetComponent<Junk>() != null /*|| other.gameObject.GetComponent<Sattelite>()*/)
         {
-            Debug.Log("Junk has entered");
+            //Debug.Log("Junk has entered");
             attractable.Add(other.gameObject);
         }
     }
@@ -77,7 +77,7 @@ public class Magnet : MonoBehaviour
         {
             if (attractable.Contains(other.gameObject))
             {
-                Debug.Log("Junk has left");
+                //Debug.Log("Junk has left");
                 attractable.Remove(other.gameObject);
             }
         }

@@ -59,7 +59,7 @@ public class DropOff : MonoBehaviour
     private IEnumerator Countdown()
     {
         isDropping = true;
-        float duration = 0.5f;
+        float duration = 0.2f;
         float normalizedTime = 0;
         while (normalizedTime <= 1.0f)
         {
