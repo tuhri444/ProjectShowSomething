@@ -48,6 +48,7 @@ public class LoadScene : MonoBehaviour
             {
                 nonoWarning.Activate(false);
                 PlayerPrefs.SetString("CurrentPlayer", name);
+                PlayerPrefs.SetInt("CurrentScore",(int)playerSettings.JunkCollected);
                 Debug.Log(name);
                 Sheets.AddScoreEntry((int)playerSettings.JunkCollected, name);
                 Sheets.SortRequest();

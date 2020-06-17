@@ -106,7 +106,7 @@ public class Sheets
 
         try
         {
-            sortReq.Execute();
+            sortReq.ExecuteAsync();
             return true;
         }
         catch (Exception e)
@@ -124,9 +124,16 @@ public class Sheets
         if (values != null && values.Count > 0)
         {
             List<ScoreboardObject> scoreList = new List<ScoreboardObject>();
-            for (int i = 0;i<5;i++)
+            for (int i = 0;i<values.Count;i++)
             {
-                scoreList.Add(new ScoreboardObject() { score = values[i][1], name = values[i][0]});
+                if (i< 5)
+                {
+                    scoreList.Add(new ScoreboardObject() { score = values[i][1], name = values[i][0] });
+                }
+                if (values[i][0].ToString().Equals(PlayerPrefs.GetString("CurrentPlayer")))
+                {
+                    PlayerPrefs.SetInt("PlayerPlace",i);
+                }
             }
             return scoreList;
         }
