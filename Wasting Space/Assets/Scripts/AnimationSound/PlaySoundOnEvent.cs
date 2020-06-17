@@ -10,6 +10,7 @@ public class PlaySoundOnEvent : MonoBehaviour
 
     public AudioClip gloveOn;
     public AudioClip helmetOn;
+    public AudioClip buttonPressed;
 
     void Awake()
     {
@@ -25,6 +26,12 @@ public class PlaySoundOnEvent : MonoBehaviour
     void PlayHelmetOn ()
     {
         audioSource.clip = helmetOn;
+        audioSource.Play();
+    }
+
+    void PlayButtonPressed ()
+    {
+        audioSource.clip = buttonPressed;
         audioSource.Play();
     }
 }

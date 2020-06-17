@@ -10,16 +10,7 @@ public class SwapActivateObjectScript : MonoBehaviour
 
     public void SwapActiveObject()
     {
-        for (int i = 0; i < activateObject.Count; i++)
-        {
-            activateObject[i].SetActive(true);
-        }
-        for (int i = 0; i < deactivateObject.Count; i++)
-        {
-            deactivateObject[i].SetActive(false);
-        }
+        deactivateObject.ForEach((GameObject obj) => obj.SetActive(false));
+        activateObject.ForEach((GameObject obj) => obj.SetActive(true));
     }
-
 }
-
-
