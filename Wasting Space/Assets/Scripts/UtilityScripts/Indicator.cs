@@ -37,6 +37,9 @@ public class Indicator : MonoBehaviour
         {
 
             GetComponent<SVGImage>().enabled = true;
+            Vector3 angleVector = diff.normalized;
+            float angle = Mathf.Atan2(angleVector.y, angleVector.x)*(180.0f/Mathf.PI)+90;
+            transform.rotation = Quaternion.Euler(0, 0, angle);
             float oldZ = transform.position.z;
             transform.position = Ship.transform.position + dir;
             transform.localPosition = new Vector3(transform.position.x, transform.position.y, 0);

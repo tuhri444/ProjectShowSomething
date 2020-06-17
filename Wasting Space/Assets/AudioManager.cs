@@ -39,8 +39,9 @@ public class AudioManager : MonoBehaviour
 
     private void Update()
     {
-        PlayThrusterSound(shipRb.velocity.magnitude);
-        UpdateUnloadingSound(shipRb.velocity.magnitude);
+        float temp = 1.0f / 3.8f * shipRb.velocity.magnitude;
+        PlayThrusterSound(temp);
+        UpdateUnloadingSound(temp);
         PlayLowHealthSound(ship.GetHealth());
     }
 

@@ -22,6 +22,8 @@ public class Ship : MonoBehaviour
     private GameObject booster;
     private bool healthSet;
     public bool died = false;
+
+    private Shake shakeAnim;
     // Start is called before the first frame update
     private void Start()
     {
@@ -67,6 +69,7 @@ public class Ship : MonoBehaviour
 
     public void Update()
     {
+        if (shakeAnim == null) shakeAnim = FindObjectOfType<Shake>();
         if(healthBar == null) healthBar = FindObjectOfType<Healthbar>();
         else
         {
@@ -99,6 +102,10 @@ public class Ship : MonoBehaviour
         if (collision.gameObject.tag == "RadarObject")
         {
             Debug.Log("Hit");
+            if (shakeAnim != null)
+            {
+                shakeAnim.PlayShake();
+            }
             Vector3 directionOfImpact = (collision.transform.position - transform.position).normalized;
             collision.gameObject.GetComponent<Rigidbody>().AddForce(directionOfImpact * 10, ForceMode.Force);
             Damage(10);
