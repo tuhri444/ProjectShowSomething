@@ -27,11 +27,6 @@ public class SoundEffect : MonoBehaviour
         Grabber.Play();
     }
 
-    public void PlayMagnet ()
-    {
-        Magnet.Play();
-    }
-
     public void PlayDocking()
     {
         Docking.Play();
@@ -39,11 +34,18 @@ public class SoundEffect : MonoBehaviour
 
     public void PlayUnloading()
     {
-        Unloading.Play();
+        StartCoroutine(UnloadingCourotine());
     }
 
     public void PlayLaunch()
     {
         Launch.Play();
+    }
+
+    IEnumerator UnloadingCourotine ()
+    {
+        yield return new WaitForSeconds(1f);
+
+        Unloading.Play();
     }
 }

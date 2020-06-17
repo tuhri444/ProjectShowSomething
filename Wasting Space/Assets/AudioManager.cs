@@ -17,6 +17,7 @@ public class AudioManager : MonoBehaviour
     public GameObject shipGo;
     public AudioSource thruster;
     public AudioSource lowHealth;
+    public AudioSource unloading;
 
     [Header("Settings")]
     [Range(0, 1)]
@@ -39,6 +40,7 @@ public class AudioManager : MonoBehaviour
     private void Update()
     {
         PlayThrusterSound(shipRb.velocity.magnitude);
+        UpdateUnloadingSound(shipRb.velocity.magnitude);
         PlayLowHealthSound(ship.GetHealth());
     }
 
@@ -88,6 +90,14 @@ public class AudioManager : MonoBehaviour
         else if (health <= 30 && !lowHealth.isPlaying)
         {
             lowHealth.Play();
+        }
+    }
+
+    private void UpdateUnloadingSound(float speed)
+    {
+        if (unloading.isPlaying && speed > 0.3f)
+        {
+            unloading.Stop();
         }
     }
 
