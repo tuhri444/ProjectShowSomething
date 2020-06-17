@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PopulateLeaderboard : MonoBehaviour
 {
@@ -26,6 +27,7 @@ public class PopulateLeaderboard : MonoBehaviour
             leaderboardSlots[i].GetComponent<LeaderboardSlot>().Name = scorelist[i].name.ToString();
             leaderboardSlots[i].GetComponent<LeaderboardSlot>().Score = scorelist[i].score.ToString();
         }
+        GameObject.Find("PlayerPlace").GetComponent<TMP_Text>().text = ""+PlayerPrefs.GetInt("PlayerPlace");
 
     }
 }
