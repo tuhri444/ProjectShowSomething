@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Indicator : MonoBehaviour
 {
@@ -29,10 +30,13 @@ public class Indicator : MonoBehaviour
         dir = diff.normalized * distanceFromPlayer;
         if (diff.magnitude < 15)
         {
-            transform.position = DropOff.transform.position; 
+            GetComponent<SVGImage>().enabled = false;
+
         }
         else
         {
+
+            GetComponent<SVGImage>().enabled = true;
             float oldZ = transform.position.z;
             transform.position = Ship.transform.position + dir;
             transform.localPosition = new Vector3(transform.position.x, transform.position.y, 0);

@@ -17,7 +17,7 @@ public class PlayerSettings : MonoBehaviour
     private float rotationalDrag = .05f;
 
     //Non-Serializable Fields
-    private float junkCollected = 0.0f;
+    [SerializeField] private float junkCollected = 0.0f;
     private float internalJunkCollected = 0.0f;
 
     private Hull hull;
