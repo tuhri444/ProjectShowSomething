@@ -212,7 +212,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: f3b40daa2b83dd5408b5c36b6df60ae2,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3b40daa2b83dd5408b5c36b6df60ae2, type: 3}
@@ -695,7 +695,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &135362794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1507,7 +1507,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &366433047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1820,8 +1820,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 323.7923, y: -205.0564}
-  m_SizeDelta: {x: 647.5846, y: 78.02256}
+  m_AnchoredPosition: {x: 323.79236, y: -205.0564}
+  m_SizeDelta: {x: 647.5847, y: 78.02256}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &427896068
 MonoBehaviour:
@@ -1954,7 +1954,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &453857366
 Transform:
   m_ObjectHideFlags: 0
@@ -2411,7 +2411,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &496994551
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2956,7 +2956,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &584698690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3864,7 +3864,7 @@ PrefabInstance:
     - target: {fileID: 7879219775606198175, guid: fdc6443871653da49af5a7459581b9b5,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdc6443871653da49af5a7459581b9b5, type: 3}
@@ -3988,7 +3988,7 @@ PrefabInstance:
     - target: {fileID: 2819534899945728271, guid: 39ae78087901241c7977709959d235bb,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2819534899945728266, guid: 39ae78087901241c7977709959d235bb, type: 3}
@@ -5307,7 +5307,7 @@ PrefabInstance:
     - target: {fileID: 3935944442239277664, guid: b596bdffd1751ed4082e92a483c9106c,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3935944442239277665, guid: b596bdffd1751ed4082e92a483c9106c,
         type: 3}
@@ -5634,7 +5634,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.035330243, y: 0.037491128}
   m_AnchorMax: {x: 0.96466976, y: 0.9625089}
-  m_AnchoredPosition: {x: 4.200012, y: -5.600006}
+  m_AnchoredPosition: {x: 4.200012, y: -5.600005}
   m_SizeDelta: {x: -2, y: -2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1221723763
@@ -6053,7 +6053,7 @@ PrefabInstance:
     - target: {fileID: 1782087477226379276, guid: 9b5519a5e379ed54080ae0b97717791e,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1782087477226379277, guid: 9b5519a5e379ed54080ae0b97717791e,
         type: 3}
@@ -14978,7 +14978,7 @@ PrefabInstance:
     - target: {fileID: 4542288403532572973, guid: 04203e5470cfc784eaa5b62860ae4829,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04203e5470cfc784eaa5b62860ae4829, type: 3}
@@ -15464,7 +15464,7 @@ PrefabInstance:
     - target: {fileID: 7763028170340659076, guid: 5832f3bf7ac5ff4409f8303ff88d6026,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7842157944662274174, guid: 5832f3bf7ac5ff4409f8303ff88d6026,
         type: 3}
@@ -15557,11 +15557,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1040194939, guid: 701717e180b17104e90a01deb5313035, type: 3}
       propertyPath: m_LocalScale.x
-      value: 8.5016
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1040194939, guid: 701717e180b17104e90a01deb5313035, type: 3}
       propertyPath: m_LocalScale.z
-      value: 8.5016
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1040194939, guid: 701717e180b17104e90a01deb5313035, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -15577,7 +15577,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1040194939, guid: 701717e180b17104e90a01deb5313035, type: 3}
       propertyPath: m_LocalScale.y
-      value: 10.627
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1040194940, guid: 701717e180b17104e90a01deb5313035, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -15683,7 +15683,7 @@ PrefabInstance:
     - target: {fileID: 4979318941632955856, guid: 701717e180b17104e90a01deb5313035,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4979318941632955856, guid: 701717e180b17104e90a01deb5313035,
         type: 3}
@@ -18352,7 +18352,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &6361069387800924633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19116,7 +19116,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &7475496200719506908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19233,7 +19233,7 @@ PrefabInstance:
     - target: {fileID: 7537704964205443107, guid: 36c599e852c731e4098899e4a6c91e58,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7537704964205443108, guid: 36c599e852c731e4098899e4a6c91e58,
         type: 3}
