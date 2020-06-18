@@ -20,7 +20,7 @@ public class PlayerSettings : MonoBehaviour
     [SerializeField] private float junkCollected = 0.0f;
     private float internalJunkCollected = 0.0f;
 
-    private Hull hull;
+    public Hull hull;
     private Booster booster;
 
     // Start is called before the first frame update
@@ -33,8 +33,14 @@ public class PlayerSettings : MonoBehaviour
     void Update()
     {
 
-        if (hull == null) hull = FindObjectOfType<Hull>();
-        else internalJunkCollected = Mathf.Clamp(internalJunkCollected, 0.0f, hull.Capacity);
+        if (hull == null)
+        {
+            hull = FindObjectOfType<Hull>();
+        }
+        else
+        {
+            internalJunkCollected = Mathf.Clamp(internalJunkCollected, 0.0f, hull.Capacity);
+        }
 
         if (booster == null)
         {

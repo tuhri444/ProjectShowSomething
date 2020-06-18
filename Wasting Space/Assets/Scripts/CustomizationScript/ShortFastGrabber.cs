@@ -14,6 +14,11 @@ public class ShortFastGrabber : ABGrabber
 
     public override void OnClick()
     {
+        if (ship.Settings.InternalJunkCollected >= (ship.Settings.hull.Capacity - 1))
+        {
+            AudioManager.instance.PlayCapacityFullSound();
+        }
+
         if (AnimationInfo.IsTag(animationTagResting)/* && !AnimController.IsInTransition(0)*/)
         {
             Hitbox.GetComponent<SphereCollider>().enabled = true;
@@ -63,6 +68,11 @@ public class ShortFastGrabber : ABGrabber
     {
         foreach(GameObject item in Grabslots)
         {
+            if (ship.Settings.InternalJunkCollected >= (ship.Settings.hull.Capacity-1))
+            {
+                AudioManager.instance.PlayCapacityFullSound();
+            }
+
             ship.Settings.InternalJunkCollected += item.GetComponent<Junk>().GetWorth();
             Destroy(item);
         }

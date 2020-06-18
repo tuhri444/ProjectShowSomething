@@ -52,6 +52,9 @@ public class AudioManager : MonoBehaviour
 
     public void PlayCapacityFullSound()
     {
+        if (audioSource.isPlaying && audioSource.clip == capacityFull)
+            return;
+
         PlayClip(capacityFull);
     }
 

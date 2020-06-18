@@ -101,7 +101,6 @@ public class Ship : MonoBehaviour
     {
         if (collision.gameObject.tag == "RadarObject")
         {
-            Debug.Log("Hit");
             if (shakeAnim != null)
             {
                 shakeAnim.PlayShake();
