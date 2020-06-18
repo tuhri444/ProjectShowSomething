@@ -22,7 +22,11 @@ public class Junk : MonoBehaviour
         GameObject JunkObject = Instantiate(_junkPrefab, _position, Quaternion.Euler(0,0,0));
 
         Junk junk = JunkObject.AddComponent<Junk>() as Junk;
-        Rigidbody rigidbody = JunkObject.AddComponent<Rigidbody>() as Rigidbody;
+        Rigidbody rigidbody = JunkObject.GetComponent<Rigidbody>();
+        if ( rigidbody == null) 
+        {
+             rigidbody= JunkObject.AddComponent<Rigidbody>() as Rigidbody;
+        }
         JunkObject.AddComponent<BoxCollider>();
         JunkObject.layer = 10;
         rigidbody.useGravity = false;

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using System.Linq;
 
 [System.Serializable]
 public class SpawnArea : MonoBehaviour
@@ -37,6 +38,13 @@ public class SpawnArea : MonoBehaviour
     {
         Junks = new List<Junk>();
         Sattelites = new List<Sattelite>();
+
+        var resources = Resources.LoadAll("Junk", typeof(GameObject)).Cast<GameObject>();
+
+        foreach(GameObject go in resources)
+        {
+            Junks.Add(go.GetComponent<Junk>());
+        }
 
         Size = GetComponent<RectTransform>().sizeDelta;
         TopLeft = new Vector2(transform.position.x - Size.x * 0.5f, transform.position.y - Size.y * 0.5f);
