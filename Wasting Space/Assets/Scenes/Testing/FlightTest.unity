@@ -1646,7 +1646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpawnCap: 10
-  SatteliteJunkRatio: 88
+  SatteliteJunkRatio: 52.2
   MaxSpawnVelocity: 0
   JunkScaleModifier: 0
   SatteliteScaleModifier: 0
@@ -1825,38 +1825,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 424154995}
   m_CullTransparentMesh: 0
---- !u!1 &427883891
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 427883892}
-  m_Layer: 0
-  m_Name: Game
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &427883892
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 427883891}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.3661876, y: -3.795032, z: -13.639435}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 7431340362783610953}
-  - {fileID: 1780909779}
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &427896066
 GameObject:
   m_ObjectHideFlags: 0
@@ -3528,7 +3496,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpawnCap: 10
-  SatteliteJunkRatio: 88
+  SatteliteJunkRatio: 50.2
   MaxSpawnVelocity: 0
   JunkScaleModifier: 0
   SatteliteScaleModifier: 0
@@ -5629,7 +5597,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpawnCap: 10
-  SatteliteJunkRatio: 88
+  SatteliteJunkRatio: 53.6
   MaxSpawnVelocity: 0
   JunkScaleModifier: 0
   SatteliteScaleModifier: 0
@@ -5889,7 +5857,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpawnCap: 10
-  SatteliteJunkRatio: 88
+  SatteliteJunkRatio: 46.8
   MaxSpawnVelocity: 0
   JunkScaleModifier: 0
   SatteliteScaleModifier: 0
@@ -6853,7 +6821,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpawnCap: 10
-  SatteliteJunkRatio: 88
+  SatteliteJunkRatio: 48.7
   MaxSpawnVelocity: 0
   JunkScaleModifier: 0
   SatteliteScaleModifier: 0
@@ -7011,7 +6979,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpawnCap: 10
-  SatteliteJunkRatio: 88
+  SatteliteJunkRatio: 49.7
   MaxSpawnVelocity: 0
   JunkScaleModifier: 0
   SatteliteScaleModifier: 0
@@ -8158,8 +8126,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1780909778}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.3661876, y: -3.795032, z: -13.639435}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 584698692}
@@ -8177,8 +8145,8 @@ Transform:
   - {fileID: 135362795}
   - {fileID: 277108060}
   - {fileID: 1778243930}
-  m_Father: {fileID: 427883892}
-  m_RootOrder: 1
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1786346445
 GameObject:
@@ -8229,7 +8197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpawnCap: 10
-  SatteliteJunkRatio: 88
+  SatteliteJunkRatio: 53.6
   MaxSpawnVelocity: 0
   JunkScaleModifier: 0
   SatteliteScaleModifier: 0
@@ -8792,7 +8760,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpawnCap: 10
-  SatteliteJunkRatio: 88
+  SatteliteJunkRatio: 54.1
   MaxSpawnVelocity: 0
   JunkScaleModifier: 0
   SatteliteScaleModifier: 0
@@ -17091,7 +17059,7 @@ Transform:
   - {fileID: 847714929}
   - {fileID: 1818151030}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6047214241300955485
 GameObject:
@@ -19251,14 +19219,14 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7431340362783610957}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -13.639435}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 985355955}
   - {fileID: 1507041871}
-  m_Father: {fileID: 427883892}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

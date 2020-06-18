@@ -4883,8 +4883,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f7d27fe2141d9b46b21698b27e7e772, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  accelerationSpeed: 10
-  rototationSpeed: 5
+  accelerationSpeed: 20
+  rototationSpeed: 10
   price: 0
 --- !u!1 &4386578272937049082
 GameObject:

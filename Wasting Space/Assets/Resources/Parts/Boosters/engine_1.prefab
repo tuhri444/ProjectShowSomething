@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   accelerationSpeed: 10
-  rototationSpeed: 10
+  rototationSpeed: 20
   price: 0
 --- !u!1 &4417819133370303569
 GameObject:
