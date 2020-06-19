@@ -31,7 +31,7 @@ public class AudioManager : MonoBehaviour
     {
         instance = this;
         audioSource = gameObject.GetComponent<AudioSource>();
-
+        audioSource.volume = volume;
 
         shipRb = shipGo.GetComponent<Rigidbody>();
         ship = shipGo.GetComponent<Ship>();
@@ -43,10 +43,6 @@ public class AudioManager : MonoBehaviour
         PlayThrusterSound(temp);
         UpdateUnloadingSound(temp);
         PlayLowHealthSound(ship.GetHealth());
-        audioSource.volume = volume;
-        thruster.volume = volume;
-        lowHealth.volume = volume;
-        //unloading.volume = volume;
     }
 
     public void PlayGameOverSound()
