@@ -21,11 +21,14 @@ public class Sheets
 
     public static void ConnectToGoogle()
     {
+
         GoogleCredential credential = null;
 
-        path = Application.streamingAssetsPath+"/Credentials";
+        path = Application.streamingAssetsPath + "/Credentials";
+        path = path.Replace("file:///", "");
+        Debug.LogError(path);
         //Put your credentials json file in the root of the solution and make sure copy to output dir property is set to always copy
-        using (var stream = new FileStream(Path.Combine(path+ "/credentials.json"),
+        using (var stream = new FileStream(path + "/credentials.json",
             FileMode.Open, FileAccess.Read))
         {
             credential = GoogleCredential.FromStream(stream).CreateScoped(scopes);
