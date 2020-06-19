@@ -171,7 +171,7 @@ MonoBehaviour:
     min: 0
   tint:
     m_OverrideState: 1
-    m_Value: {r: 0, g: 0.5105083, b: 1, a: 1}
+    m_Value: {r: 0, g: 0.50980425, b: 1, a: 1}
     hdr: 0
     showAlpha: 0
     showEyeDropper: 1
@@ -291,7 +291,7 @@ MonoBehaviour:
     m_Value: 0
   contrast:
     m_OverrideState: 1
-    m_Value: 16.3
+    m_Value: 5
     min: -100
     max: 100
   colorFilter:
@@ -307,7 +307,7 @@ MonoBehaviour:
     max: 180
   saturation:
     m_OverrideState: 1
-    m_Value: 14.5
+    m_Value: 21
     min: -100
     max: 100
 --- !u!114 &8013301578117178997
@@ -344,10 +344,10 @@ MonoBehaviour:
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
-          time: 0.53535354
-          value: 0.6962025
-          inSlope: 2.5426536
-          outSlope: 2.5426536
+          time: 0.5651163
+          value: 0.5853659
+          inSlope: -0.5552372
+          outSlope: -0.5552372
           tangentMode: 0
           weightedMode: 0
           inWeight: 0
