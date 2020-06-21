@@ -36,15 +36,15 @@ MonoBehaviour:
     m_Value: 1
   gaussianStart:
     m_OverrideState: 1
-    m_Value: 10
+    m_Value: 7000
     min: 0
   gaussianEnd:
     m_OverrideState: 1
-    m_Value: 60
+    m_Value: 7000000
     min: 0
   gaussianMaxRadius:
-    m_OverrideState: 0
-    m_Value: 1
+    m_OverrideState: 1
+    m_Value: 0.767
     min: 0.5
     max: 1.5
   highQualitySampling:
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   threshold:
     m_OverrideState: 1
-    m_Value: 0.93
+    m_Value: 0.95
     min: 0
   intensity:
     m_OverrideState: 1
@@ -344,10 +344,10 @@ MonoBehaviour:
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
-          time: 0.53535354
-          value: 0.6962025
-          inSlope: 2.5426536
-          outSlope: 2.5426536
+          time: 0.6681716
+          value: 0.90047395
+          inSlope: -0.13122061
+          outSlope: -0.13122061
           tangentMode: 0
           weightedMode: 0
           inWeight: 0
