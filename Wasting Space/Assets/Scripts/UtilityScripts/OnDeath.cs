@@ -14,6 +14,8 @@ public class OnDeath : MonoBehaviour
     {
         FindObjectOfType<StopTheGame>().ActiveTheEnd();
         GameObject endMenu = Resources.Load("EndMenu") as GameObject;
+        FindObjectOfType<ShipMovement>().enabled = false;
+        FindObjectOfType<Ship>().enabled = false;
         Instantiate(endMenu, canvas.transform);
     }
 

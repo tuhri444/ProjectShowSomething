@@ -44,7 +44,7 @@ public class AudioManager : MonoBehaviour
         UpdateUnloadingSound(temp);
         PlayLowHealthSound(ship.GetHealth());
         audioSource.volume = volume;
-        thruster.volume = volume;
+        //thruster.volume = volume;
         lowHealth.volume = volume;
         //unloading.volume = volume;
     }
