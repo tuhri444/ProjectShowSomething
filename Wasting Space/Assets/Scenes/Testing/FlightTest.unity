@@ -19912,7 +19912,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
   m_GameObject: {fileID: 7715673058807243646}
   m_CullTransparentMesh: 0
 --- !u!114 &7715673058807243644
@@ -28049,8 +28048,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-=======
->>>>>>> Stashed changes
   m_GameObject: {fileID: 2403050533771540371}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -28139,11 +28136,7 @@ RectTransform:
   - {fileID: 1003491062}
   - {fileID: 1106235578}
   m_Father: {fileID: 985355955}
-<<<<<<< Updated upstream
   m_RootOrder: 7
-=======
-  m_RootOrder: 2
->>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
