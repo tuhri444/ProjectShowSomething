@@ -3662,11 +3662,7 @@ RectTransform:
   - {fileID: 1154427466}
   - {fileID: 195044391}
   m_Father: {fileID: 985355955}
-<<<<<<< Updated upstream
-  m_RootOrder: 10
-=======
   m_RootOrder: 7
->>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.24200001, y: 0.19159259}
   m_AnchorMax: {x: 0.77752084, y: 0.7708519}
@@ -4657,16 +4653,8 @@ RectTransform:
   - {fileID: 1677779377}
   - {fileID: 2074115625}
   - {fileID: 964019756}
-<<<<<<< Updated upstream
-  - {fileID: 1677779377}
-  - {fileID: 7828861776956177268}
-  - {fileID: 1035999521}
-  - {fileID: 7715673060794560977}
-  - {fileID: 786894935}
-=======
   - {fileID: 786894935}
   - {fileID: 1035999521}
->>>>>>> Stashed changes
   m_Father: {fileID: 7431340362783610953}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7697,11 +7685,7 @@ RectTransform:
   - {fileID: 264361880}
   - {fileID: 264650312}
   m_Father: {fileID: 985355955}
-<<<<<<< Updated upstream
-  m_RootOrder: 6
-=======
   m_RootOrder: 4
->>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
