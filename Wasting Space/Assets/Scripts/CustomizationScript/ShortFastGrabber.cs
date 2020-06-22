@@ -12,13 +12,12 @@ public class ShortFastGrabber : ABGrabber
     private Vector3 itemHoldScale;
     [SerializeField] private float ShrinkSpeed;
 
+    [SerializeField] private SVGImage capOutline;
+    [SerializeField] private Image capFill;
+    private bool GoingUp;
+    private Hull hull;
     public override void OnClick()
     {
-        if (ship.Settings.InternalJunkCollected >= (ship.Settings.hull.Capacity - 1))
-        {
-            AudioManager.instance.PlayCapacityFullSound();
-        }
-
         if (AnimationInfo.IsTag(animationTagResting)/* && !AnimController.IsInTransition(0)*/)
         {
             Hitbox.GetComponent<SphereCollider>().enabled = true;
@@ -42,6 +41,7 @@ public class ShortFastGrabber : ABGrabber
                     Grabslots.Add(other.gameObject);
                     itemHoldScale = other.transform.localScale;
                 }
+
             }
         }
     }
@@ -50,6 +50,8 @@ public class ShortFastGrabber : ABGrabber
     {
         AnimationInfo = AnimController.GetCurrentAnimatorStateInfo(0);
         GrabCollider.enabled = CheckColliderState();
+
+        if (capFill == null) capFill = FindObjectOfType<fillBar>().GetComponent<Image>();
 
         if (Grabslots.Count != 0 && ship.Settings.InternalJunkCollected < shipHull.Capacity)
         {
@@ -61,6 +63,31 @@ public class ShortFastGrabber : ABGrabber
             {
                 HoldJunk();
             }
+        }
+
+        if(hull == null) hull = FindObjectOfType<Hull>();
+        if (ship.Settings.InternalJunkCollected >= hull.Capacity)
+        {
+            if (GoingUp)
+            {
+                if (capFill.color.a >= 0.99f) GoingUp = false;
+                Color fill = capFill.color;
+                fill.a = Mathf.Lerp(capFill.color.a, 1, Time.deltaTime*10.0f);
+                capFill.color = fill;
+            }
+            else
+            {
+                if (capFill.color.a <= 0.01f) GoingUp = true;
+                Color fill = capFill.color;
+                fill.a = Mathf.Lerp(capFill.color.a, 0, Time.deltaTime * 10.0f);
+                capFill.color = fill;
+            }
+        }
+        else
+        {
+            Color fill = capFill.color;
+            fill.a = 255.0f;
+            capFill.color = fill;
         }
     }
 

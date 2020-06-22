@@ -32,4 +32,13 @@ public class Deadzone : MonoBehaviour
         }
     }
 
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("RadarObject"))
+        {
+            Vector3 direction = (FindObjectOfType<DropOff>().transform.position - other.transform.position).normalized;
+            other.GetComponent<Rigidbody>().velocity += direction * 2.0f * Time.deltaTime;
+        }
+    }
+
 }

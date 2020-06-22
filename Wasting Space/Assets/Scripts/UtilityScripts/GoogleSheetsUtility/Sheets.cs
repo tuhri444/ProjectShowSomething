@@ -21,7 +21,7 @@ public class Sheets
 
     public static void ConnectToGoogle()
     {
-
+        
         GoogleCredential credential = null;
 
         path = Application.streamingAssetsPath + "/Credentials";
@@ -89,6 +89,7 @@ public class Sheets
     }
     public static bool SortRequest()
     {
+        ConnectToGoogle();
         BatchUpdateSpreadsheetRequest busReq = new BatchUpdateSpreadsheetRequest();
         SortSpec ss = new SortSpec();
         // ordering ASCENDING or DESCENDING
@@ -119,7 +120,7 @@ public class Sheets
     }
     public static List<ScoreboardObject> GetScores()
     {
-        ConnectToGoogle();
+        //ConnectToGoogle();
         string range = "Scores!A2:B";
         SpreadsheetsResource.ValuesResource.GetRequest request =
                     service.Spreadsheets.Values.Get(spreadsheetId, range);

@@ -12,6 +12,7 @@ public class OnDeath : MonoBehaviour
 
     private void OnDestroy()
     {
+        FindObjectOfType<StopTheGame>().ActiveTheEnd();
         GameObject endMenu = Resources.Load("EndMenu") as GameObject;
         Instantiate(endMenu, canvas.transform);
     }

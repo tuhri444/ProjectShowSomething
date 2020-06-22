@@ -7,6 +7,7 @@ public class Junk : MonoBehaviour
     private List<GameObject> BabyJunk;
     private float Worth = 1;
     private GameObject Explosion;
+    private StopTheGame gameEnd;
 
     /// <summary>
     /// Creates and returns a gameobject with junk script attached to it. Prefab should be only a 3D model. Nothing more, nothing less.
@@ -32,6 +33,8 @@ public class Junk : MonoBehaviour
         rigidbody.useGravity = false;
         rigidbody.constraints = RigidbodyConstraints.FreezePositionZ;
 
+        junk.gameEnd = FindObjectOfType<StopTheGame>();
+
         junk.Explosion = _explosionEffect;
         JunkObject.tag = "RadarObject";
         JunkObject.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
@@ -39,6 +42,14 @@ public class Junk : MonoBehaviour
         return JunkObject;
     }
 
+    private void Update()
+    {
+        if (gameEnd!= null && gameEnd.Activated)
+        {
+            GetComponent<Rigidbody>().velocity = Vector3.zero;
+            GetComponent<Rigidbody>().rotation = Quaternion.identity;
+        }
+    }
     private void CreateChildren(GameObject _junkPrefab, GameObject _explosionEffect, Vector3 _position, int _amount)
     {
         float newWorth = Worth / _amount;

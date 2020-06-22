@@ -107,7 +107,7 @@ public class Ship : MonoBehaviour
             }
             Vector3 directionOfImpact = (collision.transform.position - transform.position).normalized;
             collision.gameObject.GetComponent<Rigidbody>().AddForce(directionOfImpact * 10, ForceMode.Force);
-            Damage(10);
+            Damage(6);
             GetComponent<Rigidbody>().AddExplosionForce(200,collision.contacts[0].point,10);
         }
     }

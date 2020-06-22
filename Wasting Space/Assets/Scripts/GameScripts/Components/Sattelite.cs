@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 
 public class Sattelite : MonoBehaviour
 {
     private List<GameObject> BabyJunk;
     private GameObject Explosion;
+    private StopTheGame gameEnd;
 
     /// <summary>
     /// Creates and returns a sattelite, just plop in a sattelite prefab, add explosion and position. TADA ye got urself a sattelite.
@@ -23,6 +25,7 @@ public class Sattelite : MonoBehaviour
         satteliteObject.AddComponent<SphereCollider>();
         satteliteObject.layer = 10;
 
+        sattelite.gameEnd = FindObjectOfType<StopTheGame>();
         rigidbody.useGravity = false;
         rigidbody.constraints = RigidbodyConstraints.FreezePositionZ;
         sattelite.Explosion = _explosionEffect;
@@ -37,6 +40,15 @@ public class Sattelite : MonoBehaviour
     public void Explode()
     {
 
+    }
+
+    private void Update()
+    {
+        if (gameEnd.Activated)
+        {
+            GetComponent<Rigidbody>().velocity = Vector3.zero;
+            GetComponent<Rigidbody>().rotation = Quaternion.identity;
+        }
     }
 
     private void OnCollisionEnter(Collision collision)

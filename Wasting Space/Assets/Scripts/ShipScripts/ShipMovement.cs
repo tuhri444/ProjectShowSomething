@@ -31,12 +31,13 @@ public class ShipMovement : MonoBehaviour
     private float rotationalDrag = .05f;
 
     public bool EnableMovement = true;
+    private StopTheGame gameEnd;
 
     // Start is called before the first frame update
     void Start()
     {
         playerSettings = FindObjectOfType<PlayerSettings>();
-
+        gameEnd = FindObjectOfType<StopTheGame>();
         rigidbody = GetComponent<Rigidbody>();
         rigidbody.drag = linearDrag;
         rigidbody.angularDrag = rotationalDrag;
@@ -46,6 +47,8 @@ public class ShipMovement : MonoBehaviour
 
     void Update()
     {
+        if (gameEnd.Activated)
+            EnableMovement = false;
         UpdateStats();
     }
 

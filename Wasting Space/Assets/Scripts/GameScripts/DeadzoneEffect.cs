@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Net.Mime;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
+using UnityEngine.UI;
 
 public class DeadzoneEffect : MonoBehaviour
 {
@@ -15,6 +17,7 @@ public class DeadzoneEffect : MonoBehaviour
     private float intensityZero;
     private Ship health;
 
+    
     private void Start()
     {
         if (health == null) health = FindObjectOfType<Ship>();

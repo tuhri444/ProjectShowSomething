@@ -18,7 +18,7 @@ public class PlayerSettings : MonoBehaviour
 
     //Non-Serializable Fields
     [SerializeField] private float junkCollected = 0.0f;
-    private float internalJunkCollected = 0.0f;
+    [SerializeField] private float internalJunkCollected = 0.0f;
 
     public Hull hull;
     private Booster booster;
