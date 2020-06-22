@@ -14,6 +14,6 @@ public class ArmorStat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GetComponent<Image>().fillAmount = FindObjectOfType<Hull>().Health / 300;
+        GetComponent<Image>().fillAmount = FindObjectOfType<Hull>().Health / 150;
     }
 }

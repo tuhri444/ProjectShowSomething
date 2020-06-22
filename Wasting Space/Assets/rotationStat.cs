@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class CapacityStat : MonoBehaviour
+
+public class rotationStat : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -13,6 +14,7 @@ public class CapacityStat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GetComponent<Image>().fillAmount = FindObjectOfType<Hull>().Capacity / 60;
+        Booster booster = FindObjectOfType<Booster>();
+        GetComponent<Image>().fillAmount = (booster.AngularAcceleration) / 25;
     }
 }
