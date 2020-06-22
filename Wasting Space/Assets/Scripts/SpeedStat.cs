@@ -15,6 +15,6 @@ public class SpeedStat : MonoBehaviour
     void Update()
     {
         Booster booster = FindObjectOfType<Booster>();
-        GetComponent<Image>().fillAmount = (booster.Acceleration+booster.AngularAcceleration) / 35;
+        GetComponent<Image>().fillAmount = (booster.Acceleration) / 25;
     }
 }
