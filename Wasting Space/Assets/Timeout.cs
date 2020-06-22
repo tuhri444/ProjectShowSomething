@@ -19,7 +19,8 @@ public class Timeout : MonoBehaviour
 
     void Update()
     {
-        CheckJoystick();
+        if(joystick!=null)
+            CheckJoystick();
         CheckKeyboard();
 
         if(!AnyInput())

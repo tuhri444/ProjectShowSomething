@@ -11,7 +11,9 @@ public class PopulateLeaderboard : MonoBehaviour
 
     //Non-Serializable Fields
     private List<GameObject> leaderboardSlots = new List<GameObject>();
-    private List<ScoreboardObject> scorelist = new List<ScoreboardObject>();
+
+    public List<ScoreboardObject> Scorelist { get; private set; } = new List<ScoreboardObject>();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,14 +22,26 @@ public class PopulateLeaderboard : MonoBehaviour
             GameObject temp = Instantiate(leaderboardSlotPrefab, transform);
             leaderboardSlots.Add(temp);
         }
-        scorelist = Sheets.GetScores();
+        Scorelist = Sheets.GetScores();
         for(int i = 0;i<leaderboardSlots.Count;i++)
         {
             leaderboardSlots[i].GetComponent<LeaderboardSlot>().Rank = i + 1;
-            leaderboardSlots[i].GetComponent<LeaderboardSlot>().Name = scorelist[i].name.ToString();
-            leaderboardSlots[i].GetComponent<LeaderboardSlot>().Score = scorelist[i].score.ToString();
+            leaderboardSlots[i].GetComponent<LeaderboardSlot>().Name = Scorelist[i].name.ToString();
+            leaderboardSlots[i].GetComponent<LeaderboardSlot>().Score = Scorelist[i].score.ToString();
         }
         GameObject.Find("PlayerPlace").GetComponent<TMP_Text>().text = ""+PlayerPrefs.GetInt("PlayerPlace");
+    }
 
+
+    public void ChangeScoresShown(int startValue)
+    {
+        for (int i = 0; i < leaderboardSlots.Count; i++)
+        {
+            float rank = startValue + i + 1;
+            string name = Scorelist[startValue + i].name.ToString();
+            string score = Scorelist[startValue + i].score.ToString();
+
+            leaderboardSlots[i].GetComponent<LeaderboardSlot>().ChangeValues(rank, name, score);
+        }
     }
 }
