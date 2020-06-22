@@ -51,7 +51,7 @@ public class ShortFastGrabber : ABGrabber
         AnimationInfo = AnimController.GetCurrentAnimatorStateInfo(0);
         GrabCollider.enabled = CheckColliderState();
 
-        if (capFill == null) capFill = FindObjectOfType<fillBar>().GetComponent<Image>();
+        if (capFill == null && FindObjectOfType<fillBar>()) capFill = FindObjectOfType<fillBar>().GetComponent<Image>();
 
         if (Grabslots.Count != 0 && ship.Settings.InternalJunkCollected < shipHull.Capacity)
         {
@@ -66,29 +66,33 @@ public class ShortFastGrabber : ABGrabber
         }
 
         if(hull == null) hull = FindObjectOfType<Hull>();
-        if (ship.Settings.InternalJunkCollected >= hull.Capacity)
+        if (hull != null && ship != null)
         {
-            if (GoingUp)
+            if (ship.Settings.InternalJunkCollected >= hull.Capacity)
             {
-                if (capFill.color.a >= 0.99f) GoingUp = false;
-                Color fill = capFill.color;
-                fill.a = Mathf.Lerp(capFill.color.a, 1, Time.deltaTime*10.0f);
-                capFill.color = fill;
+                if (GoingUp)
+                {
+                    if (capFill.color.a >= 0.99f) GoingUp = false;
+                    Color fill = capFill.color;
+                    fill.a = Mathf.Lerp(capFill.color.a, 1, Time.deltaTime * 10.0f);
+                    capFill.color = fill;
+                }
+                else
+                {
+                    if (capFill.color.a <= 0.01f) GoingUp = true;
+                    Color fill = capFill.color;
+                    fill.a = Mathf.Lerp(capFill.color.a, 0, Time.deltaTime * 10.0f);
+                    capFill.color = fill;
+                }
             }
             else
             {
-                if (capFill.color.a <= 0.01f) GoingUp = true;
                 Color fill = capFill.color;
-                fill.a = Mathf.Lerp(capFill.color.a, 0, Time.deltaTime * 10.0f);
+                fill.a = 255.0f;
                 capFill.color = fill;
             }
         }
-        else
-        {
-            Color fill = capFill.color;
-            fill.a = 255.0f;
-            capFill.color = fill;
-        }
+        
     }
 
     private void CollectJunk()
