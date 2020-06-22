@@ -39,4 +39,12 @@ public class Sattelite : MonoBehaviour
 
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "RadarObject")
+        {
+            GetComponent<Rigidbody>().AddExplosionForce(200, collision.contacts[0].point, 10);
+        }
+    }
+
 }

@@ -119,6 +119,7 @@ public class Sheets
     }
     public static List<ScoreboardObject> GetScores()
     {
+        ConnectToGoogle();
         string range = "Scores!A2:B";
         SpreadsheetsResource.ValuesResource.GetRequest request =
                     service.Spreadsheets.Values.Get(spreadsheetId, range);
@@ -129,10 +130,9 @@ public class Sheets
             List<ScoreboardObject> scoreList = new List<ScoreboardObject>();
             for (int i = 0;i<values.Count;i++)
             {
-                if (i< 5)
-                {
+                
                     scoreList.Add(new ScoreboardObject() { score = values[i][1], name = values[i][0] });
-                }
+                
                 if (values[i][0].ToString().Equals(PlayerPrefs.GetString("CurrentPlayer")))
                 {
                     PlayerPrefs.SetInt("PlayerPlace",i);

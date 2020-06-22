@@ -13,7 +13,9 @@ public class LeaderboardSlot : MonoBehaviour
 
     private GameObject nameText;
     private GameObject rankText;
+
     private GameObject scoreText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,8 +24,15 @@ public class LeaderboardSlot : MonoBehaviour
         scoreText = transform.GetChild(2).gameObject;
 
         nameText.GetComponent<TMP_Text>().text = name;
-        rankText.GetComponent <TMP_Text>().text = rank + "";
+        rankText.GetComponent<TMP_Text>().text = rank + "";
         scoreText.GetComponent<TMP_Text>().text = score + "";
+    }
+
+    public void ChangeValues(float _rank, string _name, string _score)
+    {
+        nameText.GetComponent<TMP_Text>().text = _name;
+        rankText.GetComponent<TMP_Text>().text = _rank + "";
+        scoreText.GetComponent<TMP_Text>().text = _score + "";
     }
 
 
