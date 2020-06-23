@@ -1,31 +1,31 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class YesNo : MonoBehaviour
 {
+    [SerializeField]
+    List<Sprite> ogImg = new List<Sprite>();
+
+    [SerializeField]
+    List<Sprite> iconClicked = new List<Sprite>();   
+    
     int hadFun = -1;
-    // Start is called before the first frame update
-    void Start()
+
+    public void OnClick(GameObject button)
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    public void OnClick()
-    {
-        if (gameObject.name == "Yes")
+        transform.GetChild(0).GetComponent<Image>().sprite = ogImg[0];
+        transform.GetChild(1).GetComponent<Image>().sprite = ogImg[1];
+        if (button.name == "Yes")
         {
             hadFun = 1;
+            button.GetComponent<Image>().sprite = iconClicked[0];
         }
         else
         {
             hadFun = 0;
+            button.GetComponent<Image>().sprite = iconClicked[1];
         }
     }
 
