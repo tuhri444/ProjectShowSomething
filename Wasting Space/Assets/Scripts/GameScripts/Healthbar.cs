@@ -13,7 +13,8 @@ public class Healthbar : MonoBehaviour
 
     //Non-Serializable Fields
     private Image image;
-    
+    [SerializeField] private Animator icon;
+    [SerializeField] private Animator bar;
 
     void Start()
     {
@@ -36,6 +37,12 @@ public class Healthbar : MonoBehaviour
     {
         get { return maxHealth; }
         set { maxHealth = value; }
+    }
+
+    public void Pulse()
+    {
+        icon.SetTrigger("Pulse");
+        bar.SetTrigger("Pulse");
     }
 
 }
