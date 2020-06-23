@@ -30,6 +30,7 @@ public class AudioManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        shipGo = FindObjectOfType<Ship>().gameObject;
         audioSource = gameObject.GetComponent<AudioSource>();
 
 

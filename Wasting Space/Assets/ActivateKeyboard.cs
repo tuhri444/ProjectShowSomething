@@ -15,7 +15,6 @@ public class ActivateKeyboard : MonoBehaviour
     private GameObject endMenu;
 
     private Vector3 endPos;
-    private Vector3 startPos;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,29 +26,25 @@ public class ActivateKeyboard : MonoBehaviour
         keyboard.SetActive(false);
 
         endMenu = GameObject.Find("EndMenu(Clone)");
+        endMenu.transform.localPosition = new Vector3(0, endMenu.transform.localPosition.y, 0);
 
-        startPos = endMenu.transform.position;
-        endPos = endMenu.transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        endMenu.transform.DOMove(endPos, 1);
-        Debug.Log("MovingMenu");
+        endMenu.transform.DOLocalMove(endPos, 1);
     }
 
     public void OnSelect()
     {
         keyboard.SetActive(true);
-        startPos = endMenu.transform.position;
-        endPos = startPos + new Vector3(0,.7f,0);
+        endPos = new Vector3(0, 200, 0);
     }
 
     public void OnDeselect()
     {
         keyboard.SetActive(false);
-        startPos = endMenu.transform.position;
-        endPos = startPos - new Vector3(0, .7f, 0);
+        endPos = new Vector3(0, 0, 0);
     }
 }

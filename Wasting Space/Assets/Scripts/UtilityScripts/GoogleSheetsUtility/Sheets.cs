@@ -26,7 +26,6 @@ public class Sheets
 
         path = Application.streamingAssetsPath + "/Credentials";
         path = path.Replace("file:///", "");
-        Debug.LogError(path);
         //Put your credentials json file in the root of the solution and make sure copy to output dir property is set to always copy
         using (var stream = new FileStream(path + "/credentials.json",
             FileMode.Open, FileAccess.Read))
