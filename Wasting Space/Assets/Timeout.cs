@@ -11,7 +11,7 @@ public class Timeout : MonoBehaviour
     private bool clickedOn = false;
 
     [SerializeField] private float TimePassed;
-    private float TimerAmount = 35.0f;
+    [SerializeField] private float TimerAmount = 35.0f;
     void Start()
     {
         joystick = FindObjectOfType<Joystick>();
@@ -48,6 +48,14 @@ public class Timeout : MonoBehaviour
         else if (wasdMoving) return true;
         else if (clickedOn) return true;
         else return false;
+    }
+
+    private void CheckMouse()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            clickedOn = true;
+        }
     }
     private void CheckJoystick()
     {
