@@ -16,6 +16,9 @@ public class ShortFastGrabber : ABGrabber
     [SerializeField] private Image capFill;
     private bool GoingUp;
     private Hull hull;
+
+    private CapIcon capIcon;
+    private fillBar BarFill;
     public override void OnClick()
     {
         if (AnimationInfo.IsTag(animationTagResting)/* && !AnimController.IsInTransition(0)*/)
@@ -51,6 +54,8 @@ public class ShortFastGrabber : ABGrabber
         AnimationInfo = AnimController.GetCurrentAnimatorStateInfo(0);
         GrabCollider.enabled = CheckColliderState();
 
+        if (capIcon == null && FindObjectOfType<CapIcon>()) capIcon = FindObjectOfType<CapIcon>(); 
+        if (BarFill == null && FindObjectOfType<fillBar>()) BarFill = FindObjectOfType<fillBar>(); 
         if (capFill == null && FindObjectOfType<fillBar>()) capFill = FindObjectOfType<fillBar>().GetComponent<Image>();
 
         if (Grabslots.Count != 0 && ship.Settings.InternalJunkCollected < shipHull.Capacity)
@@ -103,7 +108,8 @@ public class ShortFastGrabber : ABGrabber
             {
                 AudioManager.instance.PlayCapacityFullSound();
             }
-
+            if (capIcon != null) capIcon.Pulse();
+            if(BarFill != null) BarFill.Pulse();
             ship.Settings.InternalJunkCollected += item.GetComponent<Junk>().GetWorth();
             Destroy(item);
         }

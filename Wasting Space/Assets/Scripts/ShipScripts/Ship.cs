@@ -95,6 +95,7 @@ public class Ship : MonoBehaviour
     public void Damage(float amount = 10)
     {
         health -= amount;
+        healthBar.Pulse();
     }
 
     private void OnCollisionEnter(Collision collision)
