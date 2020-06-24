@@ -6,10 +6,10 @@ using TMPro;
 public class FInalScore : MonoBehaviour
 {
     [SerializeField]
-    private TMP_Text timer;
+    private GetTime timer;
 
     [SerializeField]
-    private TMP_Text score;
+    private Score score;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,16 +19,6 @@ public class FInalScore : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //string timerScoreText = timer.text;
-        string scoreText = score.text;
-
-        //int timeScore;
-        //int.TryParse(timerScoreText, out timeScore);
-        //Debug.Log(timeScore);
-        //int numScore;
-        //int.TryParse(scoreText,out numScore);
-        //Debug.Log(numScore);
-
-        GetComponent<TMP_Text>().text = scoreText+  "";
+        GetComponent<TMP_Text>().text = ((int)(timer.CurrentTime+score.NumScore))+  "";
     }
 }

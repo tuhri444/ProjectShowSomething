@@ -7,6 +7,7 @@ public class Score : MonoBehaviour
 {
     PlayerSettings playerSettings;
     TMP_Text scoreText;
+    int score;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,10 +17,16 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(playerSettings == null)
+        if (playerSettings == null)
         {
             playerSettings = FindObjectOfType<PlayerSettings>();
         }
         scoreText.text = playerSettings.JunkCollected + "";
+        score = (int)playerSettings.JunkCollected;
+    }
+
+    public int NumScore
+    {
+        get{return score;}
     }
 }
