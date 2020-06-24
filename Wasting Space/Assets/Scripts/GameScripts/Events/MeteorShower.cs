@@ -60,6 +60,7 @@ public class MeteorShower : MonoBehaviour, WorldEvent
                 Vector3 target = player.transform.position;
                 Vector3 Direction = (target - randoSpawn).normalized;
                 GameObject temp = Sattelite.CreateSattelite(meteoritePrefabs[Random.Range(0, meteoritePrefabs.Count - 1)], meteoritePrefabs[0], randoSpawn);
+                temp.GetComponent<Rigidbody>().mass = 8;
                 temp.GetComponent<Rigidbody>().AddForce(Direction * Speed);
                 //SphereCollider col = temp.GetComponentInChildren<SphereCollider>();
                 //col.radius = 0.9f;
