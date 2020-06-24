@@ -2092,7 +2092,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8614844675878110345
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2244,7 +2244,7 @@ GameObject:
   - component: {fileID: 8614844675976348756}
   - component: {fileID: 8614844675976348759}
   - component: {fileID: 8614844675976348758}
-  - component: {fileID: 8614844675976348757}
+  - component: {fileID: 1411002552}
   m_Layer: 5
   m_Name: Distance
   m_TagString: Untagged
@@ -2391,7 +2391,7 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &8614844675976348757
+--- !u!114 &1411002552
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2400,7 +2400,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8614844675976348763}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7d7703a54693354f97d992bf9169c46, type: 3}
+  m_Script: {fileID: 11500000, guid: 40ade2ef7f6f43f49913e865201510c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &8874755094917704851

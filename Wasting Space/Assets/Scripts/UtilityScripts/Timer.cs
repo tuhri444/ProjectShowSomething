@@ -45,4 +45,9 @@ public class Timer : MonoBehaviour
         int seconds = (d % (60 * 100)) / 100;
         return String.Format("{0:00}:{1:00}", minutes, seconds);
     }
+
+    public float CurrentTime
+    {
+        get { return currentTime; }
+    }
 }
