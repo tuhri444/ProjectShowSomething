@@ -113,29 +113,12 @@ public class SpawnArea : MonoBehaviour
             //SphereCollider col = temp.GetComponent<SphereCollider>();
             //col.radius = 0.9f;
             temp.GetComponent<Rigidbody>().velocity = startVelocity;
-            temp.GetComponent<Rigidbody>().mass = Random.Range(3, 8);
+            temp.GetComponent<Rigidbody>().mass = Random.Range(5, 8);
             Sattelites.Add(temp.GetComponent<Sattelite>());
         }
         for (int i = 0; i < JunkToSpawn; i++)
         {
             spawnLocation = new Vector3(Random.Range(TopLeft.x, BottomRight.x), Random.Range(TopLeft.y, BottomRight.y), 0);
-
-            //bool goodlocation = false;
-            //while (goodlocation != true)
-            //{
-            //    foreach (Junk item in Junks)
-            //    {
-            //        spawnLocation = new Vector3(Random.Range(TopLeft.x, BottomRight.x), Random.Range(TopLeft.y, BottomRight.y), 0);
-            //        goodlocation = CompareSpawnLocation(spawnLocation, item.transform.position);
-            //        if (goodlocation) break;
-            //    }
-            //    foreach (Sattelite item in Sattelites)
-            //    {
-            //        spawnLocation = new Vector3(Random.Range(TopLeft.x, BottomRight.x), Random.Range(TopLeft.y, BottomRight.y), 0);
-            //        goodlocation = CompareSpawnLocation(spawnLocation, item.transform.position);
-            //        if (goodlocation) break;
-            //    }
-            //}
 
             scale = Random.Range(1 - JunkScaleModifier, 1 + JunkScaleModifier);
             randomPrefab = Random.Range(0, JunkPrefabs.Count - 1);
