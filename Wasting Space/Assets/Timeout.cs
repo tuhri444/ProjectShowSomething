@@ -22,7 +22,7 @@ public class Timeout : MonoBehaviour
         if(joystick!=null)
             CheckJoystick();
         CheckKeyboard();
-
+        CheckMouse();
         if(!AnyInput())
         {
             if(TimePassed >= TimerAmount)

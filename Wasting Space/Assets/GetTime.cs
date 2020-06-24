@@ -22,4 +22,10 @@ public class GetTime : MonoBehaviour
         }
         timerText.text = timer.CurrentTime+"";
     }
+
+    public float CurrentTime
+    {
+        get { return timer.CurrentTime; }
+    }
+
 }
