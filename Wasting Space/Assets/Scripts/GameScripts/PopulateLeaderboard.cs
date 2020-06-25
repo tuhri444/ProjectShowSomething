@@ -29,12 +29,13 @@ public class PopulateLeaderboard : MonoBehaviour
             leaderboardSlots[i].GetComponent<LeaderboardSlot>().Name = Scorelist[i].name.ToString();
             leaderboardSlots[i].GetComponent<LeaderboardSlot>().Score = Scorelist[i].score.ToString();
         }
-        GameObject.Find("PlayerPlace").GetComponent<TMP_Text>().text = ""+PlayerPrefs.GetInt("PlayerPlace");
+        GameObject.Find("PlayerPlace").GetComponent<TMP_Text>().text = ""+PlayerPrefs.GetInt("PlayerPlace")+1;
     }
 
 
     public void ChangeScoresShown(int startValue)
     {
+        Scorelist = Sheets.GetScores();
         for (int i = 0; i < leaderboardSlots.Count; i++)
         {
             float rank = startValue + i + 1;

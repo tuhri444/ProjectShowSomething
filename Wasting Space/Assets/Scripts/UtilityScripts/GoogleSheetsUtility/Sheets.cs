@@ -140,6 +140,7 @@ public class Sheets
         if (values != null && values.Count > 0)
         {
             List<ScoreboardObject> scoreList = new List<ScoreboardObject>();
+            SortRequest();
             for (int i = 0;i<values.Count;i++)
             {
                 
