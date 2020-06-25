@@ -22,7 +22,7 @@ public class DropOff : MonoBehaviour
     public void Decouple()
     {
         lockIn = false;
-        ship.GetComponent<Rigidbody>().AddForce(Vector3.up * 10.0f, ForceMode.Impulse);
+        ship.GetComponent<Rigidbody>().AddForce(Vector3.up * 3.0f, ForceMode.Impulse);
     }
 
     void Start()

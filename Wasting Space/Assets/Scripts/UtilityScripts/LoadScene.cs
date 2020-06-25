@@ -39,7 +39,12 @@ public class LoadScene : MonoBehaviour
     public void Load(int id)
     {
         nonoWarning = FindObjectOfType<NoNoWarning>();
-        if (SceneManager.GetActiveScene().name == "FlightTest")
+
+        if(SceneManager.GetActiveScene().name.Equals("Start") && PlayerPrefs.GetString("RoadsterEnabled").Equals("true"))
+        {
+            SceneManager.LoadScene(2);
+        }
+        else if (SceneManager.GetActiveScene().name == "FlightTest")
         {
             PlayerSettings playerSettings = FindObjectOfType<PlayerSettings>();
             string name = GameObject.Find("NameInput").GetComponent<TMP_InputField>().text;
@@ -48,9 +53,9 @@ public class LoadScene : MonoBehaviour
             {
                 nonoWarning.Activate(false);
                 PlayerPrefs.SetString("CurrentPlayer", name);
-                PlayerPrefs.SetInt("CurrentScore",(int)playerSettings.JunkCollected);
+                PlayerPrefs.SetInt("CurrentScore",FindObjectOfType<FInalScore>().FinalScore);
                 Debug.Log(name);
-                Sheets.AddScoreEntry((int)playerSettings.JunkCollected, name);
+                Sheets.AddScoreEntry(FindObjectOfType<FInalScore>().FinalScore, name);
                 Sheets.SortRequest();
                 SceneManager.LoadScene(id);
             }

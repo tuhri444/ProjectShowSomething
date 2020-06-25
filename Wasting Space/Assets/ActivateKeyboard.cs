@@ -39,7 +39,7 @@ public class ActivateKeyboard : MonoBehaviour
     public void OnSelect()
     {
         keyboard.SetActive(true);
-        endPos = new Vector3(0, 200, 0);
+        endPos = new Vector3(0, 220, 0);
     }
 
     public void OnDeselect()

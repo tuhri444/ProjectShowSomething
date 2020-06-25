@@ -12,6 +12,7 @@ public class Feedback : MonoBehaviour
         YesNo yesno = FindObjectOfType<YesNo>();
         Sheets.AddFeebackEntry(PlayerPrefs.GetString("CurrentPlayer"),rating.Ratings,yesno.HadFun+"");
         PlayerPrefs.SetString(PlayerPrefs.GetString("CurrentPlayer"),rating.Ratings+","+yesno.HadFun);
+        PlayerPrefs.SetString("RoadsterEnabled", "false");
 
         SceneManager.LoadScene(0);
     }

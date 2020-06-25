@@ -27,6 +27,7 @@ public class Timeout : MonoBehaviour
         {
             if(TimePassed >= TimerAmount)
             {
+                PlayerPrefs.SetString("RoadsterEnabled", "false");
                 SceneManager.LoadScene(0);
             }
             else

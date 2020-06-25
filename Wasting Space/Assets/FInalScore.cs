@@ -10,6 +10,8 @@ public class FInalScore : MonoBehaviour
 
     [SerializeField]
     private Score score;
+
+    private int finalScore;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +21,13 @@ public class FInalScore : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        finalScore = (int)(timer.CurrentTime + score.NumScore);
         GetComponent<TMP_Text>().text = ((int)(timer.CurrentTime+score.NumScore))+  "";
     }
+
+    public int FinalScore
+    {
+        get { return finalScore; }
+    }
+
 }

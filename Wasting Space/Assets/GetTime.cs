@@ -23,9 +23,9 @@ public class GetTime : MonoBehaviour
         timerText.text = timer.CurrentTime+"";
     }
 
-    public float CurrentTime
+    public int CurrentTime
     {
-        get { return timer.CurrentTime; }
+        get { return (int)timer.CurrentTime/10; }
     }
 
 }

@@ -31,8 +31,10 @@ public class Ship : MonoBehaviour
         capsuleCollider = GetComponent<CapsuleCollider>();
         playerSettings = FindObjectOfType<PlayerSettings>();
         healthBar = FindObjectOfType<Healthbar>();
-        if (!CAR)
+        if (PlayerPrefs.GetString("RoadsterEnabled").Equals("false"))
         {
+            Destroy(transform.GetChild(1).GetChild(0).gameObject);
+            Destroy(transform.GetChild(2).GetChild(0).gameObject);
             meshRenderer.enabled = false;
             capsuleCollider.enabled = false;
             try
@@ -63,6 +65,11 @@ public class Ship : MonoBehaviour
         {
             meshRenderer.enabled = false;
             capsuleCollider.enabled = false;
+            string grabberName = PlayerPrefs.GetString("ActiveGrabber");
+            GameObject grabberPref = Resources.Load("Parts/Grabbers/" + grabberName) as GameObject;
+            grabber = Instantiate(grabberPref, transform.GetChild(0));
+            hull = transform.GetChild(1).GetChild(0).gameObject;
+            booster = transform.GetChild(2).GetChild(0).gameObject;
         }
         healthBar.MaxHealth = FindObjectOfType<Hull>().Health;
     }
