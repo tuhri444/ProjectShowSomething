@@ -131,7 +131,8 @@ public class Sheets
     }
     public static List<ScoreboardObject> GetScores()
     {
-        //ConnectToGoogle();
+        ConnectToGoogle();
+        SortRequest();
         string range = "Scores!A2:B";
         SpreadsheetsResource.ValuesResource.GetRequest request =
                     service.Spreadsheets.Values.Get(spreadsheetId, range);
@@ -140,15 +141,24 @@ public class Sheets
         if (values != null && values.Count > 0)
         {
             List<ScoreboardObject> scoreList = new List<ScoreboardObject>();
-            SortRequest();
             for (int i = 0;i<values.Count;i++)
             {
-                
                     scoreList.Add(new ScoreboardObject() { score = values[i][1], name = values[i][0] });
                 
-                if (values[i][0].ToString().Equals(PlayerPrefs.GetString("CurrentPlayer")))
+                if (scoreList[i].name.ToString().Equals(PlayerPrefs.GetString("CurrentPlayer")))
                 {
+                    Debug.Log("Place:"+i);
+                    Debug.Log(scoreList[i].name);
                     PlayerPrefs.SetInt("PlayerPlace",i);
+                }
+            }
+
+            if(values.Count < 15)
+            {
+                int index = 15-values.Count;
+                for(int i = 0; i<index;i++)
+                {
+                    scoreList.Add(new ScoreboardObject() { score = 0, name = "" });
                 }
             }
             return scoreList;

@@ -14,7 +14,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip collision;
 
     [Header("Special")]
-    public GameObject shipGo;
+    private GameObject ShipGo;
     public AudioSource thruster;
     public AudioSource lowHealth;
     public AudioSource unloading;
@@ -30,20 +30,26 @@ public class AudioManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        shipGo = FindObjectOfType<Ship>().gameObject;
         audioSource = gameObject.GetComponent<AudioSource>();
 
-
-        shipRb = shipGo.GetComponent<Rigidbody>();
-        ship = shipGo.GetComponent<Ship>();
+        if (FindObjectOfType<Ship>() != null)
+        {
+            ShipGo = FindObjectOfType<Ship>().gameObject;
+            shipRb = ShipGo.GetComponent<Rigidbody>();
+            ship = ShipGo.GetComponent<Ship>();
+        }
     }
 
     private void Update()
     {
-        float temp = 1.0f / 3.8f * shipRb.velocity.magnitude;
-        PlayThrusterSound(temp);
-        UpdateUnloadingSound(temp);
-        PlayLowHealthSound(ship.GetHealth());
+        if (shipRb != null)
+        {
+            float temp = 1.0f / 3.8f * shipRb.velocity.magnitude;
+
+            PlayThrusterSound(temp);
+            UpdateUnloadingSound(temp);
+            PlayLowHealthSound(ship.GetHealth());
+        }
         audioSource.volume = volume;
         //thruster.volume = volume;
         lowHealth.volume = volume;
@@ -114,5 +120,10 @@ public class AudioManager : MonoBehaviour
     {
         audioSource.clip = clip;
         audioSource.Play();
+    }
+
+    public GameObject shipGo
+    {
+        get { return ShipGo; }
     }
 }

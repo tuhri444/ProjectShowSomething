@@ -29,7 +29,7 @@ public class PopulateLeaderboard : MonoBehaviour
             leaderboardSlots[i].GetComponent<LeaderboardSlot>().Name = Scorelist[i].name.ToString();
             leaderboardSlots[i].GetComponent<LeaderboardSlot>().Score = Scorelist[i].score.ToString();
         }
-        GameObject.Find("PlayerPlace").GetComponent<TMP_Text>().text = ""+PlayerPrefs.GetInt("PlayerPlace")+1;
+        GameObject.Find("PlayerPlace").GetComponent<TMP_Text>().text = PlayerPrefs.GetInt("PlayerPlace")+1+"";
     }
 
 
