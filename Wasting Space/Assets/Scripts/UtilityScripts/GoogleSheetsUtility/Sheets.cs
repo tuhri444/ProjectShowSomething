@@ -117,6 +117,18 @@ public class Sheets
             return false;
         }
     }
+    public static void ClearRequest()
+    {
+        string range = "Scores!A2:B";  // TODO: Update placeholder value.
+        ClearValuesRequest requestBody = new ClearValuesRequest();
+        SpreadsheetsResource.ValuesResource.ClearRequest request = service.Spreadsheets.Values.Clear(requestBody, spreadsheetId, range);
+        ClearValuesResponse response = request.Execute();
+
+        range = "Feedback!A2:C";  // TODO: Update placeholder value.
+        requestBody = new ClearValuesRequest();
+        request = service.Spreadsheets.Values.Clear(requestBody, spreadsheetId, range);
+        response = request.Execute();
+    }
     public static List<ScoreboardObject> GetScores()
     {
         //ConnectToGoogle();
