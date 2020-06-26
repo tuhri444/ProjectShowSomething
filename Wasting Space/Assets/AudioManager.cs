@@ -12,12 +12,14 @@ public class AudioManager : MonoBehaviour
     public AudioClip gameOver;
     public AudioClip capacityFull;
     public AudioClip collision;
+    public AudioClip dock;
 
     [Header("Special")]
     private GameObject ShipGo;
     public AudioSource thruster;
     public AudioSource lowHealth;
     public AudioSource unloading;
+    public AudioSource docking;
 
     [Header("Settings")]
     [Range(0, 1)]
@@ -74,6 +76,11 @@ public class AudioManager : MonoBehaviour
         PlayClip(collision);
     }
 
+    public void PlayDockingSound()
+    {
+        PlayClip(dock);
+    }
+
     private void PlayThrusterSound(float speed)
     {
         if (speed > 0.3f && !thruster.isPlaying)
@@ -106,6 +113,12 @@ public class AudioManager : MonoBehaviour
         {
             lowHealth.Play();
         }
+    }
+
+    public void CheatSound()
+    {
+        lowHealth.loop = false;
+        lowHealth.Play();
     }
 
     private void UpdateUnloadingSound(float speed)

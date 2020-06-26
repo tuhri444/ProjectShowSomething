@@ -18,11 +18,14 @@ public class DropOff : MonoBehaviour
     public void LockIn()
     {
         lockIn = true;
+        AudioManager.instance.PlayDockingSound();
+        Educator.SlideDown();
     }
     public void Decouple()
     {
         lockIn = false;
         ship.GetComponent<Rigidbody>().AddForce(Vector3.up * 3.0f, ForceMode.Impulse);
+        Educator.SlideUp();
     }
 
     void Start()

@@ -64,7 +64,7 @@ public class Sheets
             return false;
         }
     }
-    public static bool AddFeebackEntry(string name, int rating, string feedback)
+    public static bool AddFeebackEntry(string name, string rating, string feedback)
     {
         try
         {

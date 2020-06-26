@@ -11,7 +11,7 @@ public class YesNo : MonoBehaviour
     [SerializeField]
     List<Sprite> iconClicked = new List<Sprite>();   
     
-    int hadFun = -1;
+    string hadFun = "";
 
     public void OnClick(GameObject button)
     {
@@ -19,17 +19,17 @@ public class YesNo : MonoBehaviour
         transform.GetChild(1).GetComponent<Image>().sprite = ogImg[1];
         if (button.name == "Yes")
         {
-            hadFun = 1;
+            hadFun = "Yes";
             button.GetComponent<Image>().sprite = iconClicked[0];
         }
         else
         {
-            hadFun = 0;
+            hadFun = "No";
             button.GetComponent<Image>().sprite = iconClicked[1];
         }
     }
 
-    public int HadFun
+    public string HadFun
     {
         get { return hadFun; }
     }

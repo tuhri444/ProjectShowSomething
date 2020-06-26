@@ -20,7 +20,7 @@ public class GetTime : MonoBehaviour
         {
             timer = FindObjectOfType<Timer>();
         }
-        timerText.text = timer.CurrentTime+"";
+        timerText.text = (int)(timer.CurrentTime)+" s";
     }
 
     public int CurrentTime

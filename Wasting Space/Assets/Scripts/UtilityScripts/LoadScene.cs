@@ -17,7 +17,7 @@ public class LoadScene : MonoBehaviour
 
     List<string> nonoNames = new List<string>() {
         "kut", "hoer", "slet", "piemel", "penis", "nigger", "fuck", "neger", "kanker", "tering", "tyfus", "cunt", "bitch",
-        "dick", "cock", "vag", "kenker", "anal", "kuck", "poop", "sex", "sexy", "hoe", "rape", "kill", "murder", "hitler", "kok",
+        "dick", "cock", "vag", "kenker", "anal", "kuck", "sex", "sexy", "hoe", "rape", "kill", "murder", "hitler", "kok",
         "slaaf", "slave", "jood", "kech", "thot", "fag", "faggot", "shit", "homo", "pot", "weed", "drugs", "wiet", "dead",
         "lsd", "death", "chink", "nigga", "nibba", "chigga", "niggle", "porn", "porno", "hentai”, “oppai”, “rawrxd”, “arsch", "fotze",
         "anaal", "moord", "geil", "horny", "furry","niger","neeger","negeer","pimmel","vagina","pussy","slut","pick","pee","0","1",
@@ -27,7 +27,8 @@ public class LoadScene : MonoBehaviour
         "hufter","banga","sanga","cancer","neuk","heks","fuk","arjen","fuc","berm","anus","bollox","boner","styve","stijve","tit",
         "tatas","boobs","tiet","borst","tepel","clit","poes","cunnie","breast","wank","recktum","rectum","rukken","hussy","whore","va j j",
         "vjay","fap","rukker","shiz","nazi","skank","rimjob","queef","fart","scheet","schijt","puto","puta","isis","pisda",
-        "kooch","fuhrer","jerk","kuchka","kurva","putka","hui","erect","butt","suchka","suka","cabron","pishka","pussi","dildo"
+        "kooch","fuhrer","jerk","kuchka","kurva","putka","hui","erect","butt","suchka","suka","cabron","pishka","pussi","dildo","poo","orgy",
+        "blowjob","rimjob"
     };
     // Start is called before the first frame update
     void Start()

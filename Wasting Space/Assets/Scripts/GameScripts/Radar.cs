@@ -19,7 +19,7 @@ public class Radar : MonoBehaviour
     private Plane[] planes;
     private List<GameObject> radarObjects = new List<GameObject>();
     private Dictionary<GameObject, RawImage> radarUI = new Dictionary<GameObject, RawImage>();
-    private Dictionary<GameObject,RawImage> toBeDestroyed = new Dictionary<GameObject,RawImage>();
+    private Dictionary<GameObject, RawImage> toBeDestroyed = new Dictionary<GameObject, RawImage>();
 
 
     void Start()
@@ -59,23 +59,23 @@ public class Radar : MonoBehaviour
 
                     if (go.GetComponent<Ship>() != null)
                     {
+                        radarUI[go].color = new Color(0, 0, 255);
+                        continue;
+                    }
+
+                    if (go.GetComponent<Junk>() != null)
+                    {
                         radarUI[go].color = new Color(0, 255, 0);
                         continue;
                     }
 
-                    if (go.GetComponent<Junk>() != null) 
-                    {
-                        radarUI[go].color = new Color(0, 0, 255);
-                        continue;
-                    }
-                    
-                    if(go.GetComponent<Sattelite>() != null)
+                    if (go.GetComponent<Sattelite>() != null)
                     {
                         radarUI[go].color = new Color(255, 0, 0);
                         continue;
                     }
                 }
-            } 
+            }
             else
             {
                 //Debug.Log("Removed");

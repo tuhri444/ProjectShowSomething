@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: abafd3038a94bfe4d88f3fc726727a38,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -3162,11 +3162,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Did you have fun?
+  m_text: How would you rate your enjoyment?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: efe80474492bc3f479ccba5d6f5cb0ae, type: 2}
-  m_sharedMaterial: {fileID: -729904962098492356, guid: efe80474492bc3f479ccba5d6f5cb0ae,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3208,7 +3207,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 0
+  m_firstOverflowCharacterIndex: 19
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -3229,15 +3228,15 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 10.300853, y: 0, z: 0, w: 0}
+  m_margin: {x: 0.09794865, y: -0.27577618, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 8783483989157032330}
-    characterCount: 17
+    characterCount: 34
     spriteCount: 0
-    spaceCount: 3
-    wordCount: 4
+    spaceCount: 5
+    wordCount: 6
     linkCount: 0
-    lineCount: 1
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -3269,10 +3268,10 @@ RectTransform:
   m_Father: {fileID: 1126355237}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.22611775, y: 0.582}
-  m_AnchorMax: {x: 0.46250004, y: 0.62200004}
-  m_AnchoredPosition: {x: 33.20302, y: 28.369362}
-  m_SizeDelta: {x: 112.503204, y: 5.703311}
+  m_AnchorMin: {x: 0.126, y: 0.7204201}
+  m_AnchorMax: {x: 0.88100004, y: 1}
+  m_AnchoredPosition: {x: -0.05999756, y: 0.5589981}
+  m_SizeDelta: {x: -0.015838623, y: -0.24307632}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &8783483989157032332
 GameObject:
@@ -3285,6 +3284,7 @@ GameObject:
   - component: {fileID: 8783483989157032331}
   - component: {fileID: 8783483989157032329}
   - component: {fileID: 8783483989157032330}
+  - component: {fileID: 8783483989157032333}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -3292,6 +3292,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8783483989157032333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8783483989157032332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c0eab5df14b1934fa9c0c18bbeba102, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  message: Hoe beoordeelt u uw plezier?
 --- !u!1 &8783483989173639064
 GameObject:
   m_ObjectHideFlags: 0
@@ -3303,6 +3316,7 @@ GameObject:
   - component: {fileID: 8783483989173639079}
   - component: {fileID: 8783483989173639077}
   - component: {fileID: 8783483989173639078}
+  - component: {fileID: 8783483989173639065}
   m_Layer: 5
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
@@ -3310,6 +3324,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8783483989173639065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8783483989173639064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c0eab5df14b1934fa9c0c18bbeba102, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  message: Heb je iets nieuws geleerd?
 --- !u!222 &8783483989173639077
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3339,9 +3366,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Did you learn something?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: efe80474492bc3f479ccba5d6f5cb0ae, type: 2}
-  m_sharedMaterial: {fileID: -729904962098492356, guid: efe80474492bc3f479ccba5d6f5cb0ae,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3444,10 +3470,10 @@ RectTransform:
   m_Father: {fileID: 1126355237}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.22236773, y: 0.44833335}
-  m_AnchorMax: {x: 0.46750003, y: 0.5083333}
-  m_AnchoredPosition: {x: 36.80726, y: -6.588131}
-  m_SizeDelta: {x: 166.8047, y: 20.13976}
+  m_AnchorMin: {x: 0.020865183, y: 0.30671996}
+  m_AnchorMax: {x: 0.99489135, y: 0.5411401}
+  m_AnchoredPosition: {x: -0.19274902, y: -0.08813095}
+  m_SizeDelta: {x: 0.80470276, y: -0.86024094}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8783483989200690523
 CanvasRenderer:

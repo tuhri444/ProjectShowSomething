@@ -20,5 +20,6 @@ public class Cheat : MonoBehaviour
     {
         Debug.Log("Roadster Enabled");
         PlayerPrefs.SetString("RoadsterEnabled", "true");
+        AudioManager.instance.CheatSound();
     }
 }
